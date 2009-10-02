@@ -1,9 +1,11 @@
 div.main{
-	width:875px;
+	width:675px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:0;
 	height: 160px;
+	padding-left:10px;
+	padding-right:10px;
 	color: #cd3f3f;
 	background-color: gray;
 	border: 1px solid red;
@@ -15,6 +17,15 @@ div.left{
 	height: 60px;
 	margin-top:0;
 	border: 1px solid green;
+}
+
+div.menupart{
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	height: 40px;
+	border: 1px solid #397695;
+	background-color: green;
 }
 
 div.topheader{
