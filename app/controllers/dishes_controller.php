@@ -1,17 +1,18 @@
 <?php
 class DishesController extends AppController {
-    var $name = 'Dishes';
 
     function admin_index( $id=NULL ){
+/*        $r = $this->Dish->getAction( );
+        var_dump( $r );*/
         $this->layout =  "admin";
         if( is_null( $id ) ) $this->redirect( '/admin/dgroups/index/' );
-        $this->set( "dishes", $this->Dish->findAllByDgroupsId( (int) $id ) );
-        $this->set( "dgroups_id", (int) $id );
+        $this->set( "dish", $this->Dish->findAllByDgroupId( (int) $id ) );
+        $this->set( "dgroup_id", (int) $id );
     }
 
     function admin_new( $id ) {
         $this->layout =  "admin";
-        $this->set( "dish",  array( 'Dish'=>array( 'dgroups_id'=>(int) $id ) ) );
+        $this->set( "dish",  array( 'Dish'=>array( 'dgroup_id'=>(int) $id ) ) );
     }
 
     function admin_edit( $id ) {
@@ -29,7 +30,8 @@ class DishesController extends AppController {
     function admin_save( ) {
         $this->layout =  "admin";
         $this->Dish->save( $this->data );
-        $this->redirect( '/admin/dishes/index/'.$this->Dish->dgroups_id );
+//        var_dump( $this->data );
+        $this->redirect( '/admin/dishes/index/'.$this->data['Dish']['dgroup_id'] );
     }
 }
 ?>

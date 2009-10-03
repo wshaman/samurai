@@ -1,7 +1,6 @@
 <?php
 class DgroupsController extends AppController {
-    var $name = 'Dgroups';
-//    var $models=array( 'Dgroups', 'Dishes' );
+//    var $models=array( 'Dgroup', 'Dish' );
 //    var $helpers = array('Html','Ajax','Javascript');
     function index(){
         echo "sdsd";

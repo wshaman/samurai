@@ -1,8 +1,9 @@
 <?php
 class Dish extends AppModel {
-    var $name = 'dishes';
+//    var $name = 'Dish';
+//    var $useTable = 'dish';
+    var $belongsTo = 'Dgroup';
     function beforeSave(){
-//        echo DISH_IMAGES."<br/>";
         $fname = md5( microtime().mt_rand() );
         if( isset( $this->data['Dish']['imagefile'] ) ){
             var_dump( $this->data['Dish']['imagefile'], DISH_IMAGES.$fname );
@@ -13,8 +14,11 @@ class Dish extends AppModel {
             }
 
         }
-//        var_dump( $this->data );
         return true;
+    }
+
+    function getAction(){
+        return $this->find('all');
     }
 }
 ?>

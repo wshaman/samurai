@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `cnews`
+--
+
+DROP TABLE IF EXISTS `cnews`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cnews` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `text` text NOT NULL,
+  `pre` text NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `created` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cnews`
+--
+
+LOCK TABLES `cnews` WRITE;
+/*!40000 ALTER TABLE `cnews` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cnews` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `dgroups`
 --
 
@@ -28,7 +54,7 @@ CREATE TABLE `dgroups` (
   `description` text NOT NULL,
   `show_on_main` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +63,7 @@ CREATE TABLE `dgroups` (
 
 LOCK TABLES `dgroups` WRITE;
 /*!40000 ALTER TABLE `dgroups` DISABLE KEYS */;
-INSERT INTO `dgroups` VALUES (1,'ЭэээБУКВЫ!','JgbcFние',0),(2,'НаборБукаффф','ПРОПРЛвпавыпава',1),(3,'Прроверка3_','frrrrrrrrrrr',1);
+INSERT INTO `dgroups` VALUES (1,'ЭэээБУКВЫ!','JgbcFние',1),(2,'НаборБукаффф','ПРОПРЛвпавыпаваj',1),(3,'Прроверка3_','frrrrrrrrrrr',1),(4,'test005','jhyuyr',1);
 /*!40000 ALTER TABLE `dgroups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +77,7 @@ DROP TABLE IF EXISTS `dishes`;
 CREATE TABLE `dishes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `dgroups_id` int(5) unsigned NOT NULL,
+  `dgroup_id` int(5) unsigned NOT NULL,
   `cost` float unsigned NOT NULL COMMENT 'Стоимость порции',
   `weight` int(5) unsigned NOT NULL COMMENT 'вес в гр.',
   `cost_half` float unsigned NOT NULL COMMENT 'Стоимость половины порции',
@@ -59,7 +85,7 @@ CREATE TABLE `dishes` (
   `image` varchar(50) NOT NULL COMMENT 'Имя картинки',
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +94,7 @@ CREATE TABLE `dishes` (
 
 LOCK TABLES `dishes` WRITE;
 /*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
-INSERT INTO `dishes` VALUES (1,'Круглая штука',1,342.45,23,0,0,'d8b9872127267abd99936ba2d55def63','Ну, она такая круглая!'),(2,'jjjjjjjjjjjjjj',0,0,0,0,0,'35d1bc4335ec5bd16c1bc8e6941043fc','hhhhhhhhhhhhhhhhhhh'),(3,'qqqqqqqqqqqq',0,0,0,0,0,'6d225d35ffb926f3a72b60476cf3fd0b','dfsdfsdfsdfsd'),(4,'dfsdf',0,0,0,0,0,'','sgfasdgfasd'),(5,'rgsdg',1,0,0,0,0,'17e311cde2df9c825cd3dd6614f69931','ggs'),(6,'fsdfasdf',1,0,0,0,0,'413e702910d300d2dd50437b13bff070','asdgfasdgasdfgs');
+INSERT INTO `dishes` VALUES (1,'Круглая штука',1,342.45,23,0,0,'250130a14fcee8fdc786e44692eaaa0f','Ну, она такая круглая!'),(2,'test02',2,0,0,0,0,'397c4a008ab35a45cb35d2107ff15041','dfsdfas'),(3,'rrrrrrrrrr',3,0,0,0,0,'4281c43438eadf5e25fb1664c339112b','treterterter');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-03  2:44:44
+-- Dump completed on 2009-10-04  2:00:54

@@ -5,14 +5,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $title_for_layout?></title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/main.css" />
 <!-- Include external files and scripts here (See HTML helper for more info.) -->
 <?php echo $scripts_for_layout ?>
 </head>
 <body>
-<div id="header">
-<!--div id="menu">...</div-->
+<div class="header">Head block</div>
+<div class="content">
+<div class="left">
+<?php echo $html->link( 'Главная', array( 'controller'=>'Menus') );?><br/>
+<?php echo $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'list') );?><br/>
+<?php echo $html->link( 'Архив новостей', array( 'controller'=>'News', 'action'=>'archive') );?>
 </div>
+<div class="right"><div class="cart">Cart will be here</div></div>
+<div class="main" align="center"><div class="menupart">Menu</div>
 <?php echo $content_for_layout ?>
+</div>
+</div>
 
 <!--div id="footer">...</div-->
 </body>
