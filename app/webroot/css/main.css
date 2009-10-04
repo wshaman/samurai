@@ -58,3 +58,7 @@ div.descr{
 	font-size: x-small;
 	color: gray;
 }
+
+div.emptycart{
+	font-style: italic;
+}

@@ -2,6 +2,9 @@
 class DgroupsController extends AppController {
 //    var $models=array( 'Dgroup', 'Dish' );
 //    var $helpers = array('Html','Ajax','Javascript');
+    var $helpers = array('Html','Ajax','Javascript');
+    var $components = array( 'RequestHandler' );
+
     function index(){
         echo "sdsd";
     }

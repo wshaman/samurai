@@ -6,6 +6,10 @@
 <title><?php echo $title_for_layout?></title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+<?php
+    echo $javascript->link('prototype');
+    echo $javascript->link('scriptaculous');
+?>
 <!-- Include external files and scripts here (See HTML helper for more info.) -->
 <?php echo $scripts_for_layout ?>
 </head>
@@ -15,10 +19,12 @@
 <div class="left">
 <?php echo $html->link( 'Главная', array( 'controller'=>'Menus', 'action' => 'index') );?><br/>
 <?php echo $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'mlist') );?><br/>
-<?php echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive') );?>
+<?php echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive') );?><br/>
+<?php echo $html->link( 'Гостевая', array( 'controller'=>'Gbook', 'action'=>'index') );?>
 </div>
-<div class="right"><div class="cart">Cart will be here</div></div>
+<div class="right"><div class="cart" id="cart">Cart will be here</div></div>
 <div class="main" align="center"><div class="menupart">Menu</div>
+<NOSCRIPT><h1>Для нормальной работы сайта необходимо включить JavaScript в Вашем браузере</h1></NOSCRIPT>
 <?php echo $content_for_layout ?>
 </div>
 </div>

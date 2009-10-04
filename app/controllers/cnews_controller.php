@@ -1,6 +1,9 @@
 <?php
 class CnewsController extends AppController {
     var $uses = array( 'Cnew' );
+    var $helpers = array('Html','Ajax','Javascript');
+    var $components = array( 'RequestHandler' );
+
     function admin_index(){
         $this->layout =  'admin';
         $this->set( 'news', $this->Cnew->find( 'all' ) );

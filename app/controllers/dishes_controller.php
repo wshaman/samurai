@@ -1,6 +1,9 @@
 <?php
 class DishesController extends AppController {
 
+    var $helpers = array('Html','Ajax','Javascript');
+    var $components = array( 'RequestHandler' );
+
     function admin_index( $id=NULL ){
 /*        $r = $this->Dish->getAction( );
         var_dump( $r );*/
