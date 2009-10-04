@@ -1,0 +1,44 @@
+.menulist{
+	border:1px solid #000000;
+	padding:5px 5px 5px 5px;
+	width: 550px;
+	overflow: auto;
+	
+}
+.menulist > div.menu{
+	min-width:150px;
+	padding-bottom: 10px;
+	padding-top: 4px;
+	border:1px solid green;
+	overflow: inherit;
+}
+
+.menulist > .menu > div.name{
+	font-family: serif;
+	font: caption;
+	color: red;
+}
+
+.menulist > .menu > .dishlist{
+	width: 90%;
+	border: 1px solid #dcd21b;
+}
+
+.menulist > .menu > .dishlist >.dish{
+	width: 120px;
+	border: 1px solid red;
+	display: inline-table;
+}
+
+.menulist > .menu > .dishlist >.dish > .name{
+	color: fucshia;
+	font-family: fantasy;	
+}
+
+input.num{
+	width:30px;
+}
+
+input.put{
+	width:60px;
+}

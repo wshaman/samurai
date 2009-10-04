@@ -7,7 +7,7 @@ div.main{
 	padding-left:10px;
 	padding-right:10px;
 	color: #cd3f3f;
-	background-color: gray;
+	background-color: #43cdce;
 	border: 1px solid red;
 }
 
@@ -43,7 +43,18 @@ div.content{
 div.right{
 	width:100px;
 	float: right;
-	/*height: 60px;*/
 	margin-top:0;
 	border: 1px solid blue;
+}
+
+div.left > a{
+	background-color: #bf4444;
+	font-style: italic;
+	
+}
+
+div.descr{
+	font-style: italic;
+	font-size: x-small;
+	color: gray;
 }

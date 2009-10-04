@@ -1,13 +1,13 @@
 .itemlist{
 	border:1px solid red;
 	padding:5px 5px 5px 5px;
-	width: 350px;
+	width: 450px;
 	overflow: auto;
 	
 }
 .itemlist > div.item{
 	display: inline-table;
-	min-width:150px;
+	min-width:120px;
 	padding-bottom: 10px;
 	padding-top: 4px;
 	border:1px solid green;
@@ -23,11 +23,5 @@
 .itemlist > .item > div.descr{
 	font-style: italic;
 	font-size: x-small;
-	
 	color: gray;
-}
-
-div.left > a{
-	background-color: #bf4444;
-	
 }

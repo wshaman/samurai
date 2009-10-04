@@ -78,6 +78,12 @@
 			define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 		}
 	}
+	if (!defined('NEWS_IMAGES')) {
+        define('NEWS_IMAGES',WWW_ROOT.'img/news/');
+	}
+	if (!defined('NEWS_IMAGES_URL')) {
+        define('NEWS_IMAGES_URL','news/');
+	}
 	if (!defined('DISH_IMAGES')) {
         define('DISH_IMAGES',WWW_ROOT.'img/trades/');
 	}

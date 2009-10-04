@@ -12,5 +12,8 @@ class Dgroup extends AppModel {
 //        var_dump( $results );die;
         return $results;
     }
+    function get1(){
+        return $this->find( 'all' );
+    }
 }
 ?>
