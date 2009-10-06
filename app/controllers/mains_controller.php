@@ -18,13 +18,6 @@ class MenusController extends AppController {
         parent::afterFilter();
     }
 
-    function mlist( $id=NULL ){
-        if( is_null( $id ) )
-            $this->set( 'list', $this->Dgroup->find( 'all', array('conditions' => array('Dgroup.show_on_main' => '1')) ));
-        else 
-            $this->set( 'list', $this->Dgroup->find( 'all', array('conditions' => array('Dgroup.show_on_main' => '1', 'id'=>(int) $id)) ));
-
-    }
 
     function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){
         if( $trade_id > 0 ){
