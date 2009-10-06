@@ -794,13 +794,13 @@ MagicDbTest	./cake/tests/cases/libs/magic_db.test.php	/^class MagicDbTest extend
 MagicDbTestData	./cake/tests/cases/libs/magic_db.test.php	/^class MagicDbTestData extends Object {$/;"	c
 MagicFileResource	./cake/libs/magic_db.php	/^		$MagicFileResource =& new MagicFileResource($file);$/;"	v
 MagicFileResource	./cake/libs/magic_db.php	/^class MagicFileResource extends Object{$/;"	c
+MainsController	./app/controllers/mains_controller.php	/^class MainsController extends AppController {$/;"	c
 MaximumCallCountExpectation	./vendors/simpletest/mock_objects.php	/^    function MaximumCallCountExpectation($method, $count, $message = '%s') {$/;"	f
 MaximumCallCountExpectation	./vendors/simpletest/mock_objects.php	/^class MaximumCallCountExpectation extends SimpleExpectation {$/;"	c
 MediaView	./cake/libs/view/media.php	/^class MediaView extends View {$/;"	c
 MemCache	./cake/tests/cases/libs/cache/memcache.test.php	/^		$MemCache =& $Cache->_Engine['Memcache'];$/;"	v
 MemcacheEngine	./cake/libs/cache/memcache.php	/^class MemcacheEngine extends CacheEngine {$/;"	c
 MemcacheEngineTest	./cake/tests/cases/libs/cache/memcache.test.php	/^class MemcacheEngineTest extends CakeTestCase {$/;"	c
-MenusController	./app/controllers/mains_controller.php	/^class MenusController extends AppController {$/;"	c
 MenusController	./app/controllers/menus_controller.php	/^class MenusController extends AppController {$/;"	c
 MergePostsController	./cake/tests/cases/libs/controller/controller_merge_vars.test.php	/^class MergePostsController extends MergeVarPluginAppController {$/;"	c
 MergeVarComponent	./cake/tests/cases/libs/controller/controller_merge_vars.test.php	/^class MergeVarComponent extends Object {$/;"	c
@@ -3912,6 +3912,7 @@ admin_edit	./app/controllers/dishes_controller.php	/^    function admin_edit( $i
 admin_index	./app/controllers/cnews_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./app/controllers/dgroups_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./app/controllers/dishes_controller.php	/^    function admin_index( $id=NULL ){$/;"	f
+admin_index	./app/controllers/mains_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./cake/tests/cases/dispatcher.test.php	/^	function admin_index() {$/;"	f
 admin_login	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function admin_login() {$/;"	f
 admin_new	./app/controllers/cnews_controller.php	/^    function admin_new( ) {$/;"	f
@@ -3947,7 +3948,6 @@ afterDelete	./cake/libs/model/behaviors/translate.php	/^	function afterDelete(&$
 afterDelete	./cake/libs/model/model.php	/^	function afterDelete() {$/;"	f
 afterDelete	./cake/tests/cases/libs/model/behavior.test.php	/^	function afterDelete(&$model) {$/;"	f
 afterFilter	./app/controllers/mains_controller.php	/^    function afterFilter(){$/;"	f
-afterFilter	./app/controllers/menus_controller.php	/^    function afterFilter(){$/;"	f
 afterFilter	./cake/libs/controller/controller.php	/^	function afterFilter() {$/;"	f
 afterFind	./app/models/dgroup.php	/^    function afterFind( $results ){$/;"	f
 afterFind	./cake/libs/model/behavior.php	/^	function afterFind(&$model, $results, $primary) { }$/;"	f
@@ -3985,7 +3985,6 @@ ajaxLayout	./cake/libs/controller/components/request_handler.php	/^	var $ajaxLay
 ajaxLogin	./cake/libs/controller/components/auth.php	/^	var $ajaxLogin = null;$/;"	v
 ajaxOptions	./cake/libs/view/helpers/ajax.php	/^	var $ajaxOptions = array($/;"	v
 ajax_cart	./app/controllers/mains_controller.php	/^    function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){$/;"	f
-ajax_cart	./app/controllers/menus_controller.php	/^    function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){$/;"	f
 alert_	./cake/libs/view/helpers/js.php	/^	function alert_($message) {$/;"	f
 alias	./cake/console/libs/shell.php	/^			$this->alias = $this->name;$/;"	v
 alias	./cake/console/libs/shell.php	/^	var $alias = null;$/;"	v
@@ -5018,7 +5017,6 @@ caption	./cake/libs/view/helpers/form.php	/^			$caption = __('Submit', true);$/;
 capture_new_classes	./vendors/simpletest/autorun.php	/^function capture_new_classes() {$/;"	f
 cards	./cake/libs/validation.php	/^		$cards = array('all' => array('amex' => '\/^3[4|7]\\\\d{13}$\/',$/;"	v
 cart	./app/controllers/mains_controller.php	/^        $cart = ( isset( $_SESSION['cart'] ) ) ? $_SESSION['cart'] : 'empty';$/;"	v
-cart	./app/controllers/menus_controller.php	/^        $cart = ( isset( $_SESSION['cart'] ) ) ? $_SESSION['cart'] : 'empty';$/;"	v
 cascade	./cake/libs/model/behavior.php	/^	function beforeDelete(&$model, $cascade = true) { }$/;"	v
 cascade	./cake/libs/model/model.php	/^			if ($data['dependent'] === true && $cascade === true) {$/;"	v
 cascade	./cake/libs/model/model.php	/^	function del($id = null, $cascade = true) {$/;"	v
@@ -10900,7 +10898,8 @@ i18nSchema	./app/config/sql/i18n.php	/^class i18nSchema extends CakeSchema {$/;"
 i18nSchema	./cake/console/libs/templates/skel/config/sql/i18n.php	/^class i18nSchema extends CakeSchema {$/;"	c
 id	./app/controllers/dgroups_controller.php	/^    function admin_save( $id=NULL ){$/;"	v
 id	./app/controllers/dishes_controller.php	/^    function admin_index( $id=NULL ){$/;"	v
-id	./app/controllers/menus_controller.php	/^    function mlist( $id=NULL ){$/;"	v
+id	./app/controllers/menus_controller.php	/^    function index( $id=NULL ){$/;"	v
+id	./app/controllers/menus_controller.php	/^\/*    function mlist( $id=NULL ){$/;"	v
 id	./cake/console/libs/acl.php	/^		$id = ife(is_numeric($this->args[1]), intval($this->args[1]), $this->args[1]);$/;"	v
 id	./cake/libs/class_registry.php	/^		$id = $false = false;$/;"	v
 id	./cake/libs/controller/components/session.php	/^	function id($id = null) {$/;"	f
@@ -11037,7 +11036,7 @@ indent	./cake/console/libs/acl.php	/^			$indent = str_repeat('  ', $count);$/;"	
 indent	./vendors/simpletest/xml.php	/^    function XmlReporter($namespace = false, $indent = '  ') {$/;"	v
 index	./app/controllers/dgroups_controller.php	/^    function index(){$/;"	f
 index	./app/controllers/mains_controller.php	/^    function index(){$/;"	f
-index	./app/controllers/menus_controller.php	/^    function index(){$/;"	f
+index	./app/controllers/menus_controller.php	/^    function index( $id=NULL ){$/;"	f
 index	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^		$index = 0;$/;"	v
 index	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^		for ($i = 0; $i < $count; $i++) { \/\/$row as $index => $field) {$/;"	v
 index	./cake/libs/model/datasources/dbo/dbo_db2.php	/^			$index = 0;$/;"	v
@@ -11904,7 +11903,7 @@ layout	./app/controllers/cnews_controller.php	/^        $this->layout =  'admin'
 layout	./app/controllers/dgroups_controller.php	/^        $this->layout =  "admin";$/;"	v
 layout	./app/controllers/dishes_controller.php	/^        $this->layout =  "admin";$/;"	v
 layout	./app/controllers/mains_controller.php	/^            $this->layout = 'ajax'; \/\/or try with $this->layout = '';$/;"	v
-layout	./app/controllers/menus_controller.php	/^            $this->layout = 'ajax'; \/\/or try with $this->layout = '';$/;"	v
+layout	./app/controllers/mains_controller.php	/^        $this->layout="admin";$/;"	v
 layout	./cake/libs/controller/components/email.php	/^			$this->layout = $layout;$/;"	v
 layout	./cake/libs/controller/components/email.php	/^	var $layout = 'default';$/;"	v
 layout	./cake/libs/controller/components/session.php	/^	function setFlash($message, $layout = 'default', $params = array(), $key = 'flash') {$/;"	v
@@ -12649,7 +12648,7 @@ missingView	./cake/console/error.php	/^	function missingView($params) {$/;"	f
 missingView	./cake/libs/error.php	/^	function missingView($params) {$/;"	f
 mixedKeys	./cake/tests/cases/libs/set.test.php	/^		$mixedKeys = array($/;"	v
 mkdir	./cake/libs/folder.php	/^	function mkdir($pathname, $mode = 0755) {$/;"	f
-mlist	./app/controllers/menus_controller.php	/^    function mlist( $id=NULL ){$/;"	f
+mlist	./app/controllers/menus_controller.php	/^\/*    function mlist( $id=NULL ){$/;"	f
 mock	./vendors/simpletest/test/interfaces_test.php	/^        $mock = new MockDummyInterface();$/;"	v
 mock	./vendors/simpletest/test/interfaces_test.php	/^        $mock = new MockImplementsDummy();$/;"	v
 mock	./vendors/simpletest/test/interfaces_test.php	/^        $mock = new MockSampleInterfaceWithHintInSignature();$/;"	v
@@ -22868,7 +22867,6 @@ trace	./vendors/simpletest/test_case.php	/^        $trace = new SimpleStackTrace
 trace	./vendors/simpletest/web_tester.php	/^        $trace = new SimpleStackTrace(array('assert', 'click', 'pass', 'fail'));$/;"	v
 traceMethod	./vendors/simpletest/simpletest.php	/^    function traceMethod($stack = false) {$/;"	f
 trade_id	./app/controllers/mains_controller.php	/^    function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){$/;"	v
-trade_id	./app/controllers/menus_controller.php	/^    function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){$/;"	v
 trans	./cake/libs/i18n.php	/^						$trans = $trans[$plurals];$/;"	v
 transactionWorked	./cake/tests/cases/libs/model/model_write.test.php	/^		$transactionWorked = Set::matches('\/Post[1][title=Baleeted First Post]', $result);$/;"	v
 transactional	./cake/libs/model/model.php	/^	var $transactional = false;$/;"	v
@@ -23139,7 +23137,8 @@ uriTemplate	./cake/libs/http_socket.php	/^			$uriTemplate = str_replace('%'.$pro
 uriTemplate	./cake/libs/http_socket.php	/^			$uriTemplate = str_replace(':%port', null, $uriTemplate);$/;"	v
 uriTemplate	./cake/libs/http_socket.php	/^	function buildUri($uri = array(), $uriTemplate = '%scheme:\/\/%user:%pass@%host:%port\/%path?%query#%fragment') {$/;"	v
 uriTemplate	./cake/libs/http_socket.php	/^	function url($url = null, $uriTemplate = null) {$/;"	v
-url	./app/webroot/index.php	/^        if ( is_null( $_GET['url'] ) ) $url = 'menus';$/;"	v
+url	./app/webroot/index.php	/^        if ( is_null( $_GET['url'] ) ) $url = 'Mains';$/;"	v
+url	./app/webroot/index.php	/^        if( $_GET['url'] =='admin' ) $url = 'admin\/Mains';$/;"	v
 url	./cake/bootstrap.php	/^	$url = null;$/;"	v
 url	./cake/dispatcher.php	/^					$url = $_GET['url'] = '\/';$/;"	v
 url	./cake/dispatcher.php	/^					$url = $_GET['url'] = substr($url, 1);$/;"	v
@@ -23528,7 +23527,7 @@ uses	./app/controllers/cnews_controller.php	/^    var $uses = array( 'Cnew' );$/
 uses	./app/controllers/mains_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
 uses	./app/controllers/mains_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew' );$/;"	v
 uses	./app/controllers/menus_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
-uses	./app/controllers/menus_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew' );$/;"	v
+uses	./app/controllers/menus_controller.php	/^    var $uses = array( 'Dgroup' );$/;"	v
 uses	./cake/basics.php	/^	function uses() {$/;"	f
 uses	./cake/console/libs/shell.php	/^			$uses = is_array($this->uses) ? $this->uses : array($this->uses);$/;"	v
 uses	./cake/console/libs/shell.php	/^		if ($this->uses === null || $this->uses === false) {$/;"	v

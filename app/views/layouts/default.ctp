@@ -19,8 +19,8 @@
 <div class="header">Head block</div>
 <div class="content">
 <div class="left">
-<?php echo $html->link( 'Главная', array( 'controller'=>'Menus', 'action' => 'index') );?><br/>
-<?php echo $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'mlist') );?><br/>
+<?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index') );?><br/>
+<?php echo $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index') );?><br/>
 <?php echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive') );?><br/>
 <?php echo $html->link( 'Гостевая', array( 'controller'=>'Gbook', 'action'=>'index') );?>
 </div>

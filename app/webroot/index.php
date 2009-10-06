@@ -97,7 +97,8 @@
 	if (isset($_GET['url']) && $_GET['url'] === 'favicon.ico') {
 		return;
 	} else {
-        if ( is_null( $_GET['url'] ) ) $url = 'menus';
+        if ( is_null( $_GET['url'] ) ) $url = 'Mains';
+        if( $_GET['url'] =='admin' ) $url = 'admin/Mains';
 		$Dispatcher = new Dispatcher();
 		$Dispatcher->dispatch($url);
 	}
