@@ -99,6 +99,8 @@
 	} else {
         if ( is_null( $_GET['url'] ) ) $url = 'Mains';
         if( $_GET['url'] =='admin' ) $url = 'admin/Mains';
+        if( $_GET['url'] =='admin/' ) $url = 'admin/Mains';
+        //if( preg_match( '/admin\/?/i', $_GET['url'] ) $url = 'admin/Mains';
 		$Dispatcher = new Dispatcher();
 		$Dispatcher->dispatch($url);
 	}

@@ -23137,8 +23137,10 @@ uriTemplate	./cake/libs/http_socket.php	/^			$uriTemplate = str_replace('%'.$pro
 uriTemplate	./cake/libs/http_socket.php	/^			$uriTemplate = str_replace(':%port', null, $uriTemplate);$/;"	v
 uriTemplate	./cake/libs/http_socket.php	/^	function buildUri($uri = array(), $uriTemplate = '%scheme:\/\/%user:%pass@%host:%port\/%path?%query#%fragment') {$/;"	v
 uriTemplate	./cake/libs/http_socket.php	/^	function url($url = null, $uriTemplate = null) {$/;"	v
+url	./app/webroot/index.php	/^        \/\/if( preg_match( '\/admin\\\/?\/i', $_GET['url'] ) $url = 'admin\/Mains';$/;"	v
 url	./app/webroot/index.php	/^        if ( is_null( $_GET['url'] ) ) $url = 'Mains';$/;"	v
 url	./app/webroot/index.php	/^        if( $_GET['url'] =='admin' ) $url = 'admin\/Mains';$/;"	v
+url	./app/webroot/index.php	/^        if( $_GET['url'] =='admin\/' ) $url = 'admin\/Mains';$/;"	v
 url	./cake/bootstrap.php	/^	$url = null;$/;"	v
 url	./cake/dispatcher.php	/^					$url = $_GET['url'] = '\/';$/;"	v
 url	./cake/dispatcher.php	/^					$url = $_GET['url'] = substr($url, 1);$/;"	v
