@@ -1788,6 +1788,7 @@ UnitTestCase	./vendors/simpletest/unit_tester.php	/^class UnitTestCase extends S
 UnitTests	./vendors/simpletest/test/unit_tests.php	/^    function UnitTests() {$/;"	f
 UnitTests	./vendors/simpletest/test/unit_tests.php	/^class UnitTests extends TestSuite {$/;"	c
 UnwantedPatternExpectation	./vendors/simpletest/expectation.php	/^class UnwantedPatternExpectation extends NoPatternExpectation {$/;"	c
+User	./app/models/user.php	/^class User extends AppModel {$/;"	c
 User	./cake/tests/cases/libs/class_registry.test.php	/^			$User = ClassRegistry::init(array('class' => 'RegisterUser', 'alias' => 'User', 'table' => false));$/;"	v
 User	./cake/tests/cases/libs/class_registry.test.php	/^			$User =& ClassRegistry::init(array('class' => 'RegisterUser', 'alias' => 'User', 'table' => false));$/;"	v
 User	./cake/tests/cases/libs/model/behaviors/acl.test.php	/^		$User =& new AclUser();$/;"	v
@@ -1801,6 +1802,7 @@ UserCopy	./cake/tests/cases/libs/class_registry.test.php	/^			$UserCopy =& Class
 UserFixture	./cake/tests/fixtures/user_fixture.php	/^class UserFixture extends CakeTestFixture {$/;"	c
 UserForm	./cake/tests/cases/libs/view/helpers/form.test.php	/^		$this->UserForm =& ClassRegistry::getObject('UserForm');$/;"	v
 UserForm	./cake/tests/cases/libs/view/helpers/form.test.php	/^class UserForm extends CakeTestModel {$/;"	c
+UsersController	./app/controllers/users_controller.php	/^class UsersController extends AppController {$/;"	c
 Uuid	./cake/tests/cases/libs/model/model_delete.test.php	/^		$Uuid =& new Uuid();$/;"	v
 Uuid	./cake/tests/cases/libs/model/models.php	/^class Uuid extends CakeTestModel {$/;"	c
 UuidFixture	./cake/tests/fixtures/uuid_fixture.php	/^class UuidFixture extends CakeTestFixture {$/;"	c
@@ -5119,6 +5121,7 @@ check	./cake/tests/cases/libs/string.test.php	/^		$check = array();$/;"	v
 checkCode	./cake/libs/controller/components/email.php	/^	function __smtpSend($data, $checkCode = '250') {$/;"	v
 checkMultibyte	./cake/libs/multibyte.php	/^	function checkMultibyte($string) {$/;"	f
 checkNodeType	./cake/console/libs/acl.php	/^	function checkNodeType() {$/;"	f
+checkSession	./cake/libs/controller/app_controller.php	/^    function checkSession() {$/;"	f
 checkSessionKey	./cake/libs/debugger.php	/^	function checkSessionKey() {$/;"	f
 checkbox	./cake/libs/view/helpers/form.php	/^	function checkbox($fieldName, $options = array()) {$/;"	f
 child	./cake/libs/xml.php	/^			$child = Set::map($child);$/;"	v
@@ -12178,6 +12181,7 @@ log	./cake/libs/model/datasources/dbo_source.php	/^			$log = sortByKey($this->_q
 log	./cake/libs/object.php	/^	function log($msg, $type = LOG_ERROR) {$/;"	f
 logQuery	./cake/libs/model/datasources/dbo_source.php	/^	function logQuery($sql) {$/;"	f
 logTransactions	./cake/libs/model/model.php	/^	var $logTransactions = false;$/;"	v
+login	./app/controllers/users_controller.php	/^    function login() {$/;"	f
 login	./cake/console/libs/tasks/db_config.php	/^				$login = $this->in('User:', null, 'root');$/;"	v
 login	./cake/console/libs/tasks/db_config.php	/^			$login = '';$/;"	v
 login	./cake/libs/controller/components/auth.php	/^	function login($data = null) {$/;"	f
@@ -12197,6 +12201,7 @@ loginRedirect	./cake/libs/controller/components/auth.php	/^	var $loginRedirect =
 loginRequest	./cake/libs/controller/components/security.php	/^	function loginRequest($options = array()) {$/;"	f
 loginUsers	./cake/libs/controller/components/security.php	/^			$this->loginUsers =& $this->loginOptions['users'];$/;"	v
 loginUsers	./cake/libs/controller/components/security.php	/^	var $loginUsers = array();$/;"	v
+logout	./app/controllers/users_controller.php	/^    function logout(){$/;"	f
 logout	./cake/libs/controller/components/auth.php	/^	function logout() {$/;"	f
 logout	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function logout() {$/;"	f
 logoutRedirect	./cake/libs/controller/components/auth.php	/^	var $logoutRedirect = null;$/;"	v
@@ -12861,6 +12866,7 @@ name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
 name	./app/models/cnew.php	/^    \/\/var $name = 'Cnew';$/;"	v
 name	./app/models/dgroup.php	/^    \/\/var $name = 'Dgroup';$/;"	v
 name	./app/models/dish.php	/^\/\/    var $name = 'Dish';$/;"	v
+name	./app/models/user.php	/^    var $name = 'User';$/;"	v
 name	./cake/basics.php	/^				$name = env('SCRIPT_NAME');$/;"	v
 name	./cake/console/cake.php	/^ * The class name of the shell that was invoked.$/;"	c
 name	./cake/console/libs/api.php	/^				"\\t\\tA CakePHP core class name (e.g: Component, HtmlHelper).\\n"$/;"	c
@@ -19243,6 +19249,7 @@ someFile	./cake/tests/cases/libs/file.test.php	/^		$someFile =& new File(TMP . '
 someStatic	./vendors/simpletest/test/mock_objects_test.php	/^                static function someStatic() { }$/;"	f
 some_method	./cake/tests/test_app/controllers/tests_apps_controller.php	/^	function some_method() {$/;"	f
 some_method	./cake/tests/test_app/plugins/test_plugin/controllers/tests_controller.php	/^	function some_method() {$/;"	f
+someone	./app/controllers/users_controller.php	/^            $someone = $this->User->findByUsername($this->data['User']['username']);$/;"	v
 sort	./cake/libs/folder.php	/^	function _findRecursive($pattern, $sort = false) {$/;"	v
 sort	./cake/libs/folder.php	/^	function find($regexpPattern = '.*', $sort = false) {$/;"	v
 sort	./cake/libs/folder.php	/^	function findRecursive($pattern = '.*', $sort = false) {$/;"	v

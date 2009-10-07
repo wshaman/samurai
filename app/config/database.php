@@ -96,6 +96,7 @@ class DATABASE_CONFIG {
 		'login' => 'root',
 		'password' => 'root',
 		'database' => 'db002',
+        'encoding' => 'utf8',
 		'prefix' => '',
 	);
 }

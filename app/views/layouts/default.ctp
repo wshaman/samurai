@@ -18,19 +18,26 @@
 <body>
 <div class="header">Head block</div>
 <div class="content">
-<div class="left">
-<?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index') );?><br/>
-<?php echo $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index') );?><br/>
-<?php echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive') );?><br/>
-<?php echo $html->link( 'Гостевая', array( 'controller'=>'Gbook', 'action'=>'index') );?>
-</div>
-<div class="right"><div class="cart" id="cart">Cart will be here</div></div>
-<div class="main" align="center"><div class="menupart">Menu</div>
-<NOSCRIPT><h1>Для нормальной работы сайта необходимо включить JavaScript в Вашем браузере</h1></NOSCRIPT>
-<?php echo $content_for_layout ?>
-</div>
+    <div class="left" align="center">
+    <div class="inner"><h3>Заказ он-лайн</h3>Телефон доставки:<br/>XX-XX-XX</div>
+    </div>
+    <div class="right"><div class="inner"><h3>Корзина</h3></div><div id="cart">Cart will be here</div></div>
+    <div class="main" align="center"><div class="menupart">
+    <?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index'), array( 'class'=>'item_main' )  );
+    echo "<span class=\"span_item\">".$html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index'), array( 'class'=>'item_menu' ) )."</span>";
+    echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive'), array( 'class'=>'item_news' )  );
+    echo $html->link( 'Гостевая', array( 'controller'=>'Gbook', 'action'=>'index'), array( 'class'=>'item_gbook' )  );?>
+    </div>
+    <div class="middle" align="center">
+    <NOSCRIPT><h1>Для нормальной работы сайта необходимо включить JavaScript в Вашем браузере</h1></NOSCRIPT>
+    <?php echo $content_for_layout ?>
+    </div>
+    </div>
+    </div>
 </div>
 
-<!--div id="footer">...</div-->
+<div class="footer"><br/>Samurai, 2009</div>
+
+
 </body>
 </html>

@@ -36,5 +36,11 @@
  * @subpackage    cake.cake.libs.controller
  */
 class AppController extends Controller {
+    function checkSession() {
+        if (!$this->Session->check('User')) {
+            $this->redirect('/users/login');
+            exit();
+        }
+    }
 }
 ?>
