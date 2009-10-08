@@ -20,5 +20,13 @@ class Dish extends AppModel {
     function getAction(){
         return $this->find('all');
     }
+
+    function getNameByID($id=NULL){
+        if( is_null( $id )  ) return 'ничегошка';
+        $this->unbindModel( 'Dgroup' );
+        $r = $this->findById( (int) $id );
+//        var_dump( $r );
+        return $r['Dish']['name'];
+    }
 }
 ?>

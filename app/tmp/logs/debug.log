@@ -672,3 +672,6 @@
 2009-10-07 23:43:13 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 100]
 2009-10-07 23:43:13 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 101]
 2009-10-07 23:43:13 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 102]
+2009-10-08 20:56:28 Notice: Notice (8): Undefined variable: cart in [APP/controllers/mains_controller.php, line 37]
+2009-10-08 21:03:17 Notice: Notice (8): Undefined variable: cart in [APP/controllers/mains_controller.php, line 37]
+2009-10-08 21:42:16 Notice: Notice (8): Undefined index: num in [APP/views/mains/ajax_cart.ctp, line 11]

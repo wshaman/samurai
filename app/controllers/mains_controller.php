@@ -1,7 +1,7 @@
 <?php
 class MainsController extends AppController {
     //var $uses = array( 'Dgroup', 'Cnew', 'Cart' );
-    var $uses = array( 'Dgroup', 'Cnew' );
+    var $uses = array( 'Dgroup', 'Cnew', 'Dish' );
     var $helpers = array('Html','Ajax','Javascript');
     var $components = array( 'RequestHandler' );
 
@@ -25,12 +25,15 @@ class MainsController extends AppController {
 
 
     function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){
+        $cart = $this->Session->read( 'cart' );
         if( $trade_id > 0 ){
-            if( isset( $_SESSION['cart'][$trade_id][$half] ) ){
-                $_SESSION['cart'][$trade_id][$half]['num'] += $trade_num;   
-            }
+            if( isset( $cart[$trade_id][$half] ) ){
+                $cart[$trade_id][$half]['num'] += $trade_num;   
+            } else 
+                $cart[$trade_id][$half]['num'] = $trade_num;   
+            $cart[$trade_id][$half]['name'] = $this->Dish->getNameByID( $trade_id );
+            $this->Session->write( 'cart', $cart );
         }
-        $cart = ( isset( $_SESSION['cart'] ) ) ? $_SESSION['cart'] : 'empty';
         $this->set( 'cart', $cart );
     }
 }

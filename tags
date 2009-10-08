@@ -5018,7 +5018,7 @@ caption	./cake/libs/view/helpers/form.php	/^				$caption = trim($caption, '\/');
 caption	./cake/libs/view/helpers/form.php	/^			$caption = __('Submit', true);$/;"	v
 capture_new_classes	./vendors/simpletest/autorun.php	/^function capture_new_classes() {$/;"	f
 cards	./cake/libs/validation.php	/^		$cards = array('all' => array('amex' => '\/^3[4|7]\\\\d{13}$\/',$/;"	v
-cart	./app/controllers/mains_controller.php	/^        $cart = ( isset( $_SESSION['cart'] ) ) ? $_SESSION['cart'] : 'empty';$/;"	v
+cart	./app/controllers/mains_controller.php	/^        $cart = $this->Session->read( 'cart' );$/;"	v
 cascade	./cake/libs/model/behavior.php	/^	function beforeDelete(&$model, $cascade = true) { }$/;"	v
 cascade	./cake/libs/model/model.php	/^			if ($data['dependent'] === true && $cascade === true) {$/;"	v
 cascade	./cake/libs/model/model.php	/^	function del($id = null, $cascade = true) {$/;"	v
@@ -10345,6 +10345,7 @@ getName	./vendors/simpletest/extensions/pear_test_case.php	/^        function ge
 getName	./vendors/simpletest/selector.php	/^    function getName() {$/;"	f
 getName	./vendors/simpletest/tag.php	/^    function getName() {$/;"	f
 getName	./vendors/simpletest/xml.php	/^    function getName() {$/;"	f
+getNameByID	./app/models/dish.php	/^    function getNameByID($id=NULL){$/;"	f
 getNamedElements	./cake/libs/router.php	/^	function getNamedElements($params, $controller = null, $action = null) {$/;"	f
 getNamedExpressions	./cake/libs/router.php	/^	function getNamedExpressions() {$/;"	f
 getNewCookies	./vendors/simpletest/http.php	/^    function getNewCookies() {$/;"	f
@@ -15342,6 +15343,7 @@ quotedAlias	./cake/libs/model/datasources/dbo_source.php	/^		$quotedAlias = $thi
 quotes	./cake/tests/lib/cake_test_case.php	/^							$quotes = '"?';$/;"	v
 quotes	./cake/tests/lib/cake_test_case.php	/^						$quotes = '"';$/;"	v
 r	./app/controllers/dishes_controller.php	/^\/*        $r = $this->Dish->getAction( );$/;"	v
+r	./app/models/dish.php	/^        $r = $this->findById( (int) $id );$/;"	v
 r	./cake/basics.php	/^			$r = array_merge($r, $a);$/;"	v
 r	./cake/basics.php	/^		$r = array();$/;"	v
 r	./cake/basics.php	/^	function r($search, $replace, $subject) {$/;"	f
@@ -23534,7 +23536,7 @@ users	./cake/tests/cases/libs/model/model_write.test.php	/^		$users = $User->fin
 users	./cake/tests/cases/libs/model/model_write.test.php	/^		$users = $User->find('all',array('order' => 'User.uid'));$/;"	v
 uses	./app/controllers/cnews_controller.php	/^    var $uses = array( 'Cnew' );$/;"	v
 uses	./app/controllers/mains_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
-uses	./app/controllers/mains_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew' );$/;"	v
+uses	./app/controllers/mains_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew', 'Dish' );$/;"	v
 uses	./app/controllers/menus_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
 uses	./app/controllers/menus_controller.php	/^    var $uses = array( 'Dgroup' );$/;"	v
 uses	./cake/basics.php	/^	function uses() {$/;"	f
