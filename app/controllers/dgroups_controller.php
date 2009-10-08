@@ -5,8 +5,12 @@ class DgroupsController extends AppController {
     var $helpers = array('Html','Ajax','Javascript');
     var $components = array( 'RequestHandler' );
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allowedActions = array('index' );
+    }
+
     function index(){
-        echo "sdsd";
     }
     function admin_index(){
         $this->layout =  "admin";

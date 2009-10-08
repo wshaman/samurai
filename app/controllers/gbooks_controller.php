@@ -1,6 +1,11 @@
 <?php
 class GbooksController extends AppController {
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allowedActions = array('index', 'add', 'save' );
+    }
+
     function index(){
         $this->set( 'par', $this->Gbook->getRecent(5) );
     }

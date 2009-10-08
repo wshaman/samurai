@@ -4,6 +4,11 @@ class CnewsController extends AppController {
     var $helpers = array('Html','Ajax','Javascript');
     var $components = array( 'RequestHandler' );
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allowedActions = array('index' );
+    }
+
     function admin_index(){
         $this->layout =  'admin';
         $this->set( 'news', $this->Cnew->find( 'all' ) );

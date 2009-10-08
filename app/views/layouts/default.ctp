@@ -16,6 +16,7 @@
 <?php echo $scripts_for_layout ?>
 </head>
 <body>
+<?php   $session->flash('auth'); ?>
 <div class="header">Head block</div>
 <div class="content">
     <div class="left" align="center">
@@ -41,3 +42,15 @@
 
 </body>
 </html>
+<script type="text/javascript">
+    function onload(){
+        <?php echo 
+             $ajax->remoteFunction(
+                 array(
+                 'url' => array( 'controller' => 'mains', 'action' => 'ajax_cart', 0, 0 ),
+                 'update' => 'cart'
+                 )
+             );
+ ?>
+    }
+</script>

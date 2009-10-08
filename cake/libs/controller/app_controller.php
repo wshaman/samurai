@@ -36,6 +36,17 @@
  * @subpackage    cake.cake.libs.controller
  */
 class AppController extends Controller {
+    var $components = array('Acl', 'Auth');
+
+    function beforeFilter() {
+        //Configure AuthComponent
+        $this->Auth->authorize = 'actions';
+        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
+        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
+        $this->Auth->loginRedirect = array('controller' => 'mains', 'action' => 'index');
+        parent::beforeFilter();
+    }
+
     function checkSession() {
         if (!$this->Session->check('User')) {
             $this->redirect('/users/login');

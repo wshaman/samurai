@@ -27,15 +27,3 @@
     }
 ?>
 </div>
-<script type="text/javascript">
-    function onload(){
-        <?php echo 
-             $ajax->remoteFunction(
-                 array(
-                 'url' => array( 'controller' => 'mains', 'action' => 'ajax_cart', 0, 0 ),
-                 'update' => 'cart'
-                 )
-             );
- ?>
-    }
-</script>

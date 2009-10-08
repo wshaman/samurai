@@ -428,6 +428,8 @@ ControllerPaginateModel	./cake/tests/cases/libs/controller/controller.test.php	/
 ControllerPost	./cake/tests/cases/libs/controller/controller.test.php	/^class ControllerPost extends CakeTestModel {$/;"	c
 ControllerTask	./cake/console/libs/tasks/controller.php	/^class ControllerTask extends Shell {$/;"	c
 ControllerTest	./cake/tests/cases/libs/controller/controller.test.php	/^class ControllerTest extends CakeTestCase {$/;"	c
+Controllers	./app/controllers/users_controller.php	/^$Controllers = Configure::listObjects('controller');$/;"	v
+Controllers	./app/controllers/users_controller.php	/^$Controllers = array_merge($Controllers, $Plugins);$/;"	v
 CookieComponent	./cake/libs/controller/components/cookie.php	/^class CookieComponent extends Object {$/;"	c
 CookieComponentTest	./cake/tests/cases/libs/controller/components/cookie.test.php	/^class CookieComponentTest extends CakeTestCase {$/;"	c
 CookieComponentTestController	./cake/tests/cases/libs/controller/components/cookie.test.php	/^class CookieComponentTestController extends Controller {$/;"	c
@@ -681,10 +683,19 @@ FruitsUuidTag	./cake/tests/cases/libs/model/models.php	/^class FruitsUuidTag ext
 FruitsUuidTagFixture	./cake/tests/fixtures/fruits_uuid_tag_fixture.php	/^class FruitsUuidTagFixture extends CakeTestFixture {$/;"	c
 Gbook	./app/models/gbook.php	/^class Gbook extends AppModel {$/;"	c
 GbooksController	./app/controllers/gbooks_controller.php	/^class GbooksController extends AppController {$/;"	c
+Group	./app/models/group.php	/^class Group extends AppModel {$/;"	c
+Group	./app/tests/cases/models/group.test.php	/^		$this->Group =& ClassRegistry::init('Group');$/;"	v
+Group	./app/tests/cases/models/group.test.php	/^	var $Group = null;$/;"	v
 Group	./cake/tests/cases/libs/model/datasources/dbo_source.test.php	/^class Group extends CakeTestModel {$/;"	c
+GroupFixture	./app/tests/fixtures/group_fixture.php	/^class GroupFixture extends CakeTestFixture {$/;"	c
 GroupTest	./vendors/simpletest/test_case.php	/^class GroupTest extends TestSuite { }$/;"	c
+GroupTestCase	./app/tests/cases/models/group.test.php	/^class GroupTestCase extends CakeTestCase {$/;"	c
 GroupUpdateAll	./cake/tests/cases/libs/model/models.php	/^class GroupUpdateAll extends CakeTestModel {$/;"	c
 GroupUpdateAllFixture	./cake/tests/fixtures/group_update_all_fixture.php	/^class GroupUpdateAllFixture extends CakeTestFixture {$/;"	c
+Groups	./app/tests/cases/controllers/groups_controller.test.php	/^		$this->Groups = new TestGroups();$/;"	v
+Groups	./app/tests/cases/controllers/groups_controller.test.php	/^	var $Groups = null;$/;"	v
+GroupsController	./app/controllers/groups_controller.php	/^class GroupsController extends AppController {$/;"	c
+GroupsControllerTest	./app/tests/cases/controllers/groups_controller.test.php	/^class GroupsControllerTest extends CakeTestCase {$/;"	c
 HELPERS	./cake/config/paths.php	/^	define('HELPERS', VIEWS.'helpers'.DS);$/;"	d
 HELPER_TESTS	./cake/config/paths.php	/^	define('HELPER_TESTS', TESTS.'cases'.DS.'views'.DS.'helpers'.DS);$/;"	d
 HOUR	./cake/basics.php	/^	define('HOUR', 60 * MINUTE);$/;"	d
@@ -1006,6 +1017,9 @@ PluginUser	./cake/tests/cases/libs/class_registry.test.php	/^			$PluginUser = Cl
 PluginUser	./cake/tests/cases/libs/class_registry.test.php	/^			$PluginUser =& ClassRegistry::init(array('class' => 'RegistryPlugin.RegisterUser', 'alias' => 'RegistryPluginUser', 'table' => false));$/;"	v
 PluginUserCopy	./cake/tests/cases/libs/class_registry.test.php	/^			$PluginUserCopy = ClassRegistry::getObject('RegistryPluginUser');$/;"	v
 PluginUserCopy	./cake/tests/cases/libs/class_registry.test.php	/^			$PluginUserCopy =& ClassRegistry::getObject('RegistryPluginUser');$/;"	v
+Plugins	./app/controllers/users_controller.php	/^$Plugins = $Plugins[0];$/;"	v
+Plugins	./app/controllers/users_controller.php	/^$Plugins = $folder->read();$/;"	v
+Plugins	./app/controllers/users_controller.php	/^$Plugins = $this->_getPluginControllerNames();$/;"	v
 PluginsComponentComponent	./cake/tests/test_app/plugins/test_plugin/controllers/components/plugins_component.php	/^class PluginsComponentComponent extends Object {$/;"	c
 Portfolio	./cake/tests/cases/libs/model/model_delete.test.php	/^		$Portfolio =& new Portfolio();$/;"	v
 Portfolio	./cake/tests/cases/libs/model/model_read.test.php	/^		$Portfolio =& new Portfolio();$/;"	v
@@ -1464,6 +1478,7 @@ TestErrorHandler	./cake/tests/cases/libs/error.test.php	/^		$TestErrorHandler = 
 TestErrorHandler	./cake/tests/cases/libs/error.test.php	/^		$TestErrorHandler =& new TestErrorHandler('error404', array('message' => 'Page not found'));$/;"	v
 TestErrorHandler	./cake/tests/cases/libs/error.test.php	/^class TestErrorHandler extends ErrorHandler {$/;"	c
 TestFakeModel	./cake/tests/cases/libs/model/model_integration.test.php	/^		$TestFakeModel =& new ArticleFeatured(array('table' => false));$/;"	v
+TestGroups	./app/tests/cases/controllers/groups_controller.test.php	/^class TestGroups extends GroupsController {$/;"	c
 TestHeadersReadFromFramesetByDefault	./vendors/simpletest/test/frames_test.php	/^    function TestHeadersReadFromFramesetByDefault() {$/;"	f
 TestJavascriptHelper	./cake/tests/cases/libs/view/helpers/ajax.test.php	/^class TestJavascriptHelper extends JavascriptHelper {$/;"	c
 TestJavascriptObject	./cake/tests/cases/libs/view/helpers/javascript.test.php	/^class TestJavascriptObject {$/;"	c
@@ -2906,6 +2921,7 @@ _get	./cake/tests/cases/dispatcher.test.php	/^		$this->_get = $_GET;$/;"	v
 _get	./cake/tests/cases/libs/code_coverage_manager.test.php	/^		$this->_get = $_GET;$/;"	v
 _getAcoKeys	./cake/libs/controller/components/acl.php	/^	function _getAcoKeys($keys) {$/;"	f
 _getAttributes	./vendors/simpletest/xml.php	/^    function _getAttributes() {$/;"	f
+_getClassMethods	./app/controllers/users_controller.php	/^function _getClassMethods($ctrlName = null) {$/;"	f
 _getCommonPath	./vendors/simpletest/authentication.php	/^    function _getCommonPath($first, $second) {$/;"	f
 _getCompoundedRegex	./vendors/simpletest/parser.php	/^    function _getCompoundedRegex() {$/;"	f
 _getCss	./vendors/simpletest/reporter.php	/^    function _getCss() {$/;"	f
@@ -2929,6 +2945,10 @@ _getParameterSignatures	./vendors/simpletest/reflection_php5.php	/^    function 
 _getParsedTags	./vendors/simpletest/parser.php	/^    function _getParsedTags() {$/;"	f
 _getPattern	./vendors/simpletest/expectation.php	/^    function _getPattern() {$/;"	f
 _getPerlMatchingFlags	./vendors/simpletest/parser.php	/^    function _getPerlMatchingFlags() {$/;"	f
+_getPluginControllerName	./app/controllers/users_controller.php	/^function _getPluginControllerName($ctrlName = null) {$/;"	f
+_getPluginControllerNames	./app/controllers/users_controller.php	/^function _getPluginControllerNames() {$/;"	f
+_getPluginControllerPath	./app/controllers/users_controller.php	/^function _getPluginControllerPath($ctrlName = null) {$/;"	f
+_getPluginName	./app/controllers/users_controller.php	/^function _getPluginName($ctrlName = null) {$/;"	f
 _getPrimaryKey	./cake/libs/model/datasources/dbo/dbo_mssql.php	/^	function _getPrimaryKey($model) {$/;"	f
 _getPublicNameFromIndex	./vendors/simpletest/frames.php	/^    function _getPublicNameFromIndex($subject) {$/;"	f
 _getRecursiveFileList	./cake/tests/lib/test_manager.php	/^	function &_getRecursiveFileList($directory = '.', $fileTestFunction) {$/;"	f
@@ -3040,6 +3060,7 @@ _isModeEnd	./vendors/simpletest/parser.php	/^    function _isModeEnd($mode) {$/;
 _isOn	./vendors/simpletest/reporter.php	/^    function _isOn() {$/;"	f
 _isOnlyAscii	./vendors/simpletest/encoding.php	/^    function _isOnlyAscii($ascii) {$/;"	f
 _isOptional	./vendors/simpletest/reflection_php5.php	/^    function _isOptional($parameter) {$/;"	f
+_isPlugin	./app/controllers/users_controller.php	/^function _isPlugin($ctrlName = null) {$/;"	f
 _isRelativePath	./vendors/simpletest/url.php	/^    function _isRelativePath($path) {$/;"	f
 _isSingle	./vendors/simpletest/web_tester.php	/^    function _isSingle($value) {$/;"	f
 _isSpecialMode	./vendors/simpletest/parser.php	/^    function _isSpecialMode($mode) {$/;"	f
@@ -3736,6 +3757,7 @@ accepts	./cake/libs/controller/components/request_handler.php	/^		$accepts = arr
 accepts	./cake/libs/controller/components/request_handler.php	/^	function accepts($type = null) {$/;"	f
 achieved	./vendors/simpletest/tag.php	/^        $achieved = array();$/;"	v
 aclConfig	./cake/libs/controller/components/acl.php	/^		$aclConfig = $this->config;$/;"	v
+aco	./app/controllers/users_controller.php	/^$aco =& $this->Acl->Aco;$/;"	v
 aco	./cake/console/libs/acl.php	/^			$aco = array($/;"	v
 aco	./cake/console/libs/acl.php	/^		$aco = ife(is_numeric($this->args[1]), intval($this->args[1]), $this->args[1]);$/;"	v
 aco	./cake/libs/controller/components/acl.php	/^		if ($aro == null || $aco == null) {$/;"	v
@@ -3808,6 +3830,8 @@ actions	./cake/libs/controller/components/acl.php	/^	function allow($aro, $aco, 
 actions	./cake/libs/controller/components/security.php	/^	function _requireMethod($method, $actions = array()) {$/;"	v
 activate	./cake/libs/controller/components/session.php	/^	function activate($base = null) {$/;"	f
 activate	./cake/libs/view/helpers/session.php	/^	function activate($base = null) {$/;"	f
+actsAs	./app/models/group.php	/^    var $actsAs = array('Acl' => array('requester'));$/;"	v
+actsAs	./app/models/user.php	/^    var $actsAs = array('Acl' => 'requester');$/;"	v
 actsAs	./cake/libs/model/db_acl.php	/^	var $actsAs = array('Tree' => 'nested');$/;"	v
 actsAs	./cake/libs/model/db_acl.php	/^	var $actsAs = null;$/;"	v
 actsAs	./cake/libs/model/model.php	/^	var $actsAs = null;$/;"	v
@@ -3824,6 +3848,7 @@ actsAs	./cake/tests/cases/libs/model/models.php	/^	var $actsAs = array();$/;"	v
 actsAs	./cake/tests/test_app/models/persister_one.php	/^	var $actsAs = array('PersisterOneBehavior');$/;"	v
 actsAs	./cake/tests/test_app/models/persister_two.php	/^	var $actsAs = array('PersisterOneBehavior');$/;"	v
 add	./app/controllers/gbooks_controller.php	/^    function add(){$/;"	f
+add	./app/controllers/groups_controller.php	/^	function add() {$/;"	f
 add	./cake/libs/folder.php	/^							$add = Folder::slashTerm($add);$/;"	v
 add	./cake/libs/folder.php	/^						$add = $stack[$i] . $entry;$/;"	v
 add	./cake/libs/model/schema.php	/^			$add = $diff;$/;"	v
@@ -3921,6 +3946,7 @@ admin_index	./app/controllers/dishes_controller.php	/^    function admin_index( 
 admin_index	./app/controllers/gbooks_controller.php	/^    function admin_index() {$/;"	f
 admin_index	./app/controllers/mains_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./cake/tests/cases/dispatcher.test.php	/^	function admin_index() {$/;"	f
+admin_login	./app/controllers/users_controller.php	/^    function admin_login(){$/;"	f
 admin_login	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function admin_login() {$/;"	f
 admin_new	./app/controllers/cnews_controller.php	/^    function admin_new( ) {$/;"	f
 admin_new	./app/controllers/dgroups_controller.php	/^    function admin_new(){$/;"	f
@@ -3971,6 +3997,7 @@ afterLayout	./cake/tests/cases/libs/view/view.test.php	/^	function afterLayout()
 afterRender	./cake/libs/view/helper.php	/^	function afterRender() {$/;"	f
 afterRender	./cake/libs/view/helpers/ajax.php	/^	function afterRender() {$/;"	f
 afterRender	./cake/libs/view/helpers/javascript.php	/^	function afterRender() {$/;"	f
+afterSave	./app/models/user.php	/^    function afterSave($created) {$/;"	f
 afterSave	./cake/libs/model/behavior.php	/^	function afterSave(&$model, $created) { }$/;"	f
 afterSave	./cake/libs/model/behaviors/acl.php	/^	function afterSave(&$model, $created) {$/;"	f
 afterSave	./cake/libs/model/behaviors/translate.php	/^	function afterSave(&$model, $created) {$/;"	f
@@ -4111,6 +4138,7 @@ app	./cake/console/libs/tasks/project.php	/^		$app = basename($dir);$/;"	v
 app	./cake/console/libs/tasks/project.php	/^		$app = basename($path);$/;"	v
 app	./cake/libs/controller/controller.php	/^						$app = Set::normalize($appVars[$var]);$/;"	v
 app	./cake/libs/i18n.php	/^					$app = $directory . DS . $lang . DS . $this->category . DS . 'core';$/;"	v
+appIndex	./app/controllers/users_controller.php	/^$appIndex = array_search('App', $Controllers);$/;"	v
 appModel	./cake/libs/class_registry.php	/^						$appModel = $plugin . 'AppModel';$/;"	v
 appModel	./cake/libs/class_registry.php	/^						$appModel = 'AppModel';$/;"	v
 appTest	./cake/tests/lib/code_coverage_manager.php	/^	var $appTest = false;$/;"	v
@@ -4174,6 +4202,7 @@ argv	./cake/tests/cases/console/libs/schema.test.php	/^	$argv = false;$/;"	v
 argv	./cake/tests/cases/console/libs/shell.test.php	/^	$argv = false;$/;"	v
 argv	./cake/tests/cases/console/libs/tasks/extract.test.php	/^	$argv = false;$/;"	v
 argv	./cake/tests/cases/console/libs/tasks/test.test.php	/^	$argv = false;$/;"	v
+aro	./app/models/user.php	/^            $aro = $node[0];$/;"	v
 aro	./cake/console/libs/acl.php	/^			$aro = array($/;"	v
 aro	./cake/console/libs/acl.php	/^		$aro = ife(is_numeric($this->args[0]), intval($this->args[0]), $this->args[0]);$/;"	v
 aroData	./cake/tests/cases/libs/model/behaviors/acl.test.php	/^		$aroData = array($/;"	v
@@ -4184,6 +4213,8 @@ aros	./cake/console/libs/templates/skel/config/sql/db_acl.php	/^	var $aros = arr
 aros	./cake/tests/cases/libs/controller/components/acl.test.php	/^		$aros = $this->Acl->Aro->find('list', array('order' => 'lft'));$/;"	v
 aros_acos	./app/config/sql/db_acl.php	/^	var $aros_acos = array($/;"	v
 aros_acos	./cake/console/libs/templates/skel/config/sql/db_acl.php	/^	var $aros_acos = array($/;"	v
+arr	./app/controllers/users_controller.php	/^$arr = String::tokenize($ctrlName, '\/');$/;"	v
+arr	./app/controllers/users_controller.php	/^$arr = array();$/;"	v
 arr	./cake/tests/cases/libs/view/helpers/time.test.php	/^		$arr = array(time(), strtotime('+1 days'), strtotime('+1 days'), strtotime('+0 days'));$/;"	v
 arr	./cake/tests/lib/code_coverage_manager.php	/^			$arr = array_reverse($arr, true);$/;"	v
 arr2	./cake/libs/set.php	/^	function merge($arr1, $arr2 = null) {$/;"	v
@@ -4490,6 +4521,7 @@ autoLink	./cake/libs/view/helpers/text.php	/^	function autoLink($text, $htmlOpti
 autoLinkEmails	./cake/libs/view/helpers/text.php	/^	function autoLinkEmails($text, $htmlOptions = array()) {$/;"	f
 autoLinkUrls	./cake/libs/view/helpers/text.php	/^	function autoLinkUrls($text, $htmlOptions = array()) {$/;"	f
 autoRedirect	./cake/libs/controller/components/auth.php	/^	var $autoRedirect = true;$/;"	v
+autoRender	./app/tests/cases/controllers/groups_controller.test.php	/^	var $autoRender = false;$/;"	v
 autoRender	./cake/libs/controller/controller.php	/^		$this->autoRender = false;$/;"	v
 autoRender	./cake/libs/controller/controller.php	/^	var $autoRender = true;$/;"	v
 autoRender	./cake/libs/view/view.php	/^	var $autoRender = true;$/;"	v
@@ -4587,6 +4619,7 @@ base	./vendors/simpletest/url.php	/^            $base = new SimpleUrl($base);$/;
 baseConfig	./cake/tests/cases/libs/http_socket.test.php	/^		$baseConfig = $this->Socket->config;$/;"	v
 baseConfig	./cake/tests/cases/libs/socket.test.php	/^		$baseConfig = $this->Socket->_baseConfig;$/;"	v
 baseDir	./cake/dispatcher.php	/^			$baseDir = preg_replace('\/^\\\/\/', '', dirname($base)) . '\/';$/;"	v
+baseMethods	./app/controllers/users_controller.php	/^$baseMethods = get_class_methods('Controller');$/;"	v
 basePaths	./cake/libs/configure.php	/^		$basePaths = array($/;"	v
 baseUrl	./cake/dispatcher.php	/^	function baseUrl() {$/;"	f
 baseUrl	./cake/tests/lib/test_manager.php	/^				$baseUrl = BASE;$/;"	v
@@ -4623,6 +4656,13 @@ beforeDelete	./cake/libs/model/behavior.php	/^	function beforeDelete(&$model, $c
 beforeDelete	./cake/libs/model/behaviors/tree.php	/^	function beforeDelete(&$Model) {$/;"	f
 beforeDelete	./cake/libs/model/model.php	/^	function beforeDelete($cascade = true) {$/;"	f
 beforeDelete	./cake/tests/cases/libs/model/behavior.test.php	/^	function beforeDelete(&$model, $cascade = true) {$/;"	f
+beforeFilter	./app/controllers/cnews_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./app/controllers/dgroups_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./app/controllers/gbooks_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./app/controllers/mains_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./app/controllers/menus_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./app/controllers/users_controller.php	/^    function beforeFilter() {$/;"	f
+beforeFilter	./cake/libs/controller/app_controller.php	/^    function beforeFilter() {$/;"	f
 beforeFilter	./cake/libs/controller/controller.php	/^	function beforeFilter() {$/;"	f
 beforeFilter	./cake/tests/cases/dispatcher.test.php	/^	function beforeFilter() {$/;"	f
 beforeFilter	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function beforeFilter() {$/;"	f
@@ -4675,6 +4715,7 @@ behaviorMethods	./cake/libs/model/model.php	/^		$behaviorMethods = array_keys($t
 behaviorPaths	./cake/libs/configure.php	/^	var $behaviorPaths = array();$/;"	v
 behaviors	./cake/libs/model/behavior.php	/^	function init($modelName, $behaviors = array()) {$/;"	v
 belongsTo	./app/models/dish.php	/^    var $belongsTo = 'Dgroup';$/;"	v
+belongsTo	./app/models/user.php	/^    var $belongsTo = array('Group');$/;"	v
 belongsTo	./cake/libs/model/db_acl.php	/^	var $belongsTo = array('Aco');$/;"	v
 belongsTo	./cake/libs/model/db_acl.php	/^	var $belongsTo = array('Aro', 'Aco');$/;"	v
 belongsTo	./cake/libs/model/model.php	/^	var $belongsTo = array();$/;"	v
@@ -4841,6 +4882,7 @@ buildPaths	./cake/libs/configure.php	/^	function buildPaths($paths) {$/;"	f
 buildRequestLine	./cake/libs/http_socket.php	/^	function buildRequestLine($request = array(), $versionToken = 'HTTP\/1.1') {$/;"	f
 buildStatement	./cake/libs/model/datasources/dbo_source.php	/^	function buildStatement($query, $model) {$/;"	f
 buildUri	./cake/libs/http_socket.php	/^	function buildUri($uri = array(), $uriTemplate = '%scheme:\/\/%user:%pass@%host:%port\/%path?%query#%fragment') {$/;"	f
+build_acl	./app/controllers/users_controller.php	/^function build_acl() {$/;"	f
 builder	./vendors/simpletest/browser.php	/^        $builder = &new SimplePageBuilder();$/;"	v
 builder	./vendors/simpletest/test/page_test.php	/^        $builder = &new PartialSimplePageBuilder();$/;"	v
 builder	./vendors/simpletest/test/page_test.php	/^        $builder = &new SimplePageBuilder();$/;"	v
@@ -5569,6 +5611,7 @@ components	./app/controllers/mains_controller.php	/^    var $components = array(
 components	./app/controllers/menus_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
 components	./cake/console/libs/tasks/controller.php	/^					$components = explode(',', $componentsListTrimmed);$/;"	v
 components	./cake/console/libs/tasks/controller.php	/^			$components = array();$/;"	v
+components	./cake/libs/controller/app_controller.php	/^    var $components = array('Acl', 'Auth');$/;"	v
 components	./cake/libs/controller/components/auth.php	/^	var $components = array('Session', 'RequestHandler');$/;"	v
 components	./cake/libs/controller/components/security.php	/^	var $components = array('RequestHandler', 'Session');$/;"	v
 components	./cake/libs/controller/controller.php	/^	var $components = array();$/;"	v
@@ -5993,6 +6036,9 @@ controllerName	./cake/console/libs/tasks/view.php	/^			$this->controllerName = I
 controllerName	./cake/console/libs/tasks/view.php	/^		$this->controllerName = $this->Controller->getName();$/;"	v
 controllerName	./cake/console/libs/tasks/view.php	/^	var $controllerName = null;$/;"	v
 controllerName	./cake/libs/error.php	/^		$controllerName = str_replace('Controller', '', $className);$/;"	v
+controllerNode	./app/controllers/users_controller.php	/^$controllerNode = $aco->node('controllers\/'.$ctrlName);$/;"	v
+controllerNode	./app/controllers/users_controller.php	/^$controllerNode = $aco->save();$/;"	v
+controllerNode	./app/controllers/users_controller.php	/^$controllerNode = $controllerNode[0];$/;"	v
 controllerObj	./cake/console/libs/tasks/view.php	/^		$controllerObj = & new $controllerClassName();$/;"	v
 controllerPath	./cake/console/libs/tasks/controller.php	/^		$controllerPath = $this->_controllerPath($controllerName);$/;"	v
 controllerPath	./cake/console/libs/tasks/view.php	/^			$this->controllerPath = Inflector::underscore($this->controllerName);$/;"	v
@@ -6191,6 +6237,8 @@ ctext	./cake/libs/set.php	/^						$ctext = array($context['key']);$/;"	v
 ctrlClass	./cake/dispatcher.php	/^			$ctrlClass = $this->__loadController($params);$/;"	v
 ctrlClass	./cake/dispatcher.php	/^		$ctrlClass = $ctrlClass . 'Controller';$/;"	v
 ctrlClass	./cake/dispatcher.php	/^		$ctrlClass = $this->__loadController($params);$/;"	v
+ctrlName	./app/controllers/users_controller.php	/^$ctrlName = substr($ctrlName, $num+1);$/;"	v
+ctrlclass	./app/controllers/users_controller.php	/^$ctrlclass = $ctrlName . 'Controller';$/;"	v
 curModel	./cake/libs/sanitize.php	/^				$curModel = null;$/;"	v
 curModel	./cake/libs/sanitize.php	/^				$curModel =& $model->{$name};$/;"	v
 curModel	./cake/libs/sanitize.php	/^				$curModel =& $model;$/;"	v
@@ -6231,6 +6279,9 @@ customValidationMethod	./cake/tests/cases/libs/model/models.php	/^	function cust
 customValidatorWithMessage	./cake/tests/cases/libs/model/models.php	/^	function customValidatorWithMessage($data) {$/;"	f
 customValidatorWithParams	./cake/tests/cases/libs/model/models.php	/^	function customValidatorWithParams($data, $validator, $or = true, $ignore_on_same = 'id') {$/;"	f
 d	./cake/libs/xml.php	/^		$d = '';$/;"	v
+data	./app/controllers/groups_controller.php	/^			$this->data = $this->Group->read(null, $id);$/;"	v
+data	./app/models/user.php	/^        $data = $this->data;$/;"	v
+data	./app/models/user.php	/^        if (empty($this->data)) $data = $this->read();$/;"	v
 data	./app/webroot/css.php	/^		$data = file_get_contents($path);$/;"	v
 data	./cake/basics.php	/^					$data = @file_get_contents($filename);$/;"	v
 data	./cake/basics.php	/^				$data = get_object_vars($data);$/;"	v
@@ -6803,6 +6854,7 @@ del	./cake/libs/controller/components/cookie.php	/^	function del($key) {$/;"	f
 del	./cake/libs/controller/components/session.php	/^	function del($name) {$/;"	f
 del	./cake/libs/model/model.php	/^	function del($id = null, $cascade = true) {$/;"	f
 del	./cake/libs/session.php	/^	function del($name) {$/;"	f
+delete	./app/controllers/groups_controller.php	/^	function delete($id = null) {$/;"	f
 delete	./cake/console/libs/acl.php	/^	function delete() {$/;"	f
 delete	./cake/libs/cache.php	/^	function delete($key) {$/;"	f
 delete	./cake/libs/cache.php	/^	function delete($key, $config = null) {$/;"	f
@@ -6875,6 +6927,7 @@ destroy	./cake/libs/controller/components/cookie.php	/^	function destroy() {$/;"
 destroy	./cake/libs/controller/components/session.php	/^	function destroy() {$/;"	f
 destroy	./cake/libs/session.php	/^	function destroy() {$/;"	f
 detach	./cake/libs/model/behavior.php	/^	function detach($name) {$/;"	f
+didCD	./app/controllers/users_controller.php	/^$didCD = $folder->cd(APP . 'plugins'. DS . $pluginName . DS . 'controllers');$/;"	v
 diff	./cake/libs/model/behaviors/tree.php	/^				$diff = $node[$right] - $node[$left] + 1;$/;"	v
 diff	./cake/libs/model/behaviors/tree.php	/^		$diff = $data[$right] - $data[$left] + 1;$/;"	v
 diff	./cake/libs/model/datasources/dbo_source.php	/^							$diff = Set::diff($dataAssocTmp, $mergeAssocTmp);$/;"	v
@@ -7092,6 +7145,7 @@ edge	./cake/libs/model/behaviors/tree.php	/^				$edge = $this->__getMax($Model, 
 edge	./cake/libs/model/behaviors/tree.php	/^			$edge = $this->__getMax($Model, $scope, $right, $recursive);$/;"	v
 edge	./cake/libs/model/behaviors/tree.php	/^		$edge = $this->__getMax($Model, $scope, $right, $recursive);$/;"	v
 edge	./cake/libs/model/behaviors/tree.php	/^		$edge = $this->__getMax($Model, $scope, $right, $recursive, $created);$/;"	v
+edit	./app/controllers/groups_controller.php	/^	function edit($id = null) {$/;"	f
 editor	./cake/libs/view/helpers/ajax.php	/^	function editor($id, $url, $options = array()) {$/;"	f
 editorOptions	./cake/libs/view/helpers/ajax.php	/^	var $editorOptions = array($/;"	v
 effectMap	./cake/libs/view/helpers/js.php	/^		$this->effectMap = array_combine($/;"	v
@@ -7213,6 +7267,7 @@ endQuote	./cake/libs/model/datasources/dbo/dbo_postgres.php	/^	var $endQuote = '
 endQuote	./cake/libs/model/datasources/dbo/dbo_sqlite.php	/^	var $endQuote = '"';$/;"	v
 endQuote	./cake/libs/model/datasources/dbo/dbo_sybase.php	/^	var $endQuote = "";$/;"	v
 endQuote	./cake/libs/model/datasources/dbo_source.php	/^			if (!empty($this->endQuote) && $this->endQuote == $this->startQuote) {$/;"	v
+endTest	./app/tests/cases/controllers/groups_controller.test.php	/^	function endTest() {$/;"	f
 endTest	./cake/tests/cases/console/libs/acl.test.php	/^	function endTest() {$/;"	f
 endTest	./cake/tests/cases/console/libs/api.test.php	/^	function endTest() {$/;"	f
 endTest	./cake/tests/cases/console/libs/schema.test.php	/^	function endTest() {$/;"	f
@@ -7478,6 +7533,7 @@ expectation	./vendors/simpletest/test/web_tester_test.php	/^        $expectation
 expectation	./vendors/simpletest/web_tester.php	/^        $expectation = $this->_getExpectation();$/;"	v
 expectations	./cake/tests/cases/libs/http_socket.test.php	/^			$expectations = array_merge($expectations, $test['expectations']);$/;"	v
 expectations	./cake/tests/cases/libs/http_socket.test.php	/^		$expectations = array();$/;"	v
+expected	./app/tests/cases/models/group.test.php	/^		$expected = array('Group' => array($/;"	v
 expected	./cake/libs/magic_db.php	/^			$expected = $magic[2];$/;"	v
 expected	./cake/libs/magic_db.php	/^		$expected = null;$/;"	v
 expected	./cake/tests/cases/basics.test.php	/^		$expected = "<pre>Array\\n(\\n    [this] => is\\n    [a] => test\\n)\\n<\/pre>";$/;"	v
@@ -9335,6 +9391,7 @@ fieldOp	./cake/libs/controller/controller.php	/^				$fieldOp = strtoupper(trim($
 fieldOp	./cake/libs/controller/controller.php	/^				if ($exclusive && $fieldOp === false) {$/;"	v
 fieldSuffix	./cake/libs/view/view.php	/^	var $fieldSuffix = null;$/;"	v
 fieldValue	./cake/libs/model/model.php	/^						$fieldValue = $this->deconstruct($fieldName, $fieldValue);$/;"	v
+fields	./app/tests/fixtures/group_fixture.php	/^	var $fields = array($/;"	v
 fields	./cake/console/libs/tasks/model.php	/^			$fields = $tempModel->schema();$/;"	v
 fields	./cake/console/libs/tasks/model.php	/^		$fields = $model->schema();$/;"	v
 fields	./cake/console/libs/tasks/view.php	/^			$fields = array();$/;"	v
@@ -9574,6 +9631,8 @@ fieldset	./cake/libs/view/helpers/form.php	/^	var $fieldset = array('fields' => 
 fieldsetClass	./cake/libs/view/helpers/form.php	/^			$fieldsetClass = '';$/;"	v
 fieldsetClass	./cake/libs/view/helpers/form.php	/^			$fieldsetClass = sprintf(' class="%s"', $fieldset);$/;"	v
 fifteen	./vendors/simpletest/test/expectation_test.php	/^        $fifteen = &new EqualExpectation(15);$/;"	v
+file	./app/controllers/users_controller.php	/^$file = Inflector::camelize(substr($file, 0, strlen($file)-strlen('_controller.php')));$/;"	v
+file	./app/controllers/users_controller.php	/^$file = basename($fileName);$/;"	v
 file	./app/webroot/js/vendors.php	/^	$file = $_GET['file'];$/;"	v
 file	./cake/console/libs/api.php	/^			$file = $type;$/;"	v
 file	./cake/console/libs/api.php	/^			$file = Inflector::underscore($this->args[1]);$/;"	v
@@ -9728,6 +9787,7 @@ filename	./vendors/simpletest/errors.php	/^function SimpleTestErrorHandler($seve
 filename	./vendors/simpletest/test/eclipse_test.php	/^		$filename = $pathparts['basename'];$/;"	v
 filepath	./app/webroot/css.php	/^	$filepath = CSS . $regs[1];$/;"	v
 filepath	./cake/console/libs/templates/skel/webroot/css.php	/^	$filepath = CSS . $regs[1];$/;"	v
+files	./app/controllers/users_controller.php	/^$files = $folder->findRecursive('.*_controller\\.php');$/;"	v
 files	./cake/basics.php	/^						$files = array_merge($files, $results);$/;"	v
 files	./cake/basics.php	/^				$files = array();$/;"	v
 files	./cake/basics.php	/^				$files = glob($cache . '*');$/;"	v
@@ -9905,6 +9965,7 @@ fixtureInc	./cake/console/libs/tasks/model.php	/^				$fixtureInc = 'plugin.'.Inf
 fixtureInc	./cake/console/libs/tasks/model.php	/^			$fixtureInc = 'app';$/;"	v
 fixturePaths	./cake/tests/lib/cake_test_case.php	/^				$fixturePaths = array($/;"	v
 fixtured	./cake/tests/test_app/controllers/tests_apps_posts_controller.php	/^	function fixtured() {$/;"	f
+fixtures	./app/tests/cases/models/group.test.php	/^	var $fixtures = array('app.group');$/;"	v
 fixtures	./cake/tests/cases/console/libs/acl.test.php	/^	var $fixtures = array('core.aco', 'core.aro', 'core.aros_aco');$/;"	v
 fixtures	./cake/tests/cases/console/libs/schema.test.php	/^	var $fixtures = array('core.article', 'core.user');$/;"	v
 fixtures	./cake/tests/cases/console/libs/shell.test.php	/^	var $fixtures = array($/;"	v
@@ -9946,6 +10007,7 @@ flush	./cake/libs/class_registry.php	/^	function flush() {$/;"	f
 fm	./cake/libs/controller/components/email.php	/^		$fm = '<pre>';$/;"	v
 fname	./app/models/cnew.php	/^        $fname = md5( microtime().mt_rand() );$/;"	v
 fname	./app/models/dish.php	/^        $fname = md5( microtime().mt_rand() );$/;"	v
+folder	./app/controllers/users_controller.php	/^$folder =& new Folder();$/;"	v
 folder	./cake/console/libs/testsuite.php	/^					$folder = $path . $scoredCategory . DS . 'tests';$/;"	v
 folder	./cake/console/libs/testsuite.php	/^			$folder = $paths[$category] . 'tests';$/;"	v
 folder	./cake/console/libs/testsuite.php	/^			$folder = APP . 'plugins' . DS . $scoredCategory . DS;$/;"	v
@@ -10476,6 +10538,7 @@ grant	./cake/libs/controller/components/acl.php	/^	function grant($aro, $aco, $a
 greedy	./cake/libs/router.php	/^			$greedy = $options['greedy'];$/;"	v
 greedy	./cake/libs/router.php	/^			$greedy = isset($options['greedy']) && $options['greedy'] === true;$/;"	v
 greedy	./cake/libs/router.php	/^		$greedy = $_this->named['greedy'];$/;"	v
+group	./app/controllers/users_controller.php	/^\/*     $group =& $this->User->Group;$/;"	v
 group	./cake/libs/file.php	/^	function group() {$/;"	f
 group	./cake/libs/model/datasources/dbo_source.php	/^				$group = join(', ', $group);$/;"	v
 group	./cake/libs/model/datasources/dbo_source.php	/^	function group($group) {$/;"	f
@@ -10569,6 +10632,7 @@ hasFrames	./vendors/simpletest/page.php	/^    function hasFrames() {$/;"	f
 hasFrequency	./cake/libs/view/helpers/ajax.php	/^		$hasFrequency = !(!isset($options['frequency']) || intval($options['frequency']) == 0);$/;"	v
 hasImage	./vendors/simpletest/form.php	/^    function hasImage($selector) {$/;"	f
 hasMany	./app/models/dgroup.php	/^    var $hasMany = 'Dish';$/;"	v
+hasMany	./app/models/group.php	/^	var $hasMany = 'User';$/;"	v
 hasMany	./cake/libs/model/model.php	/^	var $hasMany = array();$/;"	v
 hasMany	./cake/libs/model/model.php	/^ * 				var $hasMany = array('ModelName');$/;"	v
 hasMany	./cake/libs/model/model.php	/^ * 	examples: var $hasMany = array('Assoc' => array('className' => 'ModelName'));$/;"	v
@@ -10731,6 +10795,7 @@ helpers	./app/controllers/cnews_controller.php	/^    var $helpers = array('Html'
 helpers	./app/controllers/dgroups_controller.php	/^    var $helpers = array('Html','Ajax','Javascript');$/;"	v
 helpers	./app/controllers/dgroups_controller.php	/^\/\/    var $helpers = array('Html','Ajax','Javascript');$/;"	v
 helpers	./app/controllers/dishes_controller.php	/^    var $helpers = array('Html','Ajax','Javascript');$/;"	v
+helpers	./app/controllers/groups_controller.php	/^	var $helpers = array('Html', 'Form');$/;"	v
 helpers	./app/controllers/mains_controller.php	/^    var $helpers = array('Html','Ajax','Javascript');$/;"	v
 helpers	./app/controllers/menus_controller.php	/^    var $helpers = array('Html','Ajax','Javascript');$/;"	v
 helpers	./cake/console/libs/tasks/controller.php	/^					$helpers = explode(',', $helpersListTrimmed);$/;"	v
@@ -11047,6 +11112,7 @@ indent	./cake/console/libs/acl.php	/^			$indent = str_repeat('  ', $count);$/;"	
 indent	./vendors/simpletest/xml.php	/^    function XmlReporter($namespace = false, $indent = '  ') {$/;"	v
 index	./app/controllers/dgroups_controller.php	/^    function index(){$/;"	f
 index	./app/controllers/gbooks_controller.php	/^    function index(){$/;"	f
+index	./app/controllers/groups_controller.php	/^	function index() {$/;"	f
 index	./app/controllers/mains_controller.php	/^    function index(){$/;"	f
 index	./app/controllers/menus_controller.php	/^    function index( $id=NULL ){$/;"	f
 index	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^		$index = 0;$/;"	v
@@ -11502,6 +11568,7 @@ joins	./cake/libs/model/datasources/dbo_source.php	/^		$joins = array_merge($mod
 jsOptions	./cake/libs/view/helpers/ajax.php	/^		$jsOptions = array_merge($/;"	v
 jsOptions	./cake/libs/view/helpers/ajax.php	/^		$jsOptions = array_merge($jsOptions, array_intersect_key($options, array_flip(array($/;"	v
 just_this_case	./vendors/simpletest/reporter.php	/^    function SelectiveReporter(&$reporter, $just_this_case = false, $just_this_test = false) {$/;"	v
+k	./app/controllers/users_controller.php	/^foreach ($methods as $k => $method) {$/;"	v
 k	./cake/console/libs/acl.php	/^					foreach ($stack as $k => $v) {$/;"	v
 k	./cake/dispatcher.php	/^								foreach ($value as $k => $v) {$/;"	v
 k	./cake/libs/model/datasources/dbo_source.php	/^						foreach ($data[$association] as $k => $v) {$/;"	v
@@ -12184,6 +12251,7 @@ locked	./cake/libs/controller/components/security.php	/^		$locked = unserialize(
 locked	./cake/libs/view/helpers/form.php	/^		$locked = array();$/;"	v
 locked	./cake/libs/view/helpers/form.php	/^		$locked = str_rot13(serialize(array_keys($locked)));$/;"	v
 lockedFields	./cake/libs/controller/components/security.php	/^		$lockedFields = array();$/;"	v
+log	./app/controllers/users_controller.php	/^$log = array();$/;"	v
 log	./cake/libs/cake_log.php	/^		$log = new File($filename, true);$/;"	v
 log	./cake/libs/debugger.php	/^	function log($var, $level = LOG_DEBUG) {$/;"	f
 log	./cake/libs/model/datasources/dbo_source.php	/^			$log = $this->_queriesLog;$/;"	v
@@ -12192,6 +12260,7 @@ log	./cake/libs/object.php	/^	function log($msg, $type = LOG_ERROR) {$/;"	f
 logQuery	./cake/libs/model/datasources/dbo_source.php	/^	function logQuery($sql) {$/;"	f
 logTransactions	./cake/libs/model/model.php	/^	var $logTransactions = false;$/;"	v
 login	./app/controllers/users_controller.php	/^    function login() {$/;"	f
+login	./app/controllers/users_controller.php	/^\/*    function login() {$/;"	f
 login	./cake/console/libs/tasks/db_config.php	/^				$login = $this->in('User:', null, 'root');$/;"	v
 login	./cake/console/libs/tasks/db_config.php	/^			$login = '';$/;"	v
 login	./cake/libs/controller/components/auth.php	/^	function login($data = null) {$/;"	f
@@ -12581,7 +12650,10 @@ method	./vendors/simpletest/test/interfaces_test.php	/^    function method(array
 method	./vendors/simpletest/test/mock_objects_test.php	/^        $method = $reflection->getMethod('aStaticMethod');$/;"	v
 methodAllowed	./cake/libs/model/behavior.php	/^				$methodAllowed = ($/;"	v
 methodCalls	./cake/tests/cases/libs/object.test.php	/^	var $methodCalls = array();$/;"	v
+methodNode	./app/controllers/users_controller.php	/^$methodNode = $aco->node('controllers\/'.$ctrlName.'\/'.$method);$/;"	v
+methodNode	./app/controllers/users_controller.php	/^$methodNode = $aco->save();$/;"	v
 methodWithOptionalParam	./cake/tests/cases/libs/object.test.php	/^	function methodWithOptionalParam($param = null) {$/;"	f
+methods	./app/controllers/users_controller.php	/^$methods = $this->_getClassMethods($this->_getPluginControllerPath($ctrlName));$/;"	v
 methods	./cake/console/libs/api.php	/^				$methods = array_keys($parsed);$/;"	v
 methods	./cake/console/libs/tasks/controller.php	/^				$wannaDoScaffolding = $this->in(__("Would you like to include some basic class methods (index(), add(), view(), edit())?", true), array('y','n'), 'n');$/;"	c
 methods	./cake/console/libs/tasks/controller.php	/^			$wannaDoScaffolding = $this->in(__("Would you like to include some basic class methods (index(), add(), view(), edit())?", true), array('y','n'), 'y');$/;"	c
@@ -12873,10 +12945,13 @@ n2	./cake/libs/xml.php	/^						foreach ($val as $n2 => $obj2) {$/;"	v
 name	./app/config/sql/db_acl.php	/^	var $name = 'DbAcl';$/;"	v
 name	./app/config/sql/i18n.php	/^	var $name = 'i18n';$/;"	v
 name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
+name	./app/controllers/groups_controller.php	/^	var $name = 'Groups';$/;"	v
 name	./app/models/cnew.php	/^    \/\/var $name = 'Cnew';$/;"	v
 name	./app/models/dgroup.php	/^    \/\/var $name = 'Dgroup';$/;"	v
 name	./app/models/dish.php	/^\/\/    var $name = 'Dish';$/;"	v
+name	./app/models/group.php	/^	var $name = 'Group';$/;"	v
 name	./app/models/user.php	/^    var $name = 'User';$/;"	v
+name	./app/tests/fixtures/group_fixture.php	/^	var $name = 'Group';$/;"	v
 name	./cake/basics.php	/^				$name = env('SCRIPT_NAME');$/;"	v
 name	./cake/console/cake.php	/^ * The class name of the shell that was invoked.$/;"	c
 name	./cake/console/libs/api.php	/^				"\\t\\tA CakePHP core class name (e.g: Component, HtmlHelper).\\n"$/;"	c
@@ -13541,6 +13616,7 @@ noContain	./cake/libs/model/behaviors/containable.php	/^		$noContain = ((isset($
 noFriends	./cake/tests/cases/libs/xml.test.php	/^		$noFriends =& $xml->children[0]->children[12];$/;"	v
 noSkips	./vendors/simpletest/default_reporter.php	/^    function noSkips() {$/;"	f
 nocache_multiple_element	./cake/tests/cases/libs/view/view.test.php	/^	function nocache_multiple_element() {$/;"	f
+node	./app/models/user.php	/^            $node = $this->node();$/;"	v
 node	./cake/libs/model/behaviors/acl.php	/^		$node = Set::extract($this->node($model), "0.{$type}.id");$/;"	v
 node	./cake/libs/model/behaviors/acl.php	/^	function node(&$model, $ref = null) {$/;"	f
 node	./cake/libs/model/behaviors/tree.php	/^		$node = $Model->find('first', array('conditions' => array($scope, $Model->escapeField($right) . '< ' . $Model->escapeField($left)), 'recursive' => 0));$/;"	v
@@ -13619,6 +13695,7 @@ null	./cake/tests/cases/libs/view/helper.test.php	/^		$null = null;$/;"	v
 null	./vendors/simpletest/frames.php	/^        $null = null;$/;"	v
 null	./vendors/simpletest/mock_objects.php	/^        $null = null;$/;"	v
 null	./vendors/simpletest/page.php	/^        $null = null;$/;"	v
+num	./app/controllers/users_controller.php	/^$num = strpos($ctrlName, '.');$/;"	v
 num	./app/models/cnew.php	/^    function getRecent( $num=3 ){$/;"	v
 num	./app/models/gbook.php	/^    function getRecent( $num=3 ){$/;"	v
 num	./cake/tests/cases/libs/code_coverage_manager.test.php	/^			$num = $matches[1];$/;"	v
@@ -14522,6 +14599,8 @@ params	./vendors/simpletest/test/url_test.php	/^    function assertUrl($raw, $pa
 paramsKeys	./cake/libs/router.php	/^		$paramsKeys = array_keys($params);$/;"	v
 params_pass	./cake/tests/cases/libs/object.test.php	/^	function params_pass() {$/;"	f
 paranoid	./cake/libs/sanitize.php	/^	function paranoid($string, $allowed = array()) {$/;"	f
+parent	./app/models/user.php	/^            $parent = $this->node($parent);$/;"	v
+parent	./app/models/user.php	/^            $parent = $this->parentNode();$/;"	v
 parent	./cake/console/libs/acl.php	/^				$parent = Set::extract($parent, "0.{$class}.id");$/;"	v
 parent	./cake/console/libs/acl.php	/^			$parent = $this->args[1];$/;"	v
 parent	./cake/console/libs/acl.php	/^			$parent = array($/;"	v
@@ -14586,6 +14665,8 @@ parentId	./cake/libs/model/behaviors/tree.php	/^	function _setParent(&$Model, $p
 parentId	./cake/libs/model/model.php	/^				$parentId = $result[$this->alias]['parent_id'];$/;"	v
 parentMethods	./cake/libs/controller/controller.php	/^		$parentMethods = get_class_methods('Controller');$/;"	v
 parentMethods	./cake/libs/model/behavior.php	/^		$parentMethods = array_flip(get_class_methods('ModelBehavior'));$/;"	v
+parentNode	./app/models/group.php	/^    function parentNode() {$/;"	f
+parentNode	./app/models/user.php	/^    function parentNode() {$/;"	f
 parentNode	./cake/libs/model/behaviors/tree.php	/^				$parentNode = $Model->find('first', array($/;"	v
 parentNode	./cake/libs/model/behaviors/tree.php	/^			$parentNode = $parentNode[0];$/;"	v
 parentNode	./cake/libs/model/behaviors/tree.php	/^			$parentNode = array_values($Model->find('first', array($/;"	v
@@ -14834,6 +14915,7 @@ path	./vendors/simpletest/url.php	/^        $path = preg_replace('|\/\\.\/|', '\
 path1	./cake/libs/set.php	/^	function combine($data, $path1 = null, $path2 = null, $groupPath = null) {$/;"	v
 path_parts	./vendors/simpletest/url.php	/^        $path_parts = pathinfo($this->getHost());$/;"	v
 pathparts	./vendors/simpletest/test/eclipse_test.php	/^		$pathparts = pathinfo($fullpath);$/;"	v
+paths	./app/controllers/users_controller.php	/^$paths = Configure::getInstance();$/;"	v
 paths	./cake/basics.php	/^		$paths = explode(PATH_SEPARATOR, ini_get('include_path'));$/;"	v
 paths	./cake/console/cake.php	/^		$paths = array();$/;"	v
 paths	./cake/console/libs/api.php	/^		$this->paths = array_merge($this->paths, array($/;"	v
@@ -14982,6 +15064,9 @@ pluginName	./cake/dispatcher.php	/^		$pluginName = $pluginPath = $controller = n
 pluginName	./cake/libs/controller/controller.php	/^		$pluginName = Inflector::camelize($this->plugin);$/;"	v
 pluginName	./cake/tests/cases/libs/router.test.php	/^		$pluginName = 'forums';$/;"	v
 pluginName	./cake/tests/lib/cake_test_case.php	/^				$pluginName = $parts[1];$/;"	v
+pluginNode	./app/controllers/users_controller.php	/^$pluginNode = $aco->node('controllers\/' . $this->_getPluginName($ctrlName));$/;"	v
+pluginNode	./app/controllers/users_controller.php	/^$pluginNode = $aco->node('controllers\/'.$this->_getPluginName($ctrlName));$/;"	v
+pluginNode	./app/controllers/users_controller.php	/^$pluginNode = $aco->save();$/;"	v
 pluginPath	./cake/console/libs/tasks/controller.php	/^			$pluginPath = 'plugins' . DS . Inflector::underscore($this->plugin) . DS;$/;"	v
 pluginPath	./cake/console/libs/tasks/model.php	/^				$pluginPath = 'plugins' . DS . Inflector::underscore($this->plugin) . DS;$/;"	v
 pluginPath	./cake/console/libs/tasks/model.php	/^			$pluginPath = 'plugins' . DS . Inflector::underscore($this->plugin) . DS;$/;"	v
@@ -15593,6 +15678,7 @@ record	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$record = $this
 record2	./cake/tests/cases/libs/model/behavior.test.php	/^		$record2 = $Sample->read(null, 1);$/;"	v
 recordEntry	./vendors/simpletest/browser.php	/^    function recordEntry($url, $parameters) {$/;"	f
 recordExists	./cake/libs/view/helpers/form.php	/^		$recordExists = ($/;"	v
+records	./app/tests/fixtures/group_fixture.php	/^	var $records = array(array($/;"	v
 records	./cake/console/libs/tasks/model.php	/^				$records = array();$/;"	v
 records	./cake/console/libs/tasks/model.php	/^		$records = join(",\\n", $records);$/;"	v
 records	./cake/libs/model/model.php	/^					$records = $model->find('all', array('conditions' => $conditions, 'fields' => $model->primaryKey));$/;"	v
@@ -18422,6 +18508,7 @@ resultSet	./cake/libs/model/datasources/dbo/dbo_sqlite.php	/^	function resultSet
 resultSet	./cake/libs/model/datasources/dbo/dbo_sybase.php	/^	function resultSet(&$results) {$/;"	f
 resultSet	./cake/libs/model/datasources/dbo_source.php	/^		$resultSet = $this->fetchAll($query, $model->cacheQueries, $model->alias);$/;"	v
 resultSet	./cake/tests/cases/libs/model/datasources/dbo_source.test.php	/^		$resultSet = null;$/;"	v
+results	./app/tests/cases/models/group.test.php	/^		$results = $this->Group->find('first');$/;"	v
 results	./cake/basics.php	/^					$results = glob($search);$/;"	v
 results	./cake/console/libs/tasks/model.php	/^		$results = $this->fixture($className, $useTable);$/;"	v
 results	./cake/libs/controller/controller.php	/^			$results = $object->find($type, array_merge($parameters, $extra));$/;"	v
@@ -18585,6 +18672,9 @@ rollback	./cake/libs/model/datasources/dbo/dbo_db2.php	/^	function rollback(&$mo
 rollback	./cake/libs/model/datasources/dbo/dbo_oracle.php	/^	function rollback() {$/;"	f
 rollback	./cake/libs/model/datasources/dbo/dbo_sybase.php	/^	function rollback(&$model) {$/;"	f
 rollback	./cake/libs/model/datasources/dbo_source.php	/^	function rollback(&$model) {$/;"	f
+root	./app/controllers/users_controller.php	/^$root = $aco->node('controllers');$/;"	v
+root	./app/controllers/users_controller.php	/^$root = $aco->save();$/;"	v
+root	./app/controllers/users_controller.php	/^$root = $root[0];$/;"	v
 root	./cake/libs/model/model.php	/^					$root = $return[0][$this->alias]['parent_id'];$/;"	v
 root	./cake/tests/cases/libs/controller/components/acl.test.php	/^		$root = $this->Acl->Aco->node('ROOT');$/;"	v
 rootKey	./cake/libs/http_socket.php	/^					$rootKey = substr($key, 0, strpos($key, '['));$/;"	v
@@ -19374,6 +19464,8 @@ startQuote	./cake/libs/model/datasources/dbo/dbo_odbc.php	/^	var $startQuote = "
 startQuote	./cake/libs/model/datasources/dbo/dbo_postgres.php	/^	var $startQuote = '"';$/;"	v
 startQuote	./cake/libs/model/datasources/dbo/dbo_sqlite.php	/^	var $startQuote = '"';$/;"	v
 startQuote	./cake/libs/model/datasources/dbo/dbo_sybase.php	/^	var $startQuote = "";$/;"	v
+startTest	./app/tests/cases/controllers/groups_controller.test.php	/^	function startTest() {$/;"	f
+startTest	./app/tests/cases/models/group.test.php	/^	function startTest() {$/;"	f
 startTest	./cake/tests/cases/console/libs/acl.test.php	/^	function startTest() {$/;"	f
 startTest	./cake/tests/cases/console/libs/api.test.php	/^	function startTest() {$/;"	f
 startTest	./cake/tests/cases/console/libs/schema.test.php	/^	function startTest() {$/;"	f
@@ -20248,6 +20340,7 @@ templateModified	./cake/console/libs/templates/skel/webroot/css.php	/^		$templat
 templateModified	./cake/console/libs/templates/skel/webroot/css.php	/^		$templateModified = time();$/;"	v
 templatePath	./cake/console/libs/tasks/view.php	/^			$templatePath = $path . 'templates' . DS . 'views' . DS .Inflector::underscore($template).'.ctp';$/;"	v
 test	./app/config/database.php	/^	var $test = array($/;"	v
+test	./app/controllers/users_controller.php	/^    function test( $pass ){$/;"	f
 test	./cake/libs/magic_db.php	/^	function test($magic) {$/;"	f
 test	./cake/libs/multibyte.php	/^					$test = ord($string[$i]);$/;"	v
 test	./cake/libs/multibyte.php	/^				$test = ord($string[$i]);$/;"	v
@@ -21223,7 +21316,10 @@ testGoingBackwardsAndForwards	./vendors/simpletest/test/browser_test.php	/^    f
 testGoingBackwardsOffBeginning	./vendors/simpletest/test/browser_test.php	/^    function testGoingBackwardsOffBeginning() {$/;"	f
 testGoingForwardsOffEnd	./vendors/simpletest/test/browser_test.php	/^    function testGoingForwardsOffEnd() {$/;"	f
 testGroupBy	./cake/tests/cases/libs/model/model_read.test.php	/^	function testGroupBy() {$/;"	f
+testGroupFind	./app/tests/cases/models/group.test.php	/^	function testGroupFind() {$/;"	f
+testGroupInstance	./app/tests/cases/models/group.test.php	/^	function testGroupInstance() {$/;"	f
 testGroupSize	./vendors/simpletest/test/xml_test.php	/^    function testGroupSize() {$/;"	f
+testGroupsControllerInstance	./app/tests/cases/controllers/groups_controller.test.php	/^	function testGroupsControllerInstance() {$/;"	f
 testH	./cake/tests/cases/basics.test.php	/^	function testH() {$/;"	f
 testHabtmDeleteLinksWhenNoPrimaryKeyInJoinTable	./cake/tests/cases/libs/model/model_delete.test.php	/^	function testHabtmDeleteLinksWhenNoPrimaryKeyInJoinTable() {$/;"	f
 testHabtmFieldAdditionWithScaffoldForm	./cake/tests/cases/libs/controller/scaffold.test.php	/^	function testHabtmFieldAdditionWithScaffoldForm() {$/;"	f
@@ -23745,6 +23841,7 @@ validCurrentAssociation	./cake/console/libs/console.php	/^					$validCurrentAsso
 validHeader	./cake/libs/magic_db.php	/^		$validHeader = count($lines > 3)$/;"	v
 validTree	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$validTree = $this->Tree->verify();$/;"	v
 validTree	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$validTree= $this->Tree->verify();$/;"	v
+validate	./app/models/group.php	/^	var $validate = array( 'name' => array('notempty') );$/;"	v
 validate	./cake/console/libs/tasks/model.php	/^				$validate = $this->doValidation($name, $associations);$/;"	v
 validate	./cake/console/libs/tasks/model.php	/^			$validate = $this->doValidation($tempModel);$/;"	v
 validate	./cake/console/libs/tasks/model.php	/^		$validate = array();$/;"	v
@@ -23985,6 +24082,7 @@ version	./cake/libs/i18n.php	/^			if ((dechex($magic) == '950412de' || dechex($m
 version	./cake/libs/view/helpers/rss.php	/^	var $version = '2.0';$/;"	v
 version	./cake/libs/xml.php	/^	var $version = '1.0';$/;"	v
 versionToken	./cake/libs/http_socket.php	/^	function buildRequestLine($request = array(), $versionToken = 'HTTP\/1.1') {$/;"	v
+view	./app/controllers/groups_controller.php	/^	function view($id = null) {$/;"	f
 view	./cake/console/libs/acl.php	/^	function view() {$/;"	f
 view	./cake/console/libs/schema.php	/^	function view() {$/;"	f
 view	./cake/dispatcher.php	/^				$view =& new View($controller, false);$/;"	v
@@ -24094,6 +24192,7 @@ whitelist	./cake/libs/model/model.php	/^	var $whitelist = array();$/;"	v
 widget	./vendors/simpletest/test/form_test.php	/^        $widget = &new SimpleButtonTag($/;"	v
 widget	./vendors/simpletest/test/form_test.php	/^        $widget = &new SimpleTextTag(array('name' => 'me', 'type' => 'text', 'value' => 'a'));$/;"	v
 widgets	./vendors/simpletest/tag.php	/^        $widgets = &$this->_getWidgets();$/;"	v
+will	./app/controllers/users_controller.php	/^* This function will get an array of the plugin controller names, and$/;"	f
 will	./cake/libs/set.php	/^ * Note: This function will work with an unlimited amount of arguments and typecasts non-array parameters into arrays.$/;"	f
 will	./cake/tests/cases/libs/code_coverage_manager.test.php	/^		 * Note: This function will work with an unlimited amount of arguments and typecasts non-array parameters into arrays.$/;"	f
 will	./cake/tests/lib/cake_test_case.php	/^ * By default, all fixtures attached to this class will be truncated and reloaded after each test.$/;"	c
