@@ -1,0 +1,37 @@
+.recordlist{
+	border:1px solid #000000;
+	padding:5px 5px 5px 5px;
+	width: 550px;
+	overflow: auto;
+	text-align: left;
+}
+
+.recordlist > .record{
+	width: 460px;
+	margin-top:5px;
+	height: 100px;
+	border: 1px solid black;
+	color:white;
+	vertical-align: middle;
+	padding: 5px;
+	background-color: blue;
+}
+.recordlist > .record > .caption{
+	text-align: left;
+	font-size: x-small;
+	
+}
+
+.recordlist > .record > .caption > .text{
+	font-style: italic;	
+}
+
+.recordlist > .record > .caption > .data{
+	font-style: oblique;
+}
+
+.recordlist > .record > .text{
+	font-style: italic;
+	text-align: justify;
+	color: gray;
+}

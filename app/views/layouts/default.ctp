@@ -26,7 +26,7 @@
     <?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index'), array( 'class'=>'item_main' )  );
     echo "<span class=\"span_item\">".$html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index'), array( 'class'=>'item_menu' ) )."</span>";
     echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive'), array( 'class'=>'item_news' )  );
-    echo $html->link( 'Гостевая', array( 'controller'=>'Gbook', 'action'=>'index'), array( 'class'=>'item_gbook' )  );?>
+    echo $html->link( 'Гостевая', array( 'controller'=>'Gbooks', 'action'=>'index'), array( 'class'=>'item_gbook' )  );?>
     </div>
     <div class="middle" align="center">
     <NOSCRIPT><h1>Для нормальной работы сайта необходимо включить JavaScript в Вашем браузере</h1></NOSCRIPT>

@@ -99,6 +99,60 @@ LOCK TABLES `dishes` WRITE;
 INSERT INTO `dishes` VALUES (1,'Круглая штука',1,342.45,23,202.45,11,'250130a14fcee8fdc786e44692eaaa0f','Ну, она такая круглая!'),(2,'test02',2,32,123,0,0,'397c4a008ab35a45cb35d2107ff15041','dfsdfas'),(3,'rrrrrrrrrr',3,0,0,0,0,'4281c43438eadf5e25fb1664c339112b','treterterter'),(4,'gfdasd',1,0,0,0,0,'63f8c193f9771108ad6d471fe8ef067f','sdfgsdfgsd');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `gbooks`
+--
+
+DROP TABLE IF EXISTS `gbooks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gbooks` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `text` text NOT NULL,
+  `answer` text NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `author` varchar(80) NOT NULL,
+  `publish` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gbooks`
+--
+
+LOCK TABLES `gbooks` WRITE;
+/*!40000 ALTER TABLE `gbooks` DISABLE KEYS */;
+INSERT INTO `gbooks` VALUES (1,'А что это ваще?','Это сайт.','2009-10-08 16:33:37','ананым',1),(2,'Это канал про аниме?\r\nА как пропатчить кде2 под фрибсд?','','2009-10-08 17:49:31','Любопытный',0);
+/*!40000 ALTER TABLE `gbooks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -109,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-07  3:20:37
+-- Dump completed on 2009-10-09  0:51:20

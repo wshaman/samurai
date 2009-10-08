@@ -679,6 +679,8 @@ FruitFixture	./cake/tests/fixtures/fruit_fixture.php	/^class FruitFixture extend
 FruitNoWith	./cake/tests/cases/libs/model/models.php	/^class FruitNoWith extends CakeTestModel {$/;"	c
 FruitsUuidTag	./cake/tests/cases/libs/model/models.php	/^class FruitsUuidTag extends CakeTestModel {$/;"	c
 FruitsUuidTagFixture	./cake/tests/fixtures/fruits_uuid_tag_fixture.php	/^class FruitsUuidTagFixture extends CakeTestFixture {$/;"	c
+Gbook	./app/models/gbook.php	/^class Gbook extends AppModel {$/;"	c
+GbooksController	./app/controllers/gbooks_controller.php	/^class GbooksController extends AppController {$/;"	c
 Group	./cake/tests/cases/libs/model/datasources/dbo_source.test.php	/^class Group extends CakeTestModel {$/;"	c
 GroupTest	./vendors/simpletest/test_case.php	/^class GroupTest extends TestSuite { }$/;"	c
 GroupUpdateAll	./cake/tests/cases/libs/model/models.php	/^class GroupUpdateAll extends CakeTestModel {$/;"	c
@@ -3821,6 +3823,7 @@ actsAs	./cake/tests/cases/libs/model/models.php	/^	var $actsAs = array('Tree');$
 actsAs	./cake/tests/cases/libs/model/models.php	/^	var $actsAs = array();$/;"	v
 actsAs	./cake/tests/test_app/models/persister_one.php	/^	var $actsAs = array('PersisterOneBehavior');$/;"	v
 actsAs	./cake/tests/test_app/models/persister_two.php	/^	var $actsAs = array('PersisterOneBehavior');$/;"	v
+add	./app/controllers/gbooks_controller.php	/^    function add(){$/;"	f
 add	./cake/libs/folder.php	/^							$add = Folder::slashTerm($add);$/;"	v
 add	./cake/libs/folder.php	/^						$add = $stack[$i] . $entry;$/;"	v
 add	./cake/libs/model/schema.php	/^			$add = $diff;$/;"	v
@@ -3911,9 +3914,11 @@ admin_delete	./app/controllers/dishes_controller.php	/^    function admin_delete
 admin_edit	./app/controllers/cnews_controller.php	/^    function admin_edit( $id ) {$/;"	f
 admin_edit	./app/controllers/dgroups_controller.php	/^    function admin_edit( $id ){$/;"	f
 admin_edit	./app/controllers/dishes_controller.php	/^    function admin_edit( $id ) {$/;"	f
+admin_edit	./app/controllers/gbooks_controller.php	/^    function admin_edit( $id ) {$/;"	f
 admin_index	./app/controllers/cnews_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./app/controllers/dgroups_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./app/controllers/dishes_controller.php	/^    function admin_index( $id=NULL ){$/;"	f
+admin_index	./app/controllers/gbooks_controller.php	/^    function admin_index() {$/;"	f
 admin_index	./app/controllers/mains_controller.php	/^    function admin_index(){$/;"	f
 admin_index	./cake/tests/cases/dispatcher.test.php	/^	function admin_index() {$/;"	f
 admin_login	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function admin_login() {$/;"	f
@@ -3923,6 +3928,7 @@ admin_new	./app/controllers/dishes_controller.php	/^    function admin_new( $id 
 admin_save	./app/controllers/cnews_controller.php	/^    function admin_save( ) {$/;"	f
 admin_save	./app/controllers/dgroups_controller.php	/^    function admin_save( $id=NULL ){$/;"	f
 admin_save	./app/controllers/dishes_controller.php	/^    function admin_save( ) {$/;"	f
+admin_save	./app/controllers/gbooks_controller.php	/^    function admin_save(){$/;"	f
 adodb_driver	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^			$adodb_driver = $config['connect'];$/;"	v
 adodb_driver	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^			$adodb_driver = substr($config['connect'], 0, $persistent);$/;"	v
 affected	./cake/libs/model/datasources/datasource.php	/^	var $affected = null;$/;"	v
@@ -10378,6 +10384,7 @@ getRealm	./vendors/simpletest/frames.php	/^    function getRealm() {$/;"	f
 getRealm	./vendors/simpletest/http.php	/^    function getRealm() {$/;"	f
 getRealm	./vendors/simpletest/page.php	/^    function getRealm() {$/;"	f
 getRecent	./app/models/cnew.php	/^    function getRecent( $num=3 ){$/;"	f
+getRecent	./app/models/gbook.php	/^    function getRecent( $num=3 ){$/;"	f
 getReferrer	./cake/libs/controller/components/request_handler.php	/^	function getReferrer() {$/;"	f
 getReporter	./vendors/simpletest/simpletest.php	/^    function &getReporter() {$/;"	f
 getRequest	./vendors/simpletest/browser.php	/^    function getRequest() {$/;"	f
@@ -11039,6 +11046,7 @@ includes	./cake/console/cake.php	/^		$includes = array($/;"	v
 indent	./cake/console/libs/acl.php	/^			$indent = str_repeat('  ', $count);$/;"	v
 indent	./vendors/simpletest/xml.php	/^    function XmlReporter($namespace = false, $indent = '  ') {$/;"	v
 index	./app/controllers/dgroups_controller.php	/^    function index(){$/;"	f
+index	./app/controllers/gbooks_controller.php	/^    function index(){$/;"	f
 index	./app/controllers/mains_controller.php	/^    function index(){$/;"	f
 index	./app/controllers/menus_controller.php	/^    function index( $id=NULL ){$/;"	f
 index	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^		$index = 0;$/;"	v
@@ -11906,6 +11914,7 @@ layout	./app/controllers/cnews_controller.php	/^        $this->layout =  "admin"
 layout	./app/controllers/cnews_controller.php	/^        $this->layout =  'admin';$/;"	v
 layout	./app/controllers/dgroups_controller.php	/^        $this->layout =  "admin";$/;"	v
 layout	./app/controllers/dishes_controller.php	/^        $this->layout =  "admin";$/;"	v
+layout	./app/controllers/gbooks_controller.php	/^        $this->layout='admin';$/;"	v
 layout	./app/controllers/mains_controller.php	/^            $this->layout = 'ajax'; \/\/or try with $this->layout = '';$/;"	v
 layout	./app/controllers/mains_controller.php	/^        $this->layout="admin";$/;"	v
 layout	./cake/libs/controller/components/email.php	/^			$this->layout = $layout;$/;"	v
@@ -13611,6 +13620,7 @@ null	./vendors/simpletest/frames.php	/^        $null = null;$/;"	v
 null	./vendors/simpletest/mock_objects.php	/^        $null = null;$/;"	v
 null	./vendors/simpletest/page.php	/^        $null = null;$/;"	v
 num	./app/models/cnew.php	/^    function getRecent( $num=3 ){$/;"	v
+num	./app/models/gbook.php	/^    function getRecent( $num=3 ){$/;"	v
 num	./cake/tests/cases/libs/code_coverage_manager.test.php	/^			$num = $matches[1];$/;"	v
 num	./cake/tests/cases/libs/code_coverage_manager.test.php	/^		foreach ($result as $num => $line) {$/;"	v
 num	./cake/tests/lib/code_coverage_manager.php	/^			foreach ($testObjectFile as $num => $line) {$/;"	v
@@ -14070,6 +14080,7 @@ ord	./cake/libs/view/helpers/javascript.php	/^				case $ord == 0x2F:$/;"	v
 ord	./cake/libs/view/helpers/javascript.php	/^				case $ord == 0x5C:$/;"	v
 ord	./cake/libs/view/helpers/javascript.php	/^			$ord = ord($string{$i});$/;"	v
 order	./app/models/cnew.php	/^    var $order = 'Cnew.created DESC';$/;"	v
+order	./app/models/gbook.php	/^    var $order = 'Gbook.created DESC';$/;"	v
 order	./cake/basics.php	/^	function sortByKey(&$array, $sortby, $order = 'asc', $type = SORT_NUMERIC) {$/;"	v
 order	./cake/libs/model/behaviors/tree.php	/^			$order = $Model->alias . '.' . $left . ' asc';$/;"	v
 order	./cake/libs/model/behaviors/tree.php	/^		$order = $Model->alias . '.' . $left . ' asc';$/;"	v
@@ -18665,6 +18676,7 @@ sameScope	./cake/libs/view/helper.php	/^				$sameScope = false;$/;"	v
 sameScope	./cake/libs/view/helper.php	/^			$sameScope = true;$/;"	v
 sameScope	./cake/libs/view/helper.php	/^		$sameScope = $hasField = false;$/;"	v
 samples	./vendors/simpletest/test/acceptance_test.php	/^    function samples() {$/;"	f
+save	./app/controllers/gbooks_controller.php	/^    function save(){$/;"	f
 save	./cake/libs/controller/components/acl.php	/^			$save = $perms[0][$this->Aro->Permission->alias];$/;"	v
 save	./cake/libs/controller/components/acl.php	/^			$save = array_combine($permKeys, array_pad(array(), count($permKeys), $value));$/;"	v
 save	./cake/libs/controller/components/acl.php	/^		$save = array();$/;"	v
@@ -19939,6 +19951,7 @@ symbolPosition	./cake/libs/validation.php	/^	function money($check, $symbolPosit
 systemTables	./cake/libs/model/schema.php	/^				$systemTables = array($/;"	v
 t	./cake/libs/model/datasources/dbo_source.php	/^			$t = getMicrotime();$/;"	v
 tData	./cake/libs/controller/components/security.php	/^					$tData = unserialize($this->Session->read('_Token'));$/;"	v
+table	./app/models/gbook.php	/^    var $table = 'gbook';$/;"	v
 table	./cake/console/libs/schema.php	/^			$table = $this->args[1];$/;"	v
 table	./cake/console/libs/schema.php	/^			foreach ($Schema->tables as $table => $fields) {$/;"	v
 table	./cake/console/libs/schema.php	/^			foreach ($compare as $table => $changes) {$/;"	v

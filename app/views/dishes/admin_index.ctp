@@ -2,7 +2,7 @@
     echo $html->link( 'Добавить',
                 array('controller'=>'dishes', 'action'=>'admin_new', $dgroup_id) );
     echo "<table border=\"1\" width=\"80%\">";
-     echo $html->tableHeaders(
+    echo $html->tableHeaders(
          array('Название','Описание','Цена/Вес порции','Цена/Вес половины','Изображение','Удалить'),
          array('class' => 'admin_table_list'));
     foreach( $dish as $d ){
