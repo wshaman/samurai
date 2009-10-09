@@ -16,6 +16,94 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `acos`
+--
+
+DROP TABLE IF EXISTS `acos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acos`
+--
+
+LOCK TABLES `acos` WRITE;
+/*!40000 ALTER TABLE `acos` DISABLE KEYS */;
+INSERT INTO `acos` VALUES (14,13,NULL,NULL,'index',9,10),(13,9,NULL,NULL,'Menus',8,13),(12,10,NULL,NULL,'checkSession',5,6),(10,9,NULL,NULL,'Pages',2,7),(9,NULL,NULL,NULL,'controllers',1,112),(11,10,NULL,NULL,'display',3,4),(15,13,NULL,NULL,'checkSession',11,12),(16,9,NULL,NULL,'Dgroups',14,29),(17,16,NULL,NULL,'index',15,16),(18,16,NULL,NULL,'admin_index',17,18),(19,16,NULL,NULL,'admin_delete',19,20),(20,16,NULL,NULL,'admin_new',21,22),(21,16,NULL,NULL,'admin_edit',23,24),(22,16,NULL,NULL,'admin_save',25,26),(23,16,NULL,NULL,'checkSession',27,28),(24,9,NULL,NULL,'Mains',30,39),(25,24,NULL,NULL,'index',31,32),(26,24,NULL,NULL,'admin_index',33,34),(27,24,NULL,NULL,'ajax_cart',35,36),(28,24,NULL,NULL,'checkSession',37,38),(29,9,NULL,NULL,'Dishes',40,53),(30,29,NULL,NULL,'admin_index',41,42),(31,29,NULL,NULL,'admin_new',43,44),(32,29,NULL,NULL,'admin_edit',45,46),(33,29,NULL,NULL,'admin_delete',47,48),(34,29,NULL,NULL,'admin_save',49,50),(35,29,NULL,NULL,'checkSession',51,52),(36,9,NULL,NULL,'Cnews',54,67),(37,36,NULL,NULL,'admin_index',55,56),(38,36,NULL,NULL,'admin_new',57,58),(39,36,NULL,NULL,'admin_edit',59,60),(40,36,NULL,NULL,'admin_delete',61,62),(41,36,NULL,NULL,'admin_save',63,64),(42,36,NULL,NULL,'checkSession',65,66),(43,9,NULL,NULL,'Groups',68,81),(44,43,NULL,NULL,'index',69,70),(45,43,NULL,NULL,'view',71,72),(46,43,NULL,NULL,'add',73,74),(47,43,NULL,NULL,'edit',75,76),(48,43,NULL,NULL,'delete',77,78),(49,43,NULL,NULL,'checkSession',79,80),(50,9,NULL,NULL,'Gbooks',82,97),(51,50,NULL,NULL,'index',83,84),(52,50,NULL,NULL,'add',85,86),(53,50,NULL,NULL,'admin_index',87,88),(54,50,NULL,NULL,'admin_edit',89,90),(55,50,NULL,NULL,'admin_save',91,92),(56,50,NULL,NULL,'save',93,94),(57,50,NULL,NULL,'checkSession',95,96),(58,9,NULL,NULL,'Users',98,111),(59,58,NULL,NULL,'test',99,100),(60,58,NULL,NULL,'login',101,102),(61,58,NULL,NULL,'admin_login',103,104),(62,58,NULL,NULL,'logout',105,106),(63,58,NULL,NULL,'build_acl',107,108),(64,58,NULL,NULL,'checkSession',109,110);
+/*!40000 ALTER TABLE `acos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `aros`
+--
+
+DROP TABLE IF EXISTS `aros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `aros`
+--
+
+LOCK TABLES `aros` WRITE;
+/*!40000 ALTER TABLE `aros` DISABLE KEYS */;
+INSERT INTO `aros` VALUES (3,2,'User',1,'admin',4,5),(2,NULL,'Group',1,'admins',3,6);
+/*!40000 ALTER TABLE `aros` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `aros_acos`
+--
+
+DROP TABLE IF EXISTS `aros_acos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros_acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `aro_id` int(10) NOT NULL,
+  `aco_id` int(10) NOT NULL,
+  `_create` varchar(2) NOT NULL DEFAULT '0',
+  `_read` varchar(2) NOT NULL DEFAULT '0',
+  `_update` varchar(2) NOT NULL DEFAULT '0',
+  `_delete` varchar(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ARO_ACO_KEY` (`aro_id`,`aco_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `aros_acos`
+--
+
+LOCK TABLES `aros_acos` WRITE;
+/*!40000 ALTER TABLE `aros_acos` DISABLE KEYS */;
+INSERT INTO `aros_acos` VALUES (1,2,9,'1','1','1','1');
+/*!40000 ALTER TABLE `aros_acos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cnews`
 --
 
@@ -129,6 +217,32 @@ INSERT INTO `gbooks` VALUES (1,'А что это ваще?','Это сайт.','
 UNLOCK TABLES;
 
 --
+-- Table structure for table `groups`
+--
+
+DROP TABLE IF EXISTS `groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `groups`
+--
+
+LOCK TABLES `groups` WRITE;
+/*!40000 ALTER TABLE `groups` DISABLE KEYS */;
+INSERT INTO `groups` VALUES (1,'admins','0000-00-00 00:00:00',NULL),(2,'admins','2009-10-09 02:47:48',NULL);
+/*!40000 ALTER TABLE `groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -138,11 +252,10 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
+  `group_id` int(10) unsigned NOT NULL,
+  `password` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,6 +264,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'samurai',1,'8522fb228dc0f15488fb6610d0418dd7243102f4');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -163,4 +277,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-09  0:51:20
+-- Dump completed on 2009-10-09 19:01:44
