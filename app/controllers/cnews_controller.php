@@ -6,7 +6,7 @@ class CnewsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('index' );
+//        $this->Auth->allowedActions = array('index' );
     }
 
     function admin_index(){

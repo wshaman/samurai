@@ -2,9 +2,9 @@
 class User extends AppModel {
     var $name = 'User';
     var $belongsTo = array('Group');
-    var $actsAs = array('Acl' => 'requester');
+//    var $actsAs = array('Acl' => 'requester');
 
-    function parentNode() {
+  /*  function parentNode() {
         if (!$this->id && empty($this->data)) return null;
         $data = $this->data;
         if (empty($this->data)) $data = $this->read();
@@ -13,8 +13,8 @@ class User extends AppModel {
             return array('Group' => array('id' => $data['User']['group_id']));
     }
 
-
-    function afterSave($created) {
+*/
+  /*  function afterSave($created) {
         if (!$created) {
             $parent = $this->parentNode();
             $parent = $this->node($parent);
@@ -23,6 +23,6 @@ class User extends AppModel {
             $aro['Aro']['parent_id'] = $parent[0]['Aro']['id'];
             $this->Aro->save($aro);
         }
-    }
+    }*/
 }
 ?> 

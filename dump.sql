@@ -255,7 +255,7 @@ CREATE TABLE `users` (
   `group_id` int(10) unsigned NOT NULL,
   `password` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -264,7 +264,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'samurai',1,'8522fb228dc0f15488fb6610d0418dd7243102f4');
+INSERT INTO `users` VALUES (1,'admin',1,'8522fb228dc0f15488fb6610d0418dd7243102f4'),(2,'samurai',1,'40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -277,4 +277,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-09 19:01:44
+-- Dump completed on 2009-10-10  1:18:02

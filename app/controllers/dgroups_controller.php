@@ -7,7 +7,7 @@ class DgroupsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('index' );
+//        $this->Auth->allowedActions = array('index' );
     }
 
     function index(){

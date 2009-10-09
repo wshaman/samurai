@@ -36,15 +36,28 @@
  * @subpackage    cake.cake.libs.controller
  */
 class AppController extends Controller {
-    var $components = array('Acl', 'Auth');
+//    var $components = array('Acl', 'Auth');
 
     function beforeFilter() {
+        if ( preg_match( '/.*admin.*/i', $_SERVER["REQUEST_URI"] )){
+            $this->isAdmin();
+        }
+        parent::beforeFilter();
+    }
+ /*   function beforeFilter() {
         //Configure AuthComponent
         $this->Auth->authorize = 'actions';
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = array('controller' => 'mains', 'action' => 'index');
         parent::beforeFilter();
+    }*/
+
+    function isAdmin(){
+        $this->Session->check('User');
+        $r =  $this->Session->read('User' );
+        if( $r['group_id'] == 1 ) return true;
+        $this->redirect('/users/login');
     }
 
     function checkSession() {

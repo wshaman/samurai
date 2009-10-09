@@ -3,7 +3,7 @@ class GbooksController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('index', 'add', 'save' );
+//        $this->Auth->allowedActions = array('index', 'add', 'save' );
     }
 
     function index(){

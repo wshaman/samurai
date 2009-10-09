@@ -7,7 +7,7 @@ class MainsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('index', 'ajax_cart');
+        //$this->Auth->allowedActions = array('index', 'ajax_cart');
     }
 
     function index(){

@@ -1,31 +1,33 @@
 <?php
 class UsersController extends AppController {
-/*    function login() {
+    var $name='Users';
+
+    function login() {
         $this->set('error', false);
         if (!empty($this->data)) {
             $someone = $this->User->findByUsername($this->data['User']['username']);
-            if ( !empty($someone['User']['password']) && $someone['User']['password'] == md5( $this->data['User']['password'] )){
+            if ( $someone['User']['password'] == sha1( $this->data['User']['password'] )){
                 $this->Session->write('User', $someone['User']);
-                $this->redirect('/');
+                $this->redirect('/admin');
             } else {
                 $this->set('error', true);
             }
         }
     }
-*/
+
 
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allowedActions = array('*');
+    //    $this->Auth->allowedActions = array('*');
     }
 
-    function test( $pass ){
+ /*   function test( $pass ){
         var_dump( Security::hash( $pass, null, true ) );
-/*     $group =& $this->User->Group;
+     $group =& $this->User->Group;
     //Allow admins to everything
     $group->id = 1;
-    $this->Acl->allow($group, '*');*/
+    $this->Acl->allow($group, '*');
     }
 
     function login() {
@@ -34,20 +36,17 @@ class UsersController extends AppController {
             $this->redirect('/', null, false);
         }
     }
-
-
-
-
+*/
     function admin_login(){
         $this->redirect( '/users/login' );
     }
 
     function logout(){
-        $this->Session->setFlash('Good-Bye');
-        $this->redirect($this->Auth->logout());
-/*
+//        $this->Session->setFlash('Good-Bye');
+//        $this->redirect($this->Auth->logout());
+
         $this->Session->delete('User');
-        $this->redirect('/');*/
+        $this->redirect('/');
     }
 
 
