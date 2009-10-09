@@ -17,6 +17,7 @@
 </head>
 <body>
 <?php   $session->flash('auth'); ?>
+<div class="global">
 <div class="header">Head block</div>
 <div class="content">
     <div class="left" align="center">
@@ -36,9 +37,8 @@
     </div>
     </div>
 </div>
-
 <div class="footer"><br/>Samurai, 2009</div>
-
+</div>
 
 </body>
 </html>
