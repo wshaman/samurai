@@ -18,6 +18,7 @@ class MenusController extends AppController {
             $this->set( 'list', $this->Dgroup->find( 'all', array('conditions' => array('Dgroup.show_on_main' => '1', 'id'=>(int) $id)) ));
     }
 
+
 /*    function mlist( $id=NULL ){
         $this->redirect( 
     }

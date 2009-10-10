@@ -33,13 +33,22 @@ class MainsController extends AppController {
         $cart = $this->Session->read( 'cart' );
         if( $trade_id > 0 ){
             if( isset( $cart[$trade_id][$half] ) ){
-                $cart[$trade_id][$half]['num'] += $trade_num;   
+                $cart[$trade_id][$half]['num'] += $trade_num;
             } else 
-                $cart[$trade_id][$half]['num'] = $trade_num;   
-            $cart[$trade_id][$half]['name'] = $this->Dish->getNameByID( $trade_id );
+                $cart[$trade_id][$half]['num'] = $trade_num;
+            $item = $this->Dish->findById( (int) $trade_id );
+            $cart[$trade_id][$half]['cost'] = ( $half == 1 ) ? $item['Dish']['cost_half'] : $item['Dish']['cost'];
+           $cart[$trade_id][$half]['name'] = $item['Dish']['name'];//$this->Dish->getNameByID( $trade_id );
             $this->Session->write( 'cart', $cart );
         }
         $this->set( 'cart', $cart );
+    }
+
+    function order(){
+        if( !$this->Session->check( 'cart' ) ){
+            $this->flash( 'Корзика пуста!', $this->referrer() );
+        }
+        $this->set( 'cart', $cart = $this->Session->read( 'cart' ) );
     }
 }
 ?>

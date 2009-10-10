@@ -36,7 +36,7 @@ class DgroupsController extends AppController {
     function admin_save( $id=NULL ){
         $this->layout =  "admin";
         $this->Dgroup->save( $this->data );
-        $this->flash( "Раздел {$this->data->name} создан", "/admin/dgroups",  3);
+        $this->flash( "Раздел {$this->data->name} сохранён", "/admin/dgroups",  3);
         //$this->redirect( "/admin/dgroups" );
     }
 }
