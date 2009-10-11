@@ -1,7 +1,7 @@
 <?php
 class MainsController extends AppController {
     //var $uses = array( 'Dgroup', 'Cnew', 'Cart' );
-    var $uses = array( 'Dgroup', 'Cnew', 'Dish' );
+    var $uses = array( 'Dgroup', 'Cnew', 'Dish', 'Order' );
     var $helpers = array('Html','Ajax','Javascript');
     var $components = array( 'RequestHandler' );
 

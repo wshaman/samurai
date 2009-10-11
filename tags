@@ -323,6 +323,7 @@ Callback	./cake/tests/cases/libs/model/models.php	/^class Callback extends CakeT
 CallbackFixture	./cake/tests/fixtures/callback_fixture.php	/^class CallbackFixture extends CakeTestFixture {$/;"	c
 Campaign	./cake/tests/cases/libs/model/models.php	/^class Campaign extends CakeTestModel {$/;"	c
 CampaignFixture	./cake/tests/fixtures/campaign_fixture.php	/^class CampaignFixture extends CakeTestFixture {$/;"	c
+Cart	./app/models/cart.php	/^class Cart extends AppModel {$/;"	c
 Case	./cake/tests/cases/libs/cake_test_case.test.php	/^		$Case =& new CakeDispatcherMockTestCase();$/;"	v
 Case	./cake/tests/cases/libs/cake_test_case.test.php	/^		$this->Case =& new SubjectCakeTestCase();$/;"	v
 Category	./cake/tests/cases/libs/class_registry.test.php	/^			$Category = ClassRegistry::init(array('class' => 'RegisterCategory'));$/;"	v
@@ -959,6 +960,7 @@ Old	./cake/tests/cases/libs/model/datasources/dbo/dbo_postgres.test.php	/^		$Old
 OpenidUrl	./cake/tests/cases/libs/view/helpers/form.test.php	/^class OpenidUrl extends CakeTestModel {$/;"	c
 OrangeComponent	./cake/tests/cases/libs/controller/component.test.php	/^class OrangeComponent extends Object {$/;"	c
 OrangeSessionTestController	./cake/tests/cases/libs/controller/components/session.test.php	/^class OrangeSessionTestController extends Controller {$/;"	c
+Order	./app/models/order.php	/^class Order extends AppModel {$/;"	c
 Other	./cake/tests/cases/libs/model/schema.test.php	/^		$Other = $this->Schema->load(array('name' => 'MyOtherApp', 'path' => TMP . 'tests'));$/;"	v
 OtherComponentComponent	./cake/tests/test_app/plugins/test_plugin/controllers/components/other_component.php	/^class OtherComponentComponent extends Object {$/;"	c
 OtherHelperHelper	./cake/tests/test_app/plugins/test_plugin/views/helpers/other_helper.php	/^class OtherHelperHelper extends AppHelper {}$/;"	c
@@ -4687,6 +4689,7 @@ beforeRender	./cake/libs/view/helper.php	/^	function beforeRender() {$/;"	f
 beforeRender	./cake/tests/cases/libs/error.test.php	/^		function beforeRender() {$/;"	f
 beforeSave	./app/models/cnew.php	/^    function beforeSave(){$/;"	f
 beforeSave	./app/models/dish.php	/^    function beforeSave(){$/;"	f
+beforeSave	./app/models/order.php	/^    function beforeSave(){$/;"	f
 beforeSave	./cake/libs/model/behavior.php	/^	function beforeSave(&$model) { }$/;"	f
 beforeSave	./cake/libs/model/behaviors/tree.php	/^	function beforeSave(&$Model) {$/;"	f
 beforeSave	./cake/libs/model/model.php	/^	function beforeSave($options = array()) {$/;"	f
@@ -10636,6 +10639,7 @@ hasFrequency	./cake/libs/view/helpers/ajax.php	/^		$hasFrequency = !(!isset($opt
 hasImage	./vendors/simpletest/form.php	/^    function hasImage($selector) {$/;"	f
 hasMany	./app/models/dgroup.php	/^    var $hasMany = 'Dish';$/;"	v
 hasMany	./app/models/group.php	/^	var $hasMany = 'User';$/;"	v
+hasMany	./app/models/order.php	/^\/\/    var $hasMany='Cart';$/;"	v
 hasMany	./cake/libs/model/model.php	/^	var $hasMany = array();$/;"	v
 hasMany	./cake/libs/model/model.php	/^ * 				var $hasMany = array('ModelName');$/;"	v
 hasMany	./cake/libs/model/model.php	/^ * 	examples: var $hasMany = array('Assoc' => array('className' => 'ModelName'));$/;"	v
@@ -23652,7 +23656,7 @@ users	./cake/tests/cases/libs/model/model_write.test.php	/^		$users = $User->fin
 users	./cake/tests/cases/libs/model/model_write.test.php	/^		$users = $User->find('all',array('order' => 'User.uid'));$/;"	v
 uses	./app/controllers/cnews_controller.php	/^    var $uses = array( 'Cnew' );$/;"	v
 uses	./app/controllers/mains_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
-uses	./app/controllers/mains_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew', 'Dish' );$/;"	v
+uses	./app/controllers/mains_controller.php	/^    var $uses = array( 'Dgroup', 'Cnew', 'Dish', 'Order' );$/;"	v
 uses	./app/controllers/menus_controller.php	/^    \/\/var $uses = array( 'Dgroup', 'Cnew', 'Cart' );$/;"	v
 uses	./app/controllers/menus_controller.php	/^    var $uses = array( 'Dgroup' );$/;"	v
 uses	./cake/basics.php	/^	function uses() {$/;"	f
@@ -23849,6 +23853,7 @@ validHeader	./cake/libs/magic_db.php	/^		$validHeader = count($lines > 3)$/;"	v
 validTree	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$validTree = $this->Tree->verify();$/;"	v
 validTree	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$validTree= $this->Tree->verify();$/;"	v
 validate	./app/models/group.php	/^	var $validate = array( 'name' => array('notempty') );$/;"	v
+validate	./app/models/order.php	/^ var $validate = array($/;"	v
 validate	./cake/console/libs/tasks/model.php	/^				$validate = $this->doValidation($name, $associations);$/;"	v
 validate	./cake/console/libs/tasks/model.php	/^			$validate = $this->doValidation($tempModel);$/;"	v
 validate	./cake/console/libs/tasks/model.php	/^		$validate = array();$/;"	v

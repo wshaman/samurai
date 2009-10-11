@@ -104,6 +104,31 @@ INSERT INTO `aros_acos` VALUES (1,2,9,'1','1','1','1');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `carts`
+--
+
+DROP TABLE IF EXISTS `carts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `carts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `dishes_id` int(10) unsigned NOT NULL,
+  `num` int(3) unsigned NOT NULL,
+  `half` tinyint(1) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carts`
+--
+
+LOCK TABLES `carts` WRITE;
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cnews`
 --
 
@@ -243,6 +268,34 @@ INSERT INTO `groups` VALUES (1,'admins','0000-00-00 00:00:00',NULL),(2,'admins',
 UNLOCK TABLES;
 
 --
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(120) NOT NULL,
+  `address` varchar(250) NOT NULL,
+  `carts_id` int(10) unsigned NOT NULL COMMENT 'NOT USED',
+  `phone` varchar(15) NOT NULL,
+  `status` enum('open','closed') NOT NULL,
+  `cart` tinytext NOT NULL COMMENT 'Serialized cart',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -277,4 +330,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-11  1:26:10
+-- Dump completed on 2009-10-11 22:14:27
