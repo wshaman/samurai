@@ -47,7 +47,7 @@
         <?php echo 
              $ajax->remoteFunction(
                  array(
-                 'url' => array( 'controller' => 'mains', 'action' => 'ajax_cart', 0, 0 ),
+                 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', 0, 0 ),
                  'update' => 'cart'
                  )
              );

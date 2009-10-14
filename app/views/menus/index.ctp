@@ -13,8 +13,8 @@
                         echo "<div class=\"name\" align=\"center\">{$dval['name']}</div>";
                         echo "<div class=\"descr\">{$dval['description']}</div>";
 //                        echo "<input type=\"text\" id=\"num\" class=\"num\" name=\"num\" />";
-                        echo "<input type=\"button\" class=\"put\" value=\"Добавить\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'mains', 'action' => 'ajax_cart', $dval['id'], 1, 0 ), 'update' => 'cart'))} \"/>";
-                        if( $dval['cost_half']>0 ) echo "<input type=\"button\" class=\"put\" value=\"Полпорции\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'mains', 'action' => 'ajax_cart', $dval['id'], 1, 1 ), 'update' => 'cart'))} \"/>";
+                        echo "<input type=\"button\" class=\"put\" value=\"Добавить\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', $dval['id'], 1, 0 ), 'update' => 'cart'))} \"/>";
+                        if( $dval['cost_half']>0 ) echo "<input type=\"button\" class=\"put\" value=\"Полпорции\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', $dval['id'], 1, 1 ), 'update' => 'cart'))} \"/>";
 /* echo $ajax->link(
  'Добавить',
  array( 'controller' => 'menus', 'action' => 'ajax_cart', 1 ),
