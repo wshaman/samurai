@@ -21,9 +21,22 @@
 <div class="header">Head block</div>
 <div class="content">
     <div class="left" align="center">
-    <div class="inner"><h3>Заказ он-лайн</h3>Телефон доставки:<br/>XX-XX-XX</div>
+        <div class="gong">    
+            <div class="inner"><h3>Заказ он-лайн</h3>Телефон доставки:<br/>XX-XX-XX</div>
+        </div>
     </div>
-    <div class="right"><div class="inner"><h3>Корзина</h3></div><div id="cart">Cart will be here</div></div>
+    <div class="right">
+        <div class="scroll">
+            <div class="top"></div>
+            <div class="middle">
+                <div class="inner">
+                    <h3>Корзина</h3>
+                </div>
+                <div id="cart">Cart will be here</div>
+            </div>
+        <div class="bottom"></div>
+        </div>
+    </div>
     <div class="main" align="center"><div class="menupart">
     <?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index'), array( 'class'=>'item_main' )  );
     echo "<span class=\"span_item\">".$html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index'), array( 'class'=>'item_menu' ) )."</span>";

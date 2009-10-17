@@ -46,23 +46,59 @@ div.left{
 	width:190px;
 	height: 145px;
 	float: left;
-	background-image:url("../img/info190w.png");
-	background-repeat: no-repeat;
+	/*background-image:url("../img/info190w.png");
+	background-repeat: no-repeat;*/
 	/*height: 60px;*/
 	margin-top:0;
 	text-align: justify;
 	
 	/*border: 1px solid green;*/
 }
-div.left > .inner{
+
+dv.left > div.gong{
+	background-repeat: no-repeat;
+	background-image: url("../img/gong.png");
+	width: 190px;
+	min-height: 56px;
+	border: 1px solid black;
+	
+}
+
+div.left > .gong >.inner{
 	/*border: 1px solid red;*/
 	width: 180px;
 	margin-left: auto;
 	margin-top: auto;
 }
-div.right> .inner{
+
+div.scroll{
+	width: 173px;
+}
+div.scroll>.top{
+	background-image: url("../img/scroll_top.png");
+	background-repeat: no-repeat;
+	width: 173px;
+	height: 39px;
+}
+
+div.scroll>.bottom{
+	background-image: url("../img/scroll_bottom.png");
+	background-repeat: no-repeat;
+	width: 173px;
+	height: 39px;
+}
+
+div.scroll>.middle{
+	background-image: url("../img/scroll_middle.png");
+	background-repeat: repeat-y;
+	width: 169px;
+	overflow: hidden;
+	margin-left:auto;
+	margin-right:auto;
+}
+div.scroll >.middle >.inner{
 	/*border: 1px solid red;*/
-	width: 180px;
+	width: 160px;
 	margin-left: auto;
 	margin-top: auto;
 }
@@ -89,9 +125,9 @@ div.content{
 
 div.right{
 	width:190px;
-	height: 145px;
-	background-image:url("../img/info190w.png");
-	background-repeat: no-repeat;
+	min-height: 145px;
+	/*background-image:url("../img/info190w.png");
+	background-repeat: no-repeat;*/
 	float: right;
 	margin-top:0;
 	/*border: 1px solid blue;*/
@@ -169,4 +205,8 @@ div.descr{
 
 div.emptycart{
 	font-style: italic;
+}
+
+a img {
+ border: none; /* Убираем границу */
 }

@@ -6771,7 +6771,6 @@ db2	./cake/tests/cases/libs/model/model_integration.test.php	/^		$db2 =& Connect
 dbConfigs	./cake/console/libs/tasks/db_config.php	/^		$dbConfigs = array();$/;"	v
 dbName	./cake/tests/cases/libs/model/datasources/dbo/dbo_sqlite.test.php	/^		$dbName = 'db' . rand() . '$(*%&).db';$/;"	v
 debri	./vendors/simpletest/test/exceptions_test.php	/^    private $debri = 0;$/;"	v
-debug	./app/webroot/js/nyroModal-1.5.2/demoSent.php	/^$debug = '$/;"	v
 debug	./cake/basics.php	/^	function debug($var = false, $showHtml = false, $showFrom = true) {$/;"	f
 debug	./cake/libs/configure.php	/^	var $debug = null;$/;"	v
 debug	./cake/libs/view/view.php	/^			$debug = View::element('dump', $params, false);$/;"	v

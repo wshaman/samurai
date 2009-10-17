@@ -1193,3 +1193,5 @@
 2009-10-18 01:30:34 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 100]
 2009-10-18 01:30:34 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 101]
 2009-10-18 01:30:34 Notice: Notice (8): Undefined index: url in [APP/webroot/index.php, line 102]
+2009-10-18 03:34:16 Notice: Notice (8): Undefined variable: javascript in [APP/views/layouts/default.ctp, line 10]
+2009-10-18 03:34:16 Notice: Notice (8): Undefined variable: ajax in [APP/views/layouts/default.ctp, line 61]
