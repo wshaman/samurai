@@ -6771,6 +6771,7 @@ db2	./cake/tests/cases/libs/model/model_integration.test.php	/^		$db2 =& Connect
 dbConfigs	./cake/console/libs/tasks/db_config.php	/^		$dbConfigs = array();$/;"	v
 dbName	./cake/tests/cases/libs/model/datasources/dbo/dbo_sqlite.test.php	/^		$dbName = 'db' . rand() . '$(*%&).db';$/;"	v
 debri	./vendors/simpletest/test/exceptions_test.php	/^    private $debri = 0;$/;"	v
+debug	./app/webroot/js/nyroModal-1.5.2/demoSent.php	/^$debug = '$/;"	v
 debug	./cake/basics.php	/^	function debug($var = false, $showHtml = false, $showFrom = true) {$/;"	f
 debug	./cake/libs/configure.php	/^	var $debug = null;$/;"	v
 debug	./cake/libs/view/view.php	/^			$debug = View::element('dump', $params, false);$/;"	v
@@ -10988,6 +10989,7 @@ i18nSchema	./app/config/sql/i18n.php	/^class i18nSchema extends CakeSchema {$/;"
 i18nSchema	./cake/console/libs/templates/skel/config/sql/i18n.php	/^class i18nSchema extends CakeSchema {$/;"	c
 id	./app/controllers/dgroups_controller.php	/^    function admin_save( $id=NULL ){$/;"	v
 id	./app/controllers/dishes_controller.php	/^    function admin_index( $id=NULL ){$/;"	v
+id	./app/controllers/dishes_controller.php	/^    function show( $id=NULL ){$/;"	v
 id	./app/controllers/menus_controller.php	/^    function index( $id=NULL ){$/;"	v
 id	./app/controllers/orders_controller.php	/^    function admin_edit( $id=NULL ){$/;"	v
 id	./cake/console/libs/acl.php	/^		$id = ife(is_numeric($this->args[1]), intval($this->args[1]), $this->args[1]);$/;"	v
@@ -11999,6 +12001,7 @@ layout	./app/controllers/cnews_controller.php	/^        $this->layout =  "admin"
 layout	./app/controllers/cnews_controller.php	/^        $this->layout =  'admin';$/;"	v
 layout	./app/controllers/dgroups_controller.php	/^        $this->layout =  "admin";$/;"	v
 layout	./app/controllers/dishes_controller.php	/^        $this->layout =  "admin";$/;"	v
+layout	./app/controllers/dishes_controller.php	/^        $this->layout="ajax";$/;"	v
 layout	./app/controllers/gbooks_controller.php	/^        $this->layout='admin';$/;"	v
 layout	./app/controllers/mains_controller.php	/^        $this->layout="admin";$/;"	v
 layout	./app/controllers/orders_controller.php	/^            $this->layout = 'ajax'; \/\/or try with $this->layout = '';$/;"	v
@@ -19218,6 +19221,7 @@ should	./cake/libs/set.php	/^ * Deprecated, Set class should be called staticall
 should	./cake/tests/cases/libs/magic_db.test.php	/^ * The MagicDb::validates function should return if the array passed to it or the local db property contains a valid MagicDb record set$/;"	f
 shouldInvoke	./vendors/simpletest/reporter.php	/^    function shouldInvoke($test_case, $method) {$/;"	f
 shouldInvoke	./vendors/simpletest/scorer.php	/^    function shouldInvoke($test_case_name, $method) {$/;"	f
+show	./app/controllers/dishes_controller.php	/^    function show( $id=NULL ){$/;"	f
 show	./cake/tests/lib/test_manager.php	/^						$show = '?show=cases&amp;app=true';$/;"	v
 show	./cake/tests/lib/test_manager.php	/^						$show = '?show=cases&amp;plugin=' . $_GET['plugin'];$/;"	v
 show	./cake/tests/lib/test_manager.php	/^						$show = '?show=cases';$/;"	v

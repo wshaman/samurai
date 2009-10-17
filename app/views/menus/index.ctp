@@ -1,4 +1,39 @@
 <?php echo $html->css( 'menu' ); ?>
+<?php echo $html->css( 'nyroModal' ); ?>
+
+	<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.nyroModal-1.5.2.pack.js"></script>
+	<script type="text/javascript">
+    jQuery.noConflict();
+	//<![CDATA[
+	$(function() {
+		$.nyroModalSettings({
+			debug: true,
+			processHandler: function(settings) {
+				var url = settings.url;
+			},
+		});
+		
+		function preloadImg(image) {
+			var img = new Image();
+			img.src = image;
+		}
+		
+		preloadImg('/img/ajaxLoader.gif');
+		preloadImg('/img/prev.gif');
+		preloadImg('/img/next.gif');
+		
+	});
+	
+	//]]>
+	</script>
+</head>
+<body>
+
+<div id="test" style="display: none; width: 600px;">
+	<a href="demoSent.php" class="nyroModal">Open a new modal</a><br />
+	Test
+</div>
 <div class="menulist" align="center">
 <?php
     foreach( $list as $val ){
@@ -9,7 +44,7 @@
                 <div class=\"dishlist\" align=\"center\">";
                     foreach( $val['Dish'] as $dval ){
                         echo "<div class=\"dish\" align=\"center\">";
-                        echo "<div class=\"img\">{$html->image(DISH_IMAGES_URL.$dval['image'],array( 'height'=>'90px'))}</div>";
+                        echo "<div class=\"img\"><a class=\"nyromodal\" href=\"/Dishes/show/{$dval['id']}\">{$html->image(DISH_IMAGES_URL.$dval['image'],array( 'height'=>'90px'))}</a></div>";
                         echo "<div class=\"name\" align=\"center\">{$dval['name']}</div>";
                         echo "<div class=\"descr\">{$dval['description']}</div>";
 //                        echo "<input type=\"text\" id=\"num\" class=\"num\" name=\"num\" />";

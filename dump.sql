@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.38, for unknown-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.1.39, for pc-linux-gnu (i686)
 --
 -- Host: localhost    Database: db002
 -- ------------------------------------------------------
--- Server version	5.1.38
+-- Server version	5.1.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -284,7 +284,7 @@ CREATE TABLE `orders` (
   `cart` tinytext NOT NULL COMMENT 'Serialized cart',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-15  2:53:43
+-- Dump completed on 2009-10-18  1:29:38

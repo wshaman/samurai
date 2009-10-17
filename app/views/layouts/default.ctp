@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 <?php
     if( $javascript ){
-        echo $javascript->link('prototype');
+        echo $javascript->link('prototype.js');
         echo $javascript->link('scriptaculous');
     }
 ?>
@@ -37,7 +37,7 @@
     </div>
     </div>
 </div>
-<div class="footer"><br/>Samurai, 2009</div>
+<div class="footer"><br/>Shogun, 2009</div>
 </div>
 
 </body>

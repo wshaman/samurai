@@ -36,5 +36,10 @@ class DishesController extends AppController {
 //        var_dump( $this->data );
         $this->redirect( '/admin/dishes/index/'.$this->data['Dish']['dgroup_id'] );
     }
+
+    function show( $id=NULL ){
+        $this->layout="ajax";
+        $this->set( 'dish', $this->Dish->findById( (int)$id ) );
+    }
 }
 ?>
