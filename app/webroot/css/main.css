@@ -92,7 +92,6 @@ div.scroll>.middle{
 	background-image: url("../img/scroll_middle.png");
 	background-repeat: repeat-y;
 	width: 169px;
-	overflow: hidden;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -125,7 +124,6 @@ div.content{
 
 div.right{
 	width:190px;
-	min-height: 145px;
 	/*background-image:url("../img/info190w.png");
 	background-repeat: no-repeat;*/
 	float: right;
@@ -187,9 +185,6 @@ a.item_main{
 a.item_menu:hover {
 
 }
-
-
-
 
 div.left > a{
 	background-color: #bf4444;

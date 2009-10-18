@@ -64,6 +64,6 @@
                  'update' => 'cart'
                  )
              );
- ?>
+         ?>
     }
 </script>

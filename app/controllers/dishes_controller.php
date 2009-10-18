@@ -2,7 +2,7 @@
 class DishesController extends AppController {
 
     var $helpers = array('Html','Ajax','Javascript');
-    var $components = array( 'RequestHandler' );
+    var $components = array( 'RequestHandler', 'Img' );
 
     function admin_index( $id=NULL ){
 /*        $r = $this->Dish->getAction( );
@@ -33,12 +33,12 @@ class DishesController extends AppController {
     function admin_save( ) {
         $this->layout =  "admin";
         $this->Dish->save( $this->data );
-//        var_dump( $this->data );
+        $this->Img->makeimgs( $this->Dish->getLastFileName() );
         $this->redirect( '/admin/dishes/index/'.$this->data['Dish']['dgroup_id'] );
     }
 
     function show( $id=NULL ){
-        $this->layout="ajax";
+        $this->layout="empty-black";
         $this->set( 'dish', $this->Dish->findById( (int)$id ) );
     }
 }

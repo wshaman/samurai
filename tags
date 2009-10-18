@@ -739,6 +739,7 @@ IdenticalExpectation	./vendors/simpletest/expectation.php	/^    function Identic
 IdenticalExpectation	./vendors/simpletest/expectation.php	/^class IdenticalExpectation extends EqualExpectation {$/;"	c
 Image	./cake/tests/cases/libs/model/models.php	/^class Image extends CakeTestModel {$/;"	c
 ImageFixture	./cake/tests/fixtures/image_fixture.php	/^class ImageFixture extends CakeTestFixture {$/;"	c
+ImgComponent	./app/controllers/components/img.php	/^class ImgComponent extends Object {$/;"	c
 ImplementsDummy	./vendors/simpletest/test/interfaces_test.php	/^class ImplementsDummy implements DummyInterface {$/;"	c
 Inflector	./cake/libs/inflector.php	/^class Inflector extends Object {$/;"	c
 InflectorTest	./cake/tests/cases/libs/inflector.test.php	/^class InflectorTest extends CakeTestCase {$/;"	c
@@ -1773,6 +1774,7 @@ ThemeViewTestErrorHandler	./cake/tests/cases/libs/view/theme.test.php	/^class Th
 Thread	./cake/tests/cases/libs/model/model_read.test.php	/^		$Thread =& new Thread();$/;"	v
 Thread	./cake/tests/cases/libs/model/models.php	/^class Thread extends CakeTestModel {$/;"	c
 ThreadFixture	./cake/tests/fixtures/thread_fixture.php	/^class ThreadFixture extends CakeTestFixture {$/;"	c
+ThumbWidth	./app/controllers/components/img.php	/^    var $ThumbWidth=90;$/;"	v
 Time	./cake/tests/cases/libs/view/helpers/time.test.php	/^		$this->Time = new TimeHelper();$/;"	v
 TimeHelper	./cake/libs/view/helpers/time.php	/^class TimeHelper extends AppHelper {$/;"	c
 TimeHelperTest	./cake/tests/cases/libs/view/helpers/time.test.php	/^class TimeHelperTest extends CakeTestCase {$/;"	c
@@ -5616,7 +5618,7 @@ componentCn	./cake/libs/controller/component.php	/^			$componentCn = $component 
 componentPaths	./cake/libs/configure.php	/^	var $componentPaths = array();$/;"	v
 components	./app/controllers/cnews_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
 components	./app/controllers/dgroups_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
-components	./app/controllers/dishes_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
+components	./app/controllers/dishes_controller.php	/^    var $components = array( 'RequestHandler', 'Img' );$/;"	v
 components	./app/controllers/menus_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
 components	./app/controllers/orders_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
 components	./cake/console/libs/tasks/controller.php	/^					$components = explode(',', $componentsListTrimmed);$/;"	v
@@ -9760,7 +9762,12 @@ filePath	./cake/tests/cases/libs/folder.test.php	/^		$filePath = $new . DS . 'te
 filePath	./cake/tests/lib/test_manager.php	/^		$filePath = $manager->_getTestsPath('groups') . DS . strtolower($groupTestName) . $manager->_groupExtension;$/;"	v
 filePaths	./cake/libs/controller/components/email.php	/^	var $filePaths = array();$/;"	v
 fileSize	./cake/libs/view/media.php	/^			$fileSize = @filesize($path);$/;"	v
+file_name	./app/controllers/components/img.php	/^        $file_name= DISH_IMAGES.$name;$/;"	v
 file_put_contents	./cake/basics.php	/^	function file_put_contents($fileName, $data) {$/;"	f
+file_type	./app/controllers/components/img.php	/^        $file_type=$finfo->file( DISH_IMAGES.$name );*\/$/;"	v
+file_type	./app/controllers/components/img.php	/^        $file_type=trim( preg_replace( '\/;.*\/', '', exec( 'file -i -b '.$file_name ) ) );$/;"	v
+file_type	./app/controllers/components/img.php	/^        if($file_type == "image\/pjpeg" || $file_type == "image\/jpeg"){$/;"	v
+file_type	./app/controllers/components/img.php	/^        } elseif($file_type == "image\/x-png" || $file_type == "image\/png") {$/;"	v
 filename	./app/webroot/css.php	/^	$filename = 'css\/' . $regs[1];$/;"	v
 filename	./cake/basics.php	/^				$filename = CACHE . $path;$/;"	v
 filename	./cake/basics.php	/^				$filename = TMP . $path;$/;"	v
@@ -9944,6 +9951,7 @@ findQueryType	./cake/libs/model/model.php	/^		$this->findQueryType = $type;$/;"	
 findQueryType	./cake/libs/model/model.php	/^		$this->findQueryType = null;$/;"	v
 findQueryType	./cake/libs/model/model.php	/^	var $findQueryType = null;$/;"	v
 findRecursive	./cake/libs/folder.php	/^	function findRecursive($pattern = '.*', $sort = false) {$/;"	f
+finfo	./app/controllers/components/img.php	/^        $finfo = new finfo( FILEINFO_MIME, $magic );$/;"	v
 first	./cake/libs/model/datasources/dbo_source.php	/^			$first = $this->fetchRow();$/;"	v
 first	./cake/libs/view/helpers/paginator.php	/^	function first($first = '<< first', $options = array()) {$/;"	f
 first	./cake/libs/xml.php	/^	function &first() {$/;"	f
@@ -10210,6 +10218,7 @@ fullPath	./cake/basics.php	/^			$fullPath = $path . DS . $file;$/;"	v
 fullTableName	./cake/console/libs/tasks/model.php	/^				$fullTableName = $db->fullTableName($useTable, false);$/;"	v
 fullTableName	./cake/console/libs/tasks/model.php	/^		$fullTableName = $db->fullTableName($useTable, false);$/;"	v
 fullTableName	./cake/libs/model/datasources/dbo_source.php	/^	function fullTableName($model, $quote = true) {$/;"	f
+fullfix	./app/controllers/components/img.php	/^    var $fullfix = '';$/;"	v
 fullpath	./vendors/simpletest/test/eclipse_test.php	/^		$fullpath = realpath(dirname(__FILE__).'\/support\/test1.php');$/;"	v
 func	./cake/libs/view/helpers/ajax.php	/^				$func = "new Ajax.Updater('{$options['update']}',";$/;"	v
 func	./cake/libs/view/helpers/ajax.php	/^				$func = "new Ajax.Updater(document.createElement('div'),";$/;"	v
@@ -10388,6 +10397,7 @@ getLabel	./vendors/simpletest/detached.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/remote.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/tag.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/test_case.php	/^    function getLabel() {$/;"	f
+getLastFileName	./app/models/dish.php	/^    function getLastFileName(){$/;"	f
 getLastInsertID	./cake/libs/model/model.php	/^	function getLastInsertID() {$/;"	f
 getLastQuery	./cake/tests/cases/libs/model/datasources/dbo/dbo_adodb.test.php	/^	function getLastQuery() {$/;"	f
 getLastQuery	./cake/tests/cases/libs/model/datasources/dbo/dbo_mssql.test.php	/^	function getLastQuery() {$/;"	f
@@ -11082,6 +11092,8 @@ ignoreFrames	./vendors/simpletest/web_tester.php	/^    function ignoreFrames() {
 ignoreParentsIfIgnored	./vendors/simpletest/simpletest.php	/^    function ignoreParentsIfIgnored($classes) {$/;"	f
 image	./cake/libs/view/helpers/html.php	/^		$image = sprintf($this->tags['image'], $path, $this->_parseAttributes($options, null, '', ' '));$/;"	v
 image	./cake/libs/view/helpers/html.php	/^	function image($path, $options = array()) {$/;"	f
+imgDir	./app/controllers/components/img.php	/^    var $imgDir;$/;"	v
+imgratio	./app/controllers/components/img.php	/^        $imgratio=$width\/$height;$/;"	v
 implements	./vendors/simpletest/mock_objects.php	/^            $implements = 'implements ' . implode(', ', $interfaces);$/;"	v
 implements	./vendors/simpletest/mock_objects.php	/^        $implements = '';$/;"	v
 import	./cake/console/libs/tasks/controller.php	/^			$import = $this->plugin . '.' . $className;$/;"	v
@@ -11963,6 +11975,8 @@ lastError	./cake/libs/session.php	/^	var $lastError = null;$/;"	v
 lastError	./cake/libs/socket.php	/^		$this->lastError = array('num' => $errNum, 'str' => $errStr);$/;"	v
 lastError	./cake/libs/socket.php	/^	function lastError() {$/;"	f
 lastError	./cake/libs/socket.php	/^	var $lastError = array();$/;"	v
+lastFN	./app/models/dish.php	/^        $this->lastFN = $fname;$/;"	v
+lastFN	./app/models/dish.php	/^    var $lastFN = '';$/;"	v
 lastInsertId	./cake/libs/model/datasources/datasource.php	/^	function lastInsertId($source = null) {$/;"	f
 lastInsertId	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^	function lastInsertId() {$/;"	f
 lastInsertId	./cake/libs/model/datasources/dbo/dbo_db2.php	/^	function lastInsertId($source = null) {$/;"	f
@@ -12000,7 +12014,7 @@ layout	./app/controllers/cnews_controller.php	/^        $this->layout =  "admin"
 layout	./app/controllers/cnews_controller.php	/^        $this->layout =  'admin';$/;"	v
 layout	./app/controllers/dgroups_controller.php	/^        $this->layout =  "admin";$/;"	v
 layout	./app/controllers/dishes_controller.php	/^        $this->layout =  "admin";$/;"	v
-layout	./app/controllers/dishes_controller.php	/^        $this->layout="ajax";$/;"	v
+layout	./app/controllers/dishes_controller.php	/^        $this->layout="empty-black";$/;"	v
 layout	./app/controllers/gbooks_controller.php	/^        $this->layout='admin';$/;"	v
 layout	./app/controllers/mains_controller.php	/^        $this->layout="admin";$/;"	v
 layout	./app/controllers/orders_controller.php	/^            $this->layout = 'ajax'; \/\/or try with $this->layout = '';$/;"	v
@@ -12323,6 +12337,7 @@ ls	./cake/libs/folder.php	/^	function ls($sort = true, $exceptions = false) {$/;
 lst	./cake/libs/model/model.php	/^			$lst = $query['list'];$/;"	v
 m	./cake/libs/model/behavior.php	/^		foreach ($this->__methods as $m => $callback) {$/;"	v
 m	./cake/tests/cases/libs/view/helpers/text.test.php	/^		$m = $this->method;$/;"	v
+magic	./app/controllers/components/img.php	/^        $magic = ( is_file ( $sysmagic ) ) ? $sysmagic : $ownmagic;$/;"	v
 magic	./cake/libs/magic_db.php	/^			$magic = $format[0];$/;"	v
 magicDb	./cake/libs/magic_db.php	/^			$magicDb = $this->db;$/;"	v
 magicDb	./cake/libs/magic_db.php	/^			$magicDb = $this->toArray($magicDb);$/;"	v
@@ -12342,6 +12357,7 @@ makeAbsolute	./vendors/simpletest/url.php	/^    function makeAbsolute($base) {$/
 makeDry	./vendors/simpletest/scorer.php	/^    function makeDry($is_dry = true) {$/;"	f
 make_clean_css	./app/webroot/css.php	/^	function make_clean_css($path, $name) {$/;"	f
 make_clean_css	./cake/console/libs/templates/skel/webroot/css.php	/^	function make_clean_css($path, $name) {$/;"	f
+makeimgs	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL ){$/;"	f
 manager	./cake/tests/cases/libs/code_coverage_manager.test.php	/^		$manager =& CodeCoverageManager::getInstance();$/;"	v
 manager	./cake/tests/cases/libs/view/helpers/rss.test.php	/^		$manager =& XmlManager::getInstance();$/;"	v
 manager	./cake/tests/cases/libs/view/helpers/xml.test.php	/^		$manager =& XmlManager::getInstance();$/;"	v
@@ -12965,6 +12981,7 @@ n2	./cake/libs/xml.php	/^						foreach ($val as $n2 => $obj2) {$/;"	v
 name	./app/config/sql/db_acl.php	/^	var $name = 'DbAcl';$/;"	v
 name	./app/config/sql/i18n.php	/^	var $name = 'i18n';$/;"	v
 name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
+name	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL ){$/;"	v
 name	./app/controllers/groups_controller.php	/^	var $name = 'Groups';$/;"	v
 name	./app/controllers/users_controller.php	/^    var $name='Users';$/;"	v
 name	./app/models/cnew.php	/^    \/\/var $name = 'Cnew';$/;"	v
@@ -13604,7 +13621,12 @@ newUrl	./cake/tests/cases/libs/router.test.php	/^		$newUrl = array('controller' 
 new_classes	./vendors/simpletest/test_case.php	/^            $new_classes = $this->_scrapeClassesFromFile($test_file);$/;"	v
 new_classes	./vendors/simpletest/test_case.php	/^        $new_classes = array_diff(get_declared_classes(), $existing_classes);$/;"	v
 new_globals	./vendors/simpletest/test_case.php	/^        $new_globals = get_defined_vars();$/;"	v
+new_img	./app/controllers/components/img.php	/^            $new_img = imagecreatefromgif($file_name);$/;"	v
+new_img	./app/controllers/components/img.php	/^            $new_img = imagecreatefromjpeg($file_name);$/;"	v
+new_img	./app/controllers/components/img.php	/^            $new_img = imagecreatefrompng($file_name);$/;"	v
 newdir	./cake/libs/folder.php	/^		$newdir = $dir . $path;$/;"	v
+newheight	./app/controllers/components/img.php	/^           $newheight = $this->ThumbWidth;$/;"	v
+newheight	./app/controllers/components/img.php	/^           $newheight = $this->ThumbWidth\/$imgratio;$/;"	v
 newline	./cake/console/cake.php	/^	function stdout($string, $newline = true) {$/;"	v
 newline	./cake/console/error.php	/^	function stdout($string, $newline = true) {$/;"	v
 newline	./cake/console/libs/shell.php	/^	function out($string, $newline = true) {$/;"	v
@@ -13613,6 +13635,8 @@ newparts	./cake/libs/folder.php	/^		$newparts = array();$/;"	v
 newpath	./cake/libs/folder.php	/^			$newpath = DS;$/;"	v
 newpath	./cake/libs/folder.php	/^		$newpath = '';$/;"	v
 newread	./cake/tests/cases/libs/cache/file.test.php	/^		$newread = Cache::read('serialize_test');$/;"	v
+newwidth	./app/controllers/components/img.php	/^           $newwidth = $this->ThumbWidth*$imgratio;$/;"	v
+newwidth	./app/controllers/components/img.php	/^           $newwidth = $this->ThumbWidth;$/;"	v
 next	./cake/libs/debugger.php	/^				$next = array_merge($/;"	v
 next	./cake/libs/view/helpers/paginator.php	/^	function next($title = 'Next >>', $options = array(), $disabledTitle = null, $disabledOptions = array()) {$/;"	f
 next	./cake/libs/xml.php	/^	function &next() {$/;"	f
@@ -14393,6 +14417,7 @@ overload	./cake/libs/overloadable_php5.php	/^	function overload() { }$/;"	f
 overrideRecursive	./cake/libs/model/behaviors/tree.php	/^		$overrideRecursive = $recursive;$/;"	v
 owner	./cake/libs/file.php	/^	function owner() {$/;"	f
 owner	./cake/tests/cases/libs/xml.test.php	/^		$owner =& $node->document();$/;"	v
+ownmagic	./app/controllers/components/img.php	/^        $ownmagic = CAKE_CORE_INCLUDE_PATH.'\/app\/vendors\/magic';$/;"	v
 packet	./vendors/simpletest/http.php	/^            return $packet === '';$/;"	v
 page	./cake/console/libs/templates/skel/controllers/pages_controller.php	/^			$page = $path[0];$/;"	v
 page	./cake/console/libs/templates/skel/controllers/pages_controller.php	/^		$page = $subpage = $title = null;$/;"	v
@@ -16080,6 +16105,7 @@ reset	./cake/libs/socket.php	/^	function reset($state = null) {$/;"	f
 resetAssociations	./cake/libs/model/model.php	/^	function resetAssociations() {$/;"	f
 resetBindings	./cake/libs/model/behaviors/containable.php	/^	function resetBindings(&$Model) {$/;"	f
 resetValue	./vendors/simpletest/tag.php	/^    function resetValue() {$/;"	f
+resized_img	./app/controllers/components/img.php	/^           $resized_img = imagecreatetruecolor($newwidth,$newheight);$/;"	v
 resolveKey	./cake/libs/model/datasources/datasource.php	/^	function resolveKey($model, $key) {$/;"	f
 resolveKey	./cake/libs/model/datasources/dbo_source.php	/^	function resolveKey($model, $key, $assoc = null) {$/;"	f
 resolveNamespace	./cake/libs/xml.php	/^	function resolveNamespace($name, $url) {$/;"	f
@@ -20063,6 +20089,7 @@ sut	./cake/tests/cases/libs/security.test.php	/^	var $sut = null;$/;"	v
 swallowErrors	./vendors/simpletest/unit_tester.php	/^    function swallowErrors() {$/;"	f
 switch	./cake/libs/i18n.php	/^				$switch = preg_replace("\/(?:[() {}\\\\[\\\\]^\\\\s*\\\\]]+)\/", "", $this->__domains[$this->category][$this->__lang][$domain]["%po-header"]["plural-forms"]);$/;"	v
 symbolPosition	./cake/libs/validation.php	/^	function money($check, $symbolPosition = 'left') {$/;"	v
+sysmagic	./app/controllers/components/img.php	/^\/*        $sysmagic = "\/usr\/share\/misc\/magic";$/;"	v
 systemTables	./cake/libs/model/schema.php	/^				$systemTables = array($/;"	v
 t	./cake/libs/model/datasources/dbo_source.php	/^			$t = getMicrotime();$/;"	v
 tData	./cake/libs/controller/components/security.php	/^					$tData = unserialize($this->Session->read('_Token'));$/;"	v
@@ -22835,6 +22862,7 @@ throwAt	./vendors/simpletest/mock_objects.php	/^    function throwAt($timing, $m
 throwErrors	./cake/libs/model/behaviors/containable.php	/^			$throwErrors = (empty($this->settings[$Model->alias]) ? true : $this->settings[$Model->alias]['notices']);$/;"	v
 throwOn	./vendors/simpletest/mock_objects.php	/^        $code  = "    function throwOn(\\$method, \\$exception = false, \\$args = false) {\\n";$/;"	f
 throwOn	./vendors/simpletest/mock_objects.php	/^    function throwOn($method, $exception = false, $args = false) {$/;"	f
+thumbfix	./app/controllers/components/img.php	/^    var $thumbfix = '_THUMB';$/;"	v
 time	./cake/libs/cache/apc.php	/^		$time = time();$/;"	v
 time	./cake/libs/cache/file.php	/^		$time = time();$/;"	v
 time	./cake/libs/cache/memcache.php	/^		$time = time();$/;"	v

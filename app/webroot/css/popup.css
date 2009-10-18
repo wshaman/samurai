@@ -1,0 +1,12 @@
+div.popup-caption{
+	color: #ce6e1d;
+	font-size: large;
+	font-family: caption;
+	font-weight: bolder;
+	
+}
+
+div.popup-description{
+	font-style: italic;
+	color: gray;	
+}

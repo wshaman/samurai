@@ -78,6 +78,7 @@
 			define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 		}
 	}
+//    echo CAKE_CORE_INCLUDE_PATH.'/app/vendors/magic'; die;
 	if (!defined('NEWS_IMAGES')) {
         define('NEWS_IMAGES',WWW_ROOT.'img/news/');
 	}

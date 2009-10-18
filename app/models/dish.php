@@ -3,10 +3,11 @@ class Dish extends AppModel {
 //    var $name = 'Dish';
 //    var $useTable = 'dish';
     var $belongsTo = 'Dgroup';
+    var $lastFN = '';
     function beforeSave(){
         $fname = md5( microtime().mt_rand() );
+        $this->lastFN = $fname;
         if( isset( $this->data['Dish']['imagefile'] ) ){
-//            var_dump( $this->data['Dish']['imagefile'], DISH_IMAGES.$fname );
             if( !move_uploaded_file( $this->data['Dish']['imagefile']['tmp_name'], DISH_IMAGES.$fname )){
                 echo("RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR");
             }else{
@@ -15,6 +16,10 @@ class Dish extends AppModel {
 
         }
         return true;
+    }
+
+    function getLastFileName(){
+        return $this->lastFN;
     }
 
     function getAction(){

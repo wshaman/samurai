@@ -5,7 +5,7 @@
     foreach( $dgroups as $key =>$val ){
         $l = preg_replace( "/.*f=\"([^\"]+)\".*/i", "$1", $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index', 'id' => $val['Dgroup']['id']) ) );
         echo "<div class=\"item\" align=\"center\" onclick=\"document.location.href='{$l}'\">
-                <div class=\"img\">{$html->image(DISH_IMAGES_URL.$val['image'],array( 'height'=>'90px'))}</div>
+                <div class=\"img\">{$html->image(DISH_IMAGES_URL.$val['image'].'_THUMB',array( 'height'=>'90px'))}</div>
                 <div class=\"name\">{$val['Dgroup']['name']}</div>
                 <div class=\"descr\">{$val['Dgroup']['description']}</div>
             </div>"; 

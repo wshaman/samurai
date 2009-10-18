@@ -178,7 +178,7 @@ CREATE TABLE `dgroups` (
 
 LOCK TABLES `dgroups` WRITE;
 /*!40000 ALTER TABLE `dgroups` DISABLE KEYS */;
-INSERT INTO `dgroups` VALUES (1,'ЭэээБУКВЫ!','JgbcFние',1),(2,'НаборБукаффф','ПРОПРЛвпавыпаваj',1),(3,'Прроверка3_','frrrrrrrrrrr',1),(4,'test005','jhyuyr',0);
+INSERT INTO `dgroups` VALUES (1,'Хосо маки','Я-таки смог это произнести!!!',1),(2,'НаборБукаффф','ПРОПРЛвпавыпаваj',1);
 /*!40000 ALTER TABLE `dgroups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,12 +195,12 @@ CREATE TABLE `dishes` (
   `dgroup_id` int(5) unsigned NOT NULL,
   `cost` float unsigned NOT NULL COMMENT 'Стоимость порции',
   `weight` int(5) unsigned NOT NULL COMMENT 'вес в гр.',
-  `cost_half` float unsigned NOT NULL COMMENT 'Стоимость половины порции',
-  `weight_half` int(5) NOT NULL COMMENT 'вес в гр. половины порции',
+  `cost_half` float unsigned DEFAULT '0' COMMENT 'Стоимость половины порции',
+  `weight_half` int(5) DEFAULT '0' COMMENT 'вес в гр. половины порции',
   `image` varchar(50) NOT NULL COMMENT 'Имя картинки',
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +209,7 @@ CREATE TABLE `dishes` (
 
 LOCK TABLES `dishes` WRITE;
 /*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
-INSERT INTO `dishes` VALUES (1,'Круглая штука',1,342.45,23,202.45,11,'250130a14fcee8fdc786e44692eaaa0f','Ну, она такая круглая!'),(2,'test02',2,32,123,0,0,'397c4a008ab35a45cb35d2107ff15041','dfsdfas'),(3,'rrrrrrrrrr',3,0,0,0,0,'4281c43438eadf5e25fb1664c339112b','treterterter'),(4,'gfdasd',1,110,32,0,0,'63f8c193f9771108ad6d471fe8ef067f','sdfgsdfgsd');
+INSERT INTO `dishes` VALUES (10,'Сушка1',1,10,2,NULL,NULL,'d3238b80bd02056708808816c5e7b64c','Это очень симпатишная сушка. А ещё её можно кушать. Ага.'),(11,'Весёлая сушка',1,25,1,NULL,NULL,'71e6f2ba2ed0ef59ad1f104488400cb5','Она улыбается, хоть и сделана из еды.');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-18  1:29:38
+-- Dump completed on 2009-10-19  1:03:48
