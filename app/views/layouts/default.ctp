@@ -18,7 +18,11 @@
 <body>
 <?php   $session->flash('auth'); ?>
 <div class="global">
-<div class="header">Head block</div>
+<div class="header2">
+    <div class="head_left"></div>
+    <div class="head_mid"></div>
+    <div class="head_right"></div>
+</div>
 <div class="content">
     <div class="left" align="center">
         <div class="gong">    
@@ -38,10 +42,11 @@
         </div>
     </div>
     <div class="main" align="center"><div class="menupart">
-    <?php echo $html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index'), array( 'class'=>'item_main' )  );
-    echo "<span class=\"span_item\">".$html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index'), array( 'class'=>'item_menu' ) )."</span>";
-    echo $html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive'), array( 'class'=>'item_news' )  );
-    echo $html->link( 'Гостевая', array( 'controller'=>'Gbooks', 'action'=>'index'), array( 'class'=>'item_gbook' )  );?>
+    <?php echo "<div class=\"menu_item\">".$html->link( 'Главная', array( 'controller'=>'Mains', 'action' => 'index'), array( 'class'=>'item_main' )  ).'</div>&nbsp;';
+    echo "<div class=\"menu_item\">".$html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'index'), array( 'class'=>'item_menu' ) )."</div>&nbsp;";
+    echo "<div class=\"menu_item\">".$html->link( 'Архив новостей', array( 'controller'=>'Cnews', 'action'=>'archive'), array( 'class'=>'item_news' )  ).'</div>&nbsp;';
+    echo "<div class=\"menu_item\">".$html->link( 'Гостевая', array( 'controller'=>'Gbooks', 'action'=>'index'), array( 'class'=>'item_gbook' )  )."</div>";
+    ?>
     </div>
     <div class="middle" align="center">
     <NOSCRIPT><h1>Для нормальной работы сайта необходимо включить JavaScript в Вашем браузере</h1></NOSCRIPT>

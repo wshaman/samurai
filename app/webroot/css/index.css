@@ -21,14 +21,16 @@
 }
 
 .itemlist > .newsitem{
-	width: 260px;
+	width: 370px;
 	margin-top:5px;
-	height: 100px;
+	height: 95px;
 	border: 1px solid black;
 	color:white;
 	vertical-align: middle;
 	padding: 5px;
-	background-color: blue;
+	/*background-color: blue;*/
+	background-image: url("../img/news.png");
+	background-repeat: no-repeat;	
 }
 
 .itemlist > .newsitem > .img{
@@ -42,21 +44,22 @@
 
 .itemlist > .newsitem > .info{
 	display: inline-table;
-	width: 160px;
+	width: 260px;
 	vertical-align: middle;
 	float: right;
+	color: black;
 	border: 1px solid #ff00ff;
 }
 
 .itemlist > .newsitem > .info > .caption{
-	width: 160px;
+	width: 260px;
 	height: 30px;
 	text-align: center;
 	border: 1px solid #ffa5ff;
 }
 
 .itemlist > .newsitem > .info >.text{
-	width: 160px;
+	width: 260px;
 	border: 1px solid #ffa5ff;
 	text-align: justify;
 }
