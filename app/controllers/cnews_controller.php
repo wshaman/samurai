@@ -2,7 +2,7 @@
 class CnewsController extends AppController {
     var $uses = array( 'Cnew' );
     var $helpers = array('Html','Ajax','Javascript');
-    var $components = array( 'RequestHandler' );
+    var $components = array( 'RequestHandler', 'Img' );
 
     function beforeFilter() {
         parent::beforeFilter();
@@ -32,7 +32,12 @@ class CnewsController extends AppController {
     function admin_save( ) {
         $this->layout =  "admin";
         $this->Cnew->save( $this->data );
+        $this->Img->makeimgs( $this->Cnew->getLastFileName(), 'cnew' );
         $this->redirect( '/admin/cnews/index/' );
+    }
+    
+    function archive(){
+        $this->set( 'cnews', $this->Cnew->find('all') );
     }
 }
 ?>

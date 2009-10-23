@@ -9,7 +9,7 @@ class Dish extends AppModel {
         $this->lastFN = $fname;
         if( isset( $this->data['Dish']['imagefile'] ) ){
             if( !move_uploaded_file( $this->data['Dish']['imagefile']['tmp_name'], DISH_IMAGES.$fname )){
-                echo("RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR");
+                echo("Не могу сохранить изображение! Обратитесь к разработчику. Он починит. Честно.");
             }else{
                 $this->data['Dish']['image'] = $fname;
             }

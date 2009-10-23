@@ -14,7 +14,7 @@
     foreach( $news as $key =>$val ){
 //        $l = preg_replace( "/.*f=\"([^\"]+)\".*/i", "$1", $html->link( 'Меню', array( 'controller'=>'Menus', 'action'=>'mlist', 'id' => $val['Dgroup']['id']) ) );
         echo "<div class=\"newsitem\" align=\"center\" onclick=\"document.location.href='{$l}'\">
-                <div class=\"img\">{$html->image(NEWS_IMAGES_URL.$val['Cnew']['image'],array( 'height'=>'90px'))}</div>
+                <div class=\"img\">{$html->image(NEWS_IMAGES_URL.$val['Cnew']['image'].'_THUMB' ,array( 'height'=>'90px'))}</div>
                 <div class=\"info\">
                     <div class=\"caption\">{$val['Cnew']['caption']}</div>
                     <div class=\"text\">{$val['Cnew']['pre']}</div>

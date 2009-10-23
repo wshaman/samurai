@@ -143,7 +143,7 @@ CREATE TABLE `cnews` (
   `image` varchar(50) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +152,7 @@ CREATE TABLE `cnews` (
 
 LOCK TABLES `cnews` WRITE;
 /*!40000 ALTER TABLE `cnews` DISABLE KEYS */;
-INSERT INTO `cnews` VALUES (2,'Тест01','Многабукаф','Малобукаф','63b9666a35102fab091712a5edf13487','2009-10-03 17:00:00'),(4,'Тест03','ывапывапвыапы','аываываыв','b94014ed1f6367ed20cbce14b0e10a6f','2009-10-04 10:10:50');
+INSERT INTO `cnews` VALUES (5,'Тест01','А что тут ещё сказать? Ура, товарищи!','Мы открылись!','4eee425f2f6f9046a109b07e044b822d','2009-10-23 18:17:25'),(8,'Тест02','цццццццццццццццццц','йййййййййййй','e8a9d4904158366578fe1938f8bfbae3','2009-10-23 18:22:55');
 /*!40000 ALTER TABLE `cnews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,7 +169,7 @@ CREATE TABLE `dgroups` (
   `description` text NOT NULL,
   `show_on_main` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-19  1:03:48
+-- Dump completed on 2009-10-24  3:59:10

@@ -4161,6 +4161,7 @@ append	./cake/libs/view/helpers/form.php	/^			$append = sprintf($this->Html->tag
 append	./cake/libs/view/helpers/form.php	/^		$append = '';$/;"	v
 append	./cake/libs/xml.php	/^	function &append(&$child, $options = array()) {$/;"	f
 append	./cake/libs/xml.php	/^	function append() {$/;"	f
+archive	./app/controllers/cnews_controller.php	/^    function archive(){$/;"	f
 are	./cake/libs/controller/components/acl.php	/^ * Subclasses of this class are used by AclComponent to perform ACL checks in Cake.$/;"	c
 are	./vendors/simpletest/simpletest.php	/^     *   Instances of the same class are overwritten.$/;"	c
 arg	./cake/libs/router.php	/^				foreach ($_this->__paths[0]['namedArgs'] as $arg => $value) {$/;"	v
@@ -5616,7 +5617,7 @@ component	./cake/libs/controller/component.php	/^			$component =& $this->_loaded
 component	./cake/libs/controller/component.php	/^		foreach ((array)$normal as $component => $config) {$/;"	v
 componentCn	./cake/libs/controller/component.php	/^			$componentCn = $component . 'Component';$/;"	v
 componentPaths	./cake/libs/configure.php	/^	var $componentPaths = array();$/;"	v
-components	./app/controllers/cnews_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
+components	./app/controllers/cnews_controller.php	/^    var $components = array( 'RequestHandler', 'Img' );$/;"	v
 components	./app/controllers/dgroups_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
 components	./app/controllers/dishes_controller.php	/^    var $components = array( 'RequestHandler', 'Img' );$/;"	v
 components	./app/controllers/menus_controller.php	/^    var $components = array( 'RequestHandler' );$/;"	v
@@ -9762,7 +9763,8 @@ filePath	./cake/tests/cases/libs/folder.test.php	/^		$filePath = $new . DS . 'te
 filePath	./cake/tests/lib/test_manager.php	/^		$filePath = $manager->_getTestsPath('groups') . DS . strtolower($groupTestName) . $manager->_groupExtension;$/;"	v
 filePaths	./cake/libs/controller/components/email.php	/^	var $filePaths = array();$/;"	v
 fileSize	./cake/libs/view/media.php	/^			$fileSize = @filesize($path);$/;"	v
-file_name	./app/controllers/components/img.php	/^        $file_name= DISH_IMAGES.$name;$/;"	v
+file_name	./app/controllers/components/img.php	/^            case 'cnew' : $file_name= NEWS_IMAGES.$name;break;$/;"	v
+file_name	./app/controllers/components/img.php	/^            case 'dish' : $file_name= DISH_IMAGES.$name;break;$/;"	v
 file_put_contents	./cake/basics.php	/^	function file_put_contents($fileName, $data) {$/;"	f
 file_type	./app/controllers/components/img.php	/^        $file_type=$finfo->file( DISH_IMAGES.$name );*\/$/;"	v
 file_type	./app/controllers/components/img.php	/^        $file_type=trim( preg_replace( '\/;.*\/', '', exec( 'file -i -b '.$file_name ) ) );$/;"	v
@@ -10397,6 +10399,7 @@ getLabel	./vendors/simpletest/detached.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/remote.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/tag.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/test_case.php	/^    function getLabel() {$/;"	f
+getLastFileName	./app/models/cnew.php	/^    function getLastFileName(){$/;"	f
 getLastFileName	./app/models/dish.php	/^    function getLastFileName(){$/;"	f
 getLastInsertID	./cake/libs/model/model.php	/^	function getLastInsertID() {$/;"	f
 getLastQuery	./cake/tests/cases/libs/model/datasources/dbo/dbo_adodb.test.php	/^	function getLastQuery() {$/;"	f
@@ -11975,6 +11978,8 @@ lastError	./cake/libs/session.php	/^	var $lastError = null;$/;"	v
 lastError	./cake/libs/socket.php	/^		$this->lastError = array('num' => $errNum, 'str' => $errStr);$/;"	v
 lastError	./cake/libs/socket.php	/^	function lastError() {$/;"	f
 lastError	./cake/libs/socket.php	/^	var $lastError = array();$/;"	v
+lastFN	./app/models/cnew.php	/^        $this->lastFN = $fname;$/;"	v
+lastFN	./app/models/cnew.php	/^    var $lastFN = '';$/;"	v
 lastFN	./app/models/dish.php	/^        $this->lastFN = $fname;$/;"	v
 lastFN	./app/models/dish.php	/^    var $lastFN = '';$/;"	v
 lastInsertId	./cake/libs/model/datasources/datasource.php	/^	function lastInsertId($source = null) {$/;"	f
@@ -12357,7 +12362,7 @@ makeAbsolute	./vendors/simpletest/url.php	/^    function makeAbsolute($base) {$/
 makeDry	./vendors/simpletest/scorer.php	/^    function makeDry($is_dry = true) {$/;"	f
 make_clean_css	./app/webroot/css.php	/^	function make_clean_css($path, $name) {$/;"	f
 make_clean_css	./cake/console/libs/templates/skel/webroot/css.php	/^	function make_clean_css($path, $name) {$/;"	f
-makeimgs	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL ){$/;"	f
+makeimgs	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL, $type='dish' ){$/;"	f
 manager	./cake/tests/cases/libs/code_coverage_manager.test.php	/^		$manager =& CodeCoverageManager::getInstance();$/;"	v
 manager	./cake/tests/cases/libs/view/helpers/rss.test.php	/^		$manager =& XmlManager::getInstance();$/;"	v
 manager	./cake/tests/cases/libs/view/helpers/xml.test.php	/^		$manager =& XmlManager::getInstance();$/;"	v
@@ -12981,7 +12986,7 @@ n2	./cake/libs/xml.php	/^						foreach ($val as $n2 => $obj2) {$/;"	v
 name	./app/config/sql/db_acl.php	/^	var $name = 'DbAcl';$/;"	v
 name	./app/config/sql/i18n.php	/^	var $name = 'i18n';$/;"	v
 name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
-name	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL ){$/;"	v
+name	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL, $type='dish' ){$/;"	v
 name	./app/controllers/groups_controller.php	/^	var $name = 'Groups';$/;"	v
 name	./app/controllers/users_controller.php	/^    var $name='Users';$/;"	v
 name	./app/models/cnew.php	/^    \/\/var $name = 'Cnew';$/;"	v

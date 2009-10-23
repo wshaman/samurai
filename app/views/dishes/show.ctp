@@ -4,7 +4,7 @@
         <?php echo $dish['Dish']['name']; ?> 
     </div>
     <div class="popup-image">
-        <img src="<?php echo '/img/'.DISH_IMAGES_URL.$dish['Dish']['image'];?>" />
+        <img src="<?php echo '/img/'.DISH_IMAGES_URL.$dish['Dish']['image'];?>" height="500px;" />
     </div>
     <div class="popup-description">
         <?php echo $dish['Dish']['description']; ?> 

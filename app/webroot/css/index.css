@@ -44,7 +44,7 @@
 
 .itemlist > .newsitem > .info{
 	display: inline-table;
-	width: 260px;
+	width: 240px;
 	vertical-align: middle;
 	float: right;
 	color: black;
@@ -52,14 +52,14 @@
 }
 
 .itemlist > .newsitem > .info > .caption{
-	width: 260px;
+	width: 240px;
 	height: 30px;
 	text-align: center;
 	border: 1px solid #ffa5ff;
 }
 
 .itemlist > .newsitem > .info >.text{
-	width: 260px;
+	width: 240px;
 	border: 1px solid #ffa5ff;
 	text-align: justify;
 }

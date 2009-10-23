@@ -1,2 +1,2 @@
-1342351171
+1256322408
 a:4:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:10;s:3:"key";s:7:"primary";}s:9:"dishes_id";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:10;}s:3:"num";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:3;}s:4:"half";a:4:{s:4:"type";s:7:"boolean";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:1;}}

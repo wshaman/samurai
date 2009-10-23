@@ -6,7 +6,7 @@ class ImgComponent extends Object {
     var $ThumbWidth=90;
 
 
-    function makeimgs( $name=NULL ){
+    function makeimgs( $name=NULL, $type='dish' ){
         if( is_null( $name ) ) return false;
 /*        $sysmagic = "/usr/share/misc/magic";
         $ownmagic = CAKE_CORE_INCLUDE_PATH.'/app/vendors/magic';
@@ -18,7 +18,10 @@ class ImgComponent extends Object {
 //            exit();
         }
         $file_type=$finfo->file( DISH_IMAGES.$name );*/
-        $file_name= DISH_IMAGES.$name;
+        switch( $type ){
+            case 'dish' : $file_name= DISH_IMAGES.$name;break;
+            case 'cnew' : $file_name= NEWS_IMAGES.$name;break;
+        }
         $file_type=trim( preg_replace( '/;.*/', '', exec( 'file -i -b '.$file_name ) ) );
         if($file_type == "image/pjpeg" || $file_type == "image/jpeg"){
             $new_img = imagecreatefromjpeg($file_name);
