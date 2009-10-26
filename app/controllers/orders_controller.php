@@ -37,6 +37,10 @@ class OrdersController extends AppController {
 
 
     function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){
+        if( $trade_id == -1 ){
+            if( $this->Session->check( 'cart' ) )
+                $this->Session->del( 'cart' );
+        }
         $cart = $this->Session->read( 'cart' );
         if( $trade_id > 0 ){
             if( isset( $cart[$trade_id][$half] ) ){

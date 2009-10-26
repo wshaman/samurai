@@ -1,5 +1,5 @@
 .recordlist{
-	border:1px solid #000000;
+	/*border:1px solid #000000;*/
 	padding:5px 5px 5px 5px;
 	width: 550px;
 	overflow: auto;
@@ -7,14 +7,16 @@
 }
 
 .recordlist > .record{
-	width: 460px;
+	width: 450px;
 	margin-top:5px;
-	height: 100px;
-	border: 1px solid black;
-	color:white;
+	height: 110px;
+	background-image: url("../img/news460x120.png");
+	/*border: 1px solid black;*/
+	color:black;
 	vertical-align: middle;
 	padding: 5px;
-	background-color: blue;
+	/*background-color: blue;*/
+	
 }
 .recordlist > .record > .caption{
 	text-align: left;

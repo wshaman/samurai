@@ -41,10 +41,12 @@ class AppController extends Controller {
     function beforeFilter() {
         if ( preg_match( '/.*admin.*/i', $_SERVER["REQUEST_URI"] )){
             $this->isAdmin();
+        } else {
+            $this->pageTitle='Сёгун-Омск. Суши в каждый дом!';
         }
         parent::beforeFilter();
     }
- /*   function beforeFilter() {
+   /*function beforeFilter() {
         //Configure AuthComponent
         $this->Auth->authorize = 'actions';
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');

@@ -3,8 +3,8 @@
 ?>
 <div class="recordlist">
 <?php
+echo $html->link( 'Спросить Сёгуна', 
 foreach( $par as $p ){
-    echo $html->link( 'Спросить Самурая', 
                 array('controller'=>'gbooks', 'action'=>'add') );
     $p = $p['Gbook'];
     echo '<div class="record">';
@@ -12,7 +12,7 @@ foreach( $par as $p ){
     echo '<div class="text">'.$p['text'].'</div>';
 
     if( !empty( $p['answer'] ) ){ 
-        echo '<div class="caption"><span class="text">На что <span class="data">Самурай</span> ответил:</span></div>';
+        echo '<div class="caption"><span class="text">На что <span class="data">Сёгун</span> ответил:</span></div>';
         echo '<div class="text">'.$p['answer'].'</div>';
     }
     echo '</div>';

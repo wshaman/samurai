@@ -18,5 +18,9 @@ class MainsController extends AppController {
 
     }
 
+    function about(){
+
+    }
+
 }
 ?>

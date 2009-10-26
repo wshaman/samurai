@@ -3730,6 +3730,7 @@ aStaticWithParameters	./vendors/simpletest/test/reflection_php5_test.php	/^			's
 aStaticWithParameters	./vendors/simpletest/test/reflection_php5_test.php	/^	static function aStaticWithParameters($arg1, $arg2) { }$/;"	f
 aa	./cake/basics.php	/^	function aa() {$/;"	f
 abort	./cake/libs/socket.php	/^	function abort() {$/;"	f
+about	./app/controllers/mains_controller.php	/^    function about(){$/;"	f
 abs	./cake/libs/view/helpers/number.php	/^		$abs = abs($number);$/;"	v
 absolute	./vendors/simpletest/test/url_test.php	/^		$absolute = $url->makeAbsolute('http:\/\/www.domain.com\/some\/path\/');$/;"	v
 absolute	./vendors/simpletest/test/url_test.php	/^        $absolute = $url->makeAbsolute('http:\/\/host.com\/I\/am\/here\/');$/;"	v
@@ -4673,7 +4674,6 @@ beforeFilter	./app/controllers/menus_controller.php	/^    function beforeFilter(
 beforeFilter	./app/controllers/orders_controller.php	/^    function beforeFilter() {$/;"	f
 beforeFilter	./app/controllers/users_controller.php	/^    function beforeFilter() {$/;"	f
 beforeFilter	./cake/libs/controller/app_controller.php	/^    function beforeFilter() {$/;"	f
-beforeFilter	./cake/libs/controller/app_controller.php	/^ \/*   function beforeFilter() {$/;"	f
 beforeFilter	./cake/libs/controller/controller.php	/^	function beforeFilter() {$/;"	f
 beforeFilter	./cake/tests/cases/dispatcher.test.php	/^	function beforeFilter() {$/;"	f
 beforeFilter	./cake/tests/cases/libs/controller/components/auth.test.php	/^	function beforeFilter() {$/;"	f
@@ -14452,6 +14452,7 @@ page	./vendors/simpletest/test/page_test.php	/^        $page = &new SimplePage($
 page	./vendors/simpletest/test/page_test.php	/^        $page = &new SimplePage();$/;"	v
 page	./vendors/simpletest/test/page_test.php	/^        $page = &new SimplePage(new MockSimpleHttpResponse());$/;"	v
 pageCount	./cake/libs/controller/controller.php	/^		$pageCount = intval(ceil($count \/ $limit));$/;"	v
+pageTitle	./cake/libs/controller/app_controller.php	/^            $this->pageTitle='Сёгун-Омск. Суши в каждый дом!';$/;"	v
 pageTitle	./cake/libs/controller/controller.php	/^				$this->pageTitle = $value;$/;"	v
 pageTitle	./cake/libs/controller/controller.php	/^	var $pageTitle = false;$/;"	v
 pageTitle	./cake/libs/view/view.php	/^				$this->pageTitle = $value;$/;"	v
@@ -23040,6 +23041,7 @@ trace	./vendors/simpletest/test/simpletest_test.php	/^        $trace = new Simpl
 trace	./vendors/simpletest/test_case.php	/^        $trace = new SimpleStackTrace(array('assert', 'expect', 'pass', 'fail', 'skip'));$/;"	v
 trace	./vendors/simpletest/web_tester.php	/^        $trace = new SimpleStackTrace(array('assert', 'click', 'pass', 'fail'));$/;"	v
 traceMethod	./vendors/simpletest/simpletest.php	/^    function traceMethod($stack = false) {$/;"	f
+trade_id	./app/controllers/orders_controller.php	/^        if( $trade_id == -1 ){$/;"	v
 trade_id	./app/controllers/orders_controller.php	/^    function ajax_cart( $trade_id=NULL, $trade_num=1, $half=0 ){$/;"	v
 trans	./cake/libs/i18n.php	/^						$trans = $trans[$plurals];$/;"	v
 transactionWorked	./cake/tests/cases/libs/model/model_write.test.php	/^		$transactionWorked = Set::matches('\/Post[1][title=Baleeted First Post]', $result);$/;"	v
