@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "removing swp files\n"
-./rmswp
+./rmswp.sh
 echo "making DB dump\n"
 rm ./dump.sql
 mysqldump -uroot -proot db002 > ./dump.sql

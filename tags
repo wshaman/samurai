@@ -10828,6 +10828,7 @@ helpers	./app/controllers/orders_controller.php	/^    var $helpers = array('Html
 helpers	./cake/console/libs/tasks/controller.php	/^					$helpers = explode(',', $helpersListTrimmed);$/;"	v
 helpers	./cake/console/libs/tasks/controller.php	/^			$helpers = array();$/;"	v
 helpers	./cake/console/libs/templates/skel/controllers/pages_controller.php	/^	var $helpers = array('Html');$/;"	v
+helpers	./cake/libs/controller/app_controller.php	/^    var $helpers = array('Html','Ajax','Javascript');$/;"	v
 helpers	./cake/libs/controller/controller.php	/^	var $helpers = array('Html', 'Form');$/;"	v
 helpers	./cake/libs/controller/controller.php	/^ * Example: var $helpers = array('Html', 'Javascript', 'Time', 'Ajax');$/;"	v
 helpers	./cake/libs/controller/pages_controller.php	/^	var $helpers = array('Html');$/;"	v
@@ -12503,6 +12504,7 @@ mergeKeys	./cake/libs/model/datasources/dbo_source.php	/^						if ($mergeKeys[0]
 meridian	./cake/libs/view/helpers/form.php	/^						$meridian = 'pm';$/;"	v
 meridian	./cake/libs/view/helpers/form.php	/^				$meridian = 'am';$/;"	v
 meridian	./cake/libs/view/helpers/form.php	/^	function meridian($fieldName, $selected = null, $attributes = array(), $showEmpty = true) {$/;"	f
+message	./app/controllers/orders_controller.php	/^            $message="Новый заказ получен!";$/;"	v
 message	./cake/libs/controller/components/email.php	/^			$message = $this->__formatMessage($message);$/;"	v
 message	./cake/libs/controller/components/email.php	/^			$message = $this->__renderTemplate($message);$/;"	v
 message	./cake/libs/controller/components/email.php	/^			$message = array_merge($prefix, $message);$/;"	v
@@ -20033,6 +20035,7 @@ subKey	./cake/libs/http_socket.php	/^							$subKey = key($queryNode);$/;"	v
 subKeys	./cake/libs/http_socket.php	/^					$subKeys = $matches[1];$/;"	v
 sub_key	./vendors/simpletest/encoding.php	/^                foreach ($value as $sub_key => $sub_value) {$/;"	v
 subdir	./cake/tests/cases/libs/folder.test.php	/^		$subdir = 'test_folder_new';$/;"	v
+subj	./app/controllers/orders_controller.php	/^            $subj="Новый заказ!";$/;"	v
 subject	./cake/libs/controller/components/email.php	/^		$subject = $this->__strip($subject);$/;"	v
 subject	./cake/libs/controller/components/email.php	/^		$this->subject = null;$/;"	v
 subject	./cake/libs/controller/components/email.php	/^	var $subject = null;$/;"	v
@@ -22957,6 +22960,7 @@ tmpUri	./cake/dispatcher.php	/^			$tmpUri = preg_replace('\/^(?:\\?)?(?:\\\/)?\/
 tmpUri	./cake/dispatcher.php	/^			if ($tmpUri === '\/' || $tmpUri == $baseDir || $tmpUri == $base) {$/;"	v
 tmpipaddr	./cake/libs/controller/components/request_handler.php	/^			$tmpipaddr = env('HTTP_CLIENTADDRESS');$/;"	v
 tmplistener	./vendors/simpletest/eclipse.php	/^        $tmplistener = &new SimpleSocket($host, $port, 5);$/;"	v
+to	./app/controllers/orders_controller.php	/^            $to="maksim_vikulov@bk.ru";$/;"	v
 to	./cake/console/libs/bake.php	/^				$this->out(__('You have made an invalid selection. Please choose a type of class to Bake by entering D, M, V, or C.', true));$/;"	c
 to	./cake/console/libs/tasks/controller.php	/^			$this->err(__('You must have a model for this class to build scaffold methods. Please try again.', true));$/;"	c
 to	./cake/console/libs/tasks/test.php	/^			$key = $this->in(__("Enter the class to test or (q)uit", true), $keys, 'q');$/;"	c

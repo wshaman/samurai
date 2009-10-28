@@ -10,6 +10,13 @@
 <?php echo $scripts_for_layout ?>
 </head>
 <body style="background-color:e2bb59;">
+<div class="admin_navigation">
+<h2>Управление сайтом</h2>
+<?php echo $html->link( 'Заказы', array( 'controller'=>'orders', 'action'=>'index') ); ?>&nbsp;
+<?php echo $html->link( 'Меню', array( 'controller'=>'dgroups', 'action'=>'index') ); ?>&nbsp;
+<?php echo $html->link( 'Новости', array( 'controller'=>'cnews', 'action'=>'index') ); ?>&nbsp;
+<?php echo $html->link( 'Гостевая', array( 'controller'=>'gbooks', 'action'=>'index') ); ?>&nbsp;
+</div>
 <div id="header">
 <!--div id="menu">...</div-->
 </div>

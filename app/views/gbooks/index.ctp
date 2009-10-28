@@ -4,8 +4,8 @@
 <div class="recordlist">
 <?php
 echo $html->link( 'Спросить Сёгуна', 
-foreach( $par as $p ){
                 array('controller'=>'gbooks', 'action'=>'add') );
+foreach( $par as $p ){
     $p = $p['Gbook'];
     echo '<div class="record">';
     echo '<div class="caption"><span class="data">'.$p['created'].',&nbsp;'.$p['author'].'</span><span class="text">&nbsp;написал(а):</span></div>';

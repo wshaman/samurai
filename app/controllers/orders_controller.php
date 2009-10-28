@@ -68,7 +68,10 @@ class OrdersController extends AppController {
 //            var_dump( $this->data ); die;
             //$this->data['Orders']['cart']=serialize( $this->data['Orders']['cart'] );
             $this->Order->save( $this->data );
-
+            $message="Новый заказ получен!";
+            $to="maksim_vikulov@bk.ru";
+            $subj="Новый заказ!";
+            mail( $to, $subj, $message );
             $this->Session->del( 'cart' );
             $this->flash( "Ваш заказ поступил в обработку, скоро Вам перезвонят по указанному номеру", '/Mains/' );
         }

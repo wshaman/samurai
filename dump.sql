@@ -284,7 +284,7 @@ CREATE TABLE `orders` (
   `cart` tinytext NOT NULL COMMENT 'Serialized cart',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +293,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'Serg','kfkldfas fdhg',0,'2232534','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(2,'swdw','efef',0,'23423','closed','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(4,'Serg','dflkdsl;fk',0,'2323343','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00');
+INSERT INTO `orders` VALUES (1,'Serg','kfkldfas fdhg',0,'2232534','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(2,'swdw','efef',0,'23423','closed','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(4,'Serg','dflkdsl;fk',0,'2323343','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(5,'fg','fsdg',0,'3423423','open','a:2:{i:11;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"25\";s:4:\"name\";s:25:\"Весёлая сушка\";}}i:10;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"10\";s:4:\"name\";s:11:\"Сушка1\";}}}','2009-10-28 20:38:34');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-27  1:03:27
+-- Dump completed on 2009-10-29  2:54:58
