@@ -33,7 +33,11 @@ class DishesController extends AppController {
     function admin_save( ) {
         $this->layout =  "admin";
         $this->Dish->save( $this->data );
-        $this->Img->makeimgs( $this->Dish->getLastFileName() );
+        $this->Img->makeimgs( array(
+            $this->Dish->getLastFileName(),
+            $this->Dish->getLastFileType(),
+            )
+        );
         $this->redirect( '/admin/dishes/index/'.$this->data['Dish']['dgroup_id'] );
     }
 

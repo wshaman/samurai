@@ -9766,8 +9766,9 @@ fileSize	./cake/libs/view/media.php	/^			$fileSize = @filesize($path);$/;"	v
 file_name	./app/controllers/components/img.php	/^            case 'cnew' : $file_name= NEWS_IMAGES.$name;break;$/;"	v
 file_name	./app/controllers/components/img.php	/^            case 'dish' : $file_name= DISH_IMAGES.$name;break;$/;"	v
 file_put_contents	./cake/basics.php	/^	function file_put_contents($fileName, $data) {$/;"	f
+file_type	./app/controllers/components/img.php	/^            $file_type = $ftype;$/;"	v
+file_type	./app/controllers/components/img.php	/^            $file_type=trim( preg_replace( '\/;.*\/', '', exec( 'file -i -b '.$file_name ) ) );$/;"	v
 file_type	./app/controllers/components/img.php	/^        $file_type=$finfo->file( DISH_IMAGES.$name );*\/$/;"	v
-file_type	./app/controllers/components/img.php	/^        $file_type=trim( preg_replace( '\/;.*\/', '', exec( 'file -i -b '.$file_name ) ) );$/;"	v
 file_type	./app/controllers/components/img.php	/^        if($file_type == "image\/pjpeg" || $file_type == "image\/jpeg"){$/;"	v
 file_type	./app/controllers/components/img.php	/^        } elseif($file_type == "image\/x-png" || $file_type == "image\/png") {$/;"	v
 filename	./app/webroot/css.php	/^	$filename = 'css\/' . $regs[1];$/;"	v
@@ -10026,8 +10027,7 @@ flay	./cake/libs/view/helpers/text.php	/^	function flay($text, $allowHtml = fals
 floats	./cake/libs/model/datasources/dbo/dbo_postgres.php	/^		$floats = array($/;"	v
 flush	./cake/libs/class_registry.php	/^	function flush() {$/;"	f
 fm	./cake/libs/controller/components/email.php	/^		$fm = '<pre>';$/;"	v
-fname	./app/models/cnew.php	/^        $fname = md5( microtime().mt_rand() );$/;"	v
-fname	./app/models/dish.php	/^        $fname = md5( microtime().mt_rand() );$/;"	v
+fname	./cake/libs/model/app_model.php	/^        $fname = md5( microtime().mt_rand() );$/;"	v
 folder	./app/controllers/users_controller.php	/^$folder =& new Folder();$/;"	v
 folder	./cake/console/libs/testsuite.php	/^					$folder = $path . $scoredCategory . DS . 'tests';$/;"	v
 folder	./cake/console/libs/testsuite.php	/^			$folder = $paths[$category] . 'tests';$/;"	v
@@ -10208,6 +10208,11 @@ from	./cake/libs/controller/components/email.php	/^	var $from = null;$/;"	v
 from	./cake/libs/folder.php	/^					$from = Folder::addPathElement($fromDir, $item);$/;"	v
 fromDir	./cake/libs/folder.php	/^		$fromDir = $options['from'];$/;"	v
 fromString	./cake/libs/view/helpers/time.php	/^	function fromString($dateString, $userOffset = null) {$/;"	f
+ft	./cake/libs/model/app_model.php	/^            $ft = 'image\/png';$/;"	v
+ft	./cake/libs/model/app_model.php	/^            $ft =strtolower( preg_replace( '\/(.*)\\.(\\w+$)\/', '$2', $this->data[$p1][$p2]['name'] ));$/;"	v
+ft	./cake/libs/model/app_model.php	/^            if( !empty( $ft ) ) $ft = 'image\/'.$ft;$/;"	v
+ft	./cake/libs/model/app_model.php	/^        } else $ft = $this->data[$p1][$p2]['type'];$/;"	v
+ftype	./app/controllers/components/img.php	/^            $ftype=$name[1];$/;"	v
 full	./cake/libs/router.php	/^				$full = true;$/;"	v
 full	./cake/libs/router.php	/^	function url($url = null, $full = false) {$/;"	v
 full	./cake/libs/view/helper.php	/^	function url($url = null, $full = false) {$/;"	v
@@ -10399,8 +10404,8 @@ getLabel	./vendors/simpletest/detached.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/remote.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/tag.php	/^    function getLabel() {$/;"	f
 getLabel	./vendors/simpletest/test_case.php	/^    function getLabel() {$/;"	f
-getLastFileName	./app/models/cnew.php	/^    function getLastFileName(){$/;"	f
-getLastFileName	./app/models/dish.php	/^    function getLastFileName(){$/;"	f
+getLastFileName	./cake/libs/model/app_model.php	/^    function getLastFileName(){$/;"	f
+getLastFileType	./cake/libs/model/app_model.php	/^    function getLastFileType(){$/;"	f
 getLastInsertID	./cake/libs/model/model.php	/^	function getLastInsertID() {$/;"	f
 getLastQuery	./cake/tests/cases/libs/model/datasources/dbo/dbo_adodb.test.php	/^	function getLastQuery() {$/;"	f
 getLastQuery	./cake/tests/cases/libs/model/datasources/dbo/dbo_mssql.test.php	/^	function getLastQuery() {$/;"	f
@@ -11979,10 +11984,10 @@ lastError	./cake/libs/session.php	/^	var $lastError = null;$/;"	v
 lastError	./cake/libs/socket.php	/^		$this->lastError = array('num' => $errNum, 'str' => $errStr);$/;"	v
 lastError	./cake/libs/socket.php	/^	function lastError() {$/;"	f
 lastError	./cake/libs/socket.php	/^	var $lastError = array();$/;"	v
-lastFN	./app/models/cnew.php	/^        $this->lastFN = $fname;$/;"	v
-lastFN	./app/models/cnew.php	/^    var $lastFN = '';$/;"	v
-lastFN	./app/models/dish.php	/^        $this->lastFN = $fname;$/;"	v
-lastFN	./app/models/dish.php	/^    var $lastFN = '';$/;"	v
+lastFN	./cake/libs/model/app_model.php	/^        $this->lastFN = $fname;$/;"	v
+lastFN	./cake/libs/model/app_model.php	/^    var $lastFN = '';$/;"	v
+lastFT	./cake/libs/model/app_model.php	/^        $this->lastFT = $ft; $/;"	v
+lastFT	./cake/libs/model/app_model.php	/^    var $lastFT = '';$/;"	v
 lastInsertId	./cake/libs/model/datasources/datasource.php	/^	function lastInsertId($source = null) {$/;"	f
 lastInsertId	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^	function lastInsertId() {$/;"	f
 lastInsertId	./cake/libs/model/datasources/dbo/dbo_db2.php	/^	function lastInsertId($source = null) {$/;"	f
@@ -12504,6 +12509,7 @@ mergeKeys	./cake/libs/model/datasources/dbo_source.php	/^						if ($mergeKeys[0]
 meridian	./cake/libs/view/helpers/form.php	/^						$meridian = 'pm';$/;"	v
 meridian	./cake/libs/view/helpers/form.php	/^				$meridian = 'am';$/;"	v
 meridian	./cake/libs/view/helpers/form.php	/^	function meridian($fieldName, $selected = null, $attributes = array(), $showEmpty = true) {$/;"	f
+message	./app/controllers/gbooks_controller.php	/^            $message="Новый запись в гостевой!";$/;"	v
 message	./app/controllers/orders_controller.php	/^            $message="Новый заказ получен!";$/;"	v
 message	./cake/libs/controller/components/email.php	/^			$message = $this->__formatMessage($message);$/;"	v
 message	./cake/libs/controller/components/email.php	/^			$message = $this->__renderTemplate($message);$/;"	v
@@ -12988,6 +12994,7 @@ n2	./cake/libs/xml.php	/^						foreach ($val as $n2 => $obj2) {$/;"	v
 name	./app/config/sql/db_acl.php	/^	var $name = 'DbAcl';$/;"	v
 name	./app/config/sql/i18n.php	/^	var $name = 'i18n';$/;"	v
 name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
+name	./app/controllers/components/img.php	/^            $name = $name[0];$/;"	v
 name	./app/controllers/components/img.php	/^    function makeimgs( $name=NULL, $type='dish' ){$/;"	v
 name	./app/controllers/groups_controller.php	/^	var $name = 'Groups';$/;"	v
 name	./app/controllers/users_controller.php	/^    var $name='Users';$/;"	v
@@ -15278,6 +15285,7 @@ prefixes	./cake/libs/router.php	/^	function prefixes() {$/;"	f
 pregCount	./cake/libs/model/datasources/dbo_source.php	/^			$pregCount = count($replace['1']);$/;"	v
 pregCount	./cake/libs/model/datasources/dbo_source.php	/^			$pregCount = count($result[0]);$/;"	v
 prepare	./cake/libs/file.php	/^	function prepare($data, $forceWindows = false) {$/;"	f
+prepareimg	./cake/libs/model/app_model.php	/^    function prepareimg( $p1, $p2 ){$/;"	f
 prepend	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^						$prepend = 'DISTINCT ';$/;"	v
 prepend	./cake/libs/model/datasources/dbo/dbo_adodb.php	/^					$prepend = '';$/;"	v
 prepend	./cake/libs/model/datasources/dbo/dbo_mssql.php	/^					$prepend = 'DISTINCT ';$/;"	v
@@ -18822,7 +18830,7 @@ sameScope	./cake/libs/view/helper.php	/^				$sameScope = false;$/;"	v
 sameScope	./cake/libs/view/helper.php	/^			$sameScope = true;$/;"	v
 sameScope	./cake/libs/view/helper.php	/^		$sameScope = $hasField = false;$/;"	v
 samples	./vendors/simpletest/test/acceptance_test.php	/^    function samples() {$/;"	f
-save	./app/controllers/gbooks_controller.php	/^    function save(){$/;"	f
+save	./app/controllers/gbooks_controller.php	/^    function save( $user= true ){$/;"	f
 save	./cake/libs/controller/components/acl.php	/^			$save = $perms[0][$this->Aro->Permission->alias];$/;"	v
 save	./cake/libs/controller/components/acl.php	/^			$save = array_combine($permKeys, array_pad(array(), count($permKeys), $value));$/;"	v
 save	./cake/libs/controller/components/acl.php	/^		$save = array();$/;"	v
@@ -20035,6 +20043,7 @@ subKey	./cake/libs/http_socket.php	/^							$subKey = key($queryNode);$/;"	v
 subKeys	./cake/libs/http_socket.php	/^					$subKeys = $matches[1];$/;"	v
 sub_key	./vendors/simpletest/encoding.php	/^                foreach ($value as $sub_key => $sub_value) {$/;"	v
 subdir	./cake/tests/cases/libs/folder.test.php	/^		$subdir = 'test_folder_new';$/;"	v
+subj	./app/controllers/gbooks_controller.php	/^            $subj="Новая запись!";$/;"	v
 subj	./app/controllers/orders_controller.php	/^            $subj="Новый заказ!";$/;"	v
 subject	./cake/libs/controller/components/email.php	/^		$subject = $this->__strip($subject);$/;"	v
 subject	./cake/libs/controller/components/email.php	/^		$this->subject = null;$/;"	v
@@ -22960,7 +22969,8 @@ tmpUri	./cake/dispatcher.php	/^			$tmpUri = preg_replace('\/^(?:\\?)?(?:\\\/)?\/
 tmpUri	./cake/dispatcher.php	/^			if ($tmpUri === '\/' || $tmpUri == $baseDir || $tmpUri == $base) {$/;"	v
 tmpipaddr	./cake/libs/controller/components/request_handler.php	/^			$tmpipaddr = env('HTTP_CLIENTADDRESS');$/;"	v
 tmplistener	./vendors/simpletest/eclipse.php	/^        $tmplistener = &new SimpleSocket($host, $port, 5);$/;"	v
-to	./app/controllers/orders_controller.php	/^            $to="maksim_vikulov@bk.ru";$/;"	v
+to	./app/controllers/gbooks_controller.php	/^            $to=Configure::read('contact_mail' );$/;"	v
+to	./app/controllers/orders_controller.php	/^            $to=Configure::read('contact_mail' );$/;"	v
 to	./cake/console/libs/bake.php	/^				$this->out(__('You have made an invalid selection. Please choose a type of class to Bake by entering D, M, V, or C.', true));$/;"	c
 to	./cake/console/libs/tasks/controller.php	/^			$this->err(__('You must have a model for this class to build scaffold methods. Please try again.', true));$/;"	c
 to	./cake/console/libs/tasks/test.php	/^			$key = $this->in(__("Enter the class to test or (q)uit", true), $keys, 'q');$/;"	c
@@ -23657,6 +23667,7 @@ useTable	./cake/tests/test_app/models/persister_two.php	/^	var $useTable = 'post
 useTable	./cake/tests/test_app/models/post.php	/^	var $useTable = 'posts';$/;"	v
 useTable	./cake/tests/test_app/plugins/test_plugin/models/test_plugin_post.php	/^	var $useTable = 'posts';$/;"	v
 used	./cake/libs/controller/components/email.php	/^ * Wrapper for PHP mail function used for sending out emails$/;"	f
+user	./app/controllers/gbooks_controller.php	/^    function save( $user= true ){$/;"	v
 user	./cake/libs/controller/components/auth.php	/^			$user = $this->Session->read($this->sessionKey);$/;"	v
 user	./cake/libs/controller/components/auth.php	/^			$user = $this->user();$/;"	v
 user	./cake/libs/controller/components/auth.php	/^			$user = $user->read();$/;"	v

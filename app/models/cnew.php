@@ -2,17 +2,15 @@
 class Cnew extends AppModel {
     //var $name = 'Cnew';
     var $order = 'Cnew.created DESC';
-    var $lastFN = '';
 
     function beforeSave(){
-        $fname = md5( microtime().mt_rand() );
-        $this->lastFN = $fname;
+        $this->prepareimg( 'Cnew', 'imagefile' );
         if( isset( $this->data['Cnew']['imagefile'] ) ){
         //    var_dump( $this->data['Cnew']['imagefile'], NEWS_IMAGES.$fname );
-            if( !move_uploaded_file( $this->data['Cnew']['imagefile']['tmp_name'], NEWS_IMAGES.$fname )){
+            if( !move_uploaded_file( $this->data['Cnew']['imagefile']['tmp_name'], NEWS_IMAGES.$this->lastFN )){
                 echo("RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR");
             }else{
-                $this->data['Cnew']['image'] = $fname;
+                $this->data['Cnew']['image'] = $this->lastFN;
             }
 
         }
@@ -22,10 +20,6 @@ class Cnew extends AppModel {
 
     function getRecent( $num=3 ){
         return $this->find( 'all', array( 'limit'=>(int)$num ) );
-    }
-
-    function getLastFileName(){
-        return $this->lastFN;
     }
 }
 ?>

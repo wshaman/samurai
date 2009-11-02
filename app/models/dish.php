@@ -3,23 +3,20 @@ class Dish extends AppModel {
 //    var $name = 'Dish';
 //    var $useTable = 'dish';
     var $belongsTo = 'Dgroup';
-    var $lastFN = '';
+
     function beforeSave(){
-        $fname = md5( microtime().mt_rand() );
-        $this->lastFN = $fname;
+        
+        $this->prepareimg( 'Dish', 'imagefile' );
+        var_dump( $this->lastFN );
         if( isset( $this->data['Dish']['imagefile'] ) ){
-            if( !move_uploaded_file( $this->data['Dish']['imagefile']['tmp_name'], DISH_IMAGES.$fname )){
+            if( !move_uploaded_file( $this->data['Dish']['imagefile']['tmp_name'], DISH_IMAGES.$this->lastFN )){
                 echo("Не могу сохранить изображение! Обратитесь к разработчику. Он починит. Честно.");
             }else{
-                $this->data['Dish']['image'] = $fname;
+                $this->data['Dish']['image'] = $this->lastFN;
             }
 
         }
         return true;
-    }
-
-    function getLastFileName(){
-        return $this->lastFN;
     }
 
     function getAction(){

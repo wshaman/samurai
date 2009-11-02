@@ -69,7 +69,7 @@ class OrdersController extends AppController {
             //$this->data['Orders']['cart']=serialize( $this->data['Orders']['cart'] );
             $this->Order->save( $this->data );
             $message="Новый заказ получен!";
-            $to="maksim_vikulov@bk.ru";
+            $to=Configure::read('contact_mail' );
             $subj="Новый заказ!";
             mail( $to, $subj, $message );
             $this->Session->del( 'cart' );

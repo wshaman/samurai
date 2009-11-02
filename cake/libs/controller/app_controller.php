@@ -40,6 +40,7 @@ class AppController extends Controller {
     var $helpers = array('Html','Ajax','Javascript');
 
     function beforeFilter() {
+        date_default_timezone_set( 'Asia/Omsk' );
         if ( preg_match( '/.*admin.*/i', $_SERVER["REQUEST_URI"] )){
             $this->isAdmin();
         } else {

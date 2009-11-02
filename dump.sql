@@ -143,7 +143,7 @@ CREATE TABLE `cnews` (
   `image` varchar(50) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +152,7 @@ CREATE TABLE `cnews` (
 
 LOCK TABLES `cnews` WRITE;
 /*!40000 ALTER TABLE `cnews` DISABLE KEYS */;
-INSERT INTO `cnews` VALUES (5,'Тест01','А что тут ещё сказать? Ура, товарищи!','Мы открылись!','4eee425f2f6f9046a109b07e044b822d','2009-10-23 18:17:25'),(8,'Тест02','цццццццццццццццццц','йййййййййййй','e8a9d4904158366578fe1938f8bfbae3','2009-10-23 18:22:55');
+INSERT INTO `cnews` VALUES (5,'Тест01','А что тут ещё сказать? Ура, товарищи!','Мы открылись!','4eee425f2f6f9046a109b07e044b822d','2009-10-23 18:17:25'),(8,'Тест02','цццццццццццццццццц','йййййййййййй','e8a9d4904158366578fe1938f8bfbae3','2009-10-23 18:22:55'),(9,'342342','erwerw','sfsdfsdfs','9689b4f61e0586148bc2a2aade1ff811','2009-10-31 18:58:37');
 /*!40000 ALTER TABLE `cnews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,7 +200,7 @@ CREATE TABLE `dishes` (
   `image` varchar(50) NOT NULL COMMENT 'Имя картинки',
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +209,7 @@ CREATE TABLE `dishes` (
 
 LOCK TABLES `dishes` WRITE;
 /*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
-INSERT INTO `dishes` VALUES (10,'Сушка1',1,10,2,NULL,NULL,'d3238b80bd02056708808816c5e7b64c','Это очень симпатишная сушка. А ещё её можно кушать. Ага.'),(11,'Весёлая сушка',1,25,1,NULL,NULL,'71e6f2ba2ed0ef59ad1f104488400cb5','Она улыбается, хоть и сделана из еды.');
+INSERT INTO `dishes` VALUES (10,'Сушка1',1,10,2,NULL,NULL,'d3238b80bd02056708808816c5e7b64c','Это очень симпатишная сушка. А ещё её можно кушать. Ага.'),(11,'Весёлая сушка',1,25,1,NULL,NULL,'71e6f2ba2ed0ef59ad1f104488400cb5','Она улыбается, хоть и сделана из еды.'),(16,'000000000',2,34,2,NULL,NULL,'6a18faecf41ab5a3319556862cdd0d66','ghfghfghfgh'),(19,'444444',2,32,4,NULL,NULL,'7eabd8974609b8e37324154729d94af0','4dfsdfs'),(20,'22222222222222',2,42342,12,NULL,NULL,'d45e779f91ba2a641e1ec6a15818964d','dfsdf');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +284,7 @@ CREATE TABLE `orders` (
   `cart` tinytext NOT NULL COMMENT 'Serialized cart',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +293,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'Serg','kfkldfas fdhg',0,'2232534','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(2,'swdw','efef',0,'23423','closed','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(4,'Serg','dflkdsl;fk',0,'2323343','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(5,'fg','fsdg',0,'3423423','open','a:2:{i:11;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"25\";s:4:\"name\";s:25:\"Весёлая сушка\";}}i:10;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"10\";s:4:\"name\";s:11:\"Сушка1\";}}}','2009-10-28 20:38:34');
+INSERT INTO `orders` VALUES (1,'Serg','kfkldfas fdhg',0,'2232534','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(2,'swdw','efef',0,'23423','closed','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(4,'Serg','dflkdsl;fk',0,'2323343','open','a:1:{i:2;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"32\";s:4:\"name\";s:6:\"test02\";}}}','0000-00-00 00:00:00'),(5,'fg','fsdg',0,'3423423','open','a:2:{i:11;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"25\";s:4:\"name\";s:25:\"Весёлая сушка\";}}i:10;a:1:{i:0;a:3:{s:3:\"num\";s:1:\"1\";s:4:\"cost\";s:2:\"10\";s:4:\"name\";s:11:\"Сушка1\";}}}','2009-10-28 20:38:34'),(6,'Тестер','Омск',0,'23423423','closed','a:1:{i:11;a:1:{i:0;a:3:{s:3:\"num\";i:2;s:4:\"cost\";s:2:\"25\";s:4:\"name\";s:25:\"Весёлая сушка\";}}}','2009-11-02 17:29:51');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-10-29  2:54:58
+-- Dump completed on 2009-11-02 23:39:35

@@ -36,5 +36,31 @@
  * @subpackage    cake.cake.libs.model
  */
 class AppModel extends Model {
+    var $lastFN = '';
+    var $lastFT = '';
+
+    function prepareimg( $p1, $p2 ){
+        $fname = md5( microtime().mt_rand() );
+        $this->lastFN = $fname;
+        var_dump( $this->data );
+        if( empty( $this->data[$p1][$p2]['type'] ) ){
+            $ft =strtolower( preg_replace( '/(.*)\.(\w+$)/', '$2', $this->data[$p1][$p2]['name'] ));
+            if( !empty( $ft ) ) $ft = 'image/'.$ft;
+        } else $ft = $this->data[$p1][$p2]['type'];
+        if( empty( $ft ) ){
+            echo "Немогу определить тип изображения, считаю что png. За последствия не ручаюсь!";
+            $ft = 'image/png';
+        }
+        $this->lastFT = $ft; 
+    }
+
+    function getLastFileType(){
+        return $this->lastFT;
+    }
+
+    function getLastFileName(){
+        return $this->lastFN;
+    }
+
 }
 ?>

@@ -32,7 +32,10 @@ class CnewsController extends AppController {
     function admin_save( ) {
         $this->layout =  "admin";
         $this->Cnew->save( $this->data );
-        $this->Img->makeimgs( $this->Cnew->getLastFileName(), 'cnew' );
+        $this->Img->makeimgs( array(
+            $this->Cnew->getLastFileName(),
+            $this->Cnew->getLastFileType()),
+        'cnew' );
         $this->redirect( '/admin/cnews/index/' );
     }
     

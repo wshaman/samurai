@@ -7,6 +7,11 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 <?php
+/*
+ * Sorry for some indian-code, guys.
+ * Hope, they will need to fully rewrite the code.
+ * Anyway, they'll have to understand what do they need.
+ */ 
     if( $javascript ){
         echo $javascript->link('prototype.js');
         echo $javascript->link('scriptaculous');
@@ -16,13 +21,14 @@
 <?php echo $scripts_for_layout ?>
 </head>
 <body>
-<?php   $session->flash('auth'); ?>
+<?php $session->flash('auth'); ?>
+<?php echo date( 'r' ); ?>
 <div class="global">
 <div class="header2">
     <div class="head-left">
     </div>
-    <div class="head-mid"></div>
     <div class="head-right"></div>
+    <div class="head-mid"></div>
 </div>
 <div class="content">
     <div class="left" align="center">

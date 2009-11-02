@@ -25,11 +25,17 @@ class GbooksController extends AppController {
     }
 
     function admin_save(){
-        $this->save();
+        $this->save( false );
     }
 
-    function save(){
+    function save( $user= true ){
         $this->Gbook->save( $this->data );
+        if( $user ){
+            $message="Новый запись в гостевой!";
+            $to=Configure::read('contact_mail' );
+            $subj="Новая запись!";
+            mail( $to, $subj, $message );
+        }
         $this->redirect( '/gbooks/index' );
     }
 }
