@@ -21,6 +21,8 @@
 
 .menulist > .menu > .dishlist{
 	width: 90%;
+	display: table;
+	
 	/*border: 1px solid #dcd21b;*/
 }
 
@@ -28,6 +30,8 @@
 	width: 120px;
 	/*border: 1px solid red;*/
 	display: inline-table;
+	padding-right:  3px;
+	
 }
 
 .menulist > .menu > .dishlist >.dish > .name{
@@ -40,5 +44,5 @@ input.num{
 }
 
 input.put{
-	width:60px;
+	width:90px;
 }

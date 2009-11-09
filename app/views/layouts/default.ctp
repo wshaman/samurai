@@ -82,7 +82,7 @@
 </body>
 </html>
 <script type="text/javascript">
-    function onload(){
+    window.onload = function(){
         <?php echo 
              $ajax->remoteFunction(
                  array(

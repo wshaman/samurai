@@ -12,7 +12,7 @@
         echo "</td><td>{$d['description']}</td>";
         echo "<td>{$d['cost']}р/{$d['weight']}гр</td>";
         echo "<td>{$d['cost_half']}р/{$d['weight_half']}гр</td>";
-        echo "<td>{$html->image(DISH_IMAGES_URL.$d['image'], array( 'alt'=>'Загрузите изображение!', 'height'=>'40'))}</td><td>";
+        echo "<td>{$html->image(DISH_IMAGES_URL.$d['image'].'_THUMB', array( 'alt'=>'Загрузите изображение!', 'height'=>'40'))}</td><td>";
             echo $html->link('Удалить',
                 array('controller'=>'dishes', 'action'=>'admin_delete', $d['id']),
                 array(),

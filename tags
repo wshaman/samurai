@@ -1774,6 +1774,7 @@ ThemeViewTestErrorHandler	./cake/tests/cases/libs/view/theme.test.php	/^class Th
 Thread	./cake/tests/cases/libs/model/model_read.test.php	/^		$Thread =& new Thread();$/;"	v
 Thread	./cake/tests/cases/libs/model/models.php	/^class Thread extends CakeTestModel {$/;"	c
 ThreadFixture	./cake/tests/fixtures/thread_fixture.php	/^class ThreadFixture extends CakeTestFixture {$/;"	c
+ThumbHeight	./app/controllers/components/img.php	/^    var $ThumbHeight=90;$/;"	v
 ThumbWidth	./app/controllers/components/img.php	/^    var $ThumbWidth=90;$/;"	v
 Time	./cake/tests/cases/libs/view/helpers/time.test.php	/^		$this->Time = new TimeHelper();$/;"	v
 TimeHelper	./cake/libs/view/helpers/time.php	/^class TimeHelper extends AppHelper {$/;"	c
@@ -11099,9 +11100,13 @@ ignoreErrors	./vendors/simpletest/web_tester.php	/^    function ignoreErrors() {
 ignoreFrames	./vendors/simpletest/browser.php	/^    function ignoreFrames() {$/;"	f
 ignoreFrames	./vendors/simpletest/web_tester.php	/^    function ignoreFrames() {$/;"	f
 ignoreParentsIfIgnored	./vendors/simpletest/simpletest.php	/^    function ignoreParentsIfIgnored($classes) {$/;"	f
+im	./app/controllers/components/img.php	/^  case 1: $im = imagecreatefromgif($img); break;$/;"	v
+im	./app/controllers/components/img.php	/^  case 2: $im = imagecreatefromjpeg($img);  break;$/;"	v
+im	./app/controllers/components/img.php	/^  case 3: $im = imagecreatefrompng($img); break;$/;"	v
 image	./cake/libs/view/helpers/html.php	/^		$image = sprintf($this->tags['image'], $path, $this->_parseAttributes($options, null, '', ' '));$/;"	v
 image	./cake/libs/view/helpers/html.php	/^	function image($path, $options = array()) {$/;"	f
 imgDir	./app/controllers/components/img.php	/^    var $imgDir;$/;"	v
+imgInfo	./app/controllers/components/img.php	/^ $imgInfo = getimagesize($img);$/;"	v
 imgratio	./app/controllers/components/img.php	/^        $imgratio=$width\/$height;$/;"	v
 implements	./vendors/simpletest/mock_objects.php	/^            $implements = 'implements ' . implode(', ', $interfaces);$/;"	v
 implements	./vendors/simpletest/mock_objects.php	/^        $implements = '';$/;"	v
@@ -12991,6 +12996,14 @@ n	./cake/libs/xml.php	/^			$n = null;$/;"	v
 n	./cake/libs/xml.php	/^		$n = $name;$/;"	v
 n2	./cake/libs/xml.php	/^								$n2 = $n;$/;"	v
 n2	./cake/libs/xml.php	/^						foreach ($val as $n2 => $obj2) {$/;"	v
+nHeight	./app/controllers/components/img.php	/^   $nHeight = $h;$/;"	v
+nHeight	./app/controllers/components/img.php	/^   $nHeight = $imgInfo[1]*($w\/$imgInfo[0]);$/;"	v
+nHeight	./app/controllers/components/img.php	/^  $nHeight = $imgInfo[1];$/;"	v
+nHeight	./app/controllers/components/img.php	/^ $nHeight = round($nHeight);$/;"	v
+nWidth	./app/controllers/components/img.php	/^   $nWidth = $imgInfo[0]*($h\/$imgInfo[1]);$/;"	v
+nWidth	./app/controllers/components/img.php	/^   $nWidth = $w;$/;"	v
+nWidth	./app/controllers/components/img.php	/^  $nWidth = $imgInfo[0];$/;"	v
+nWidth	./app/controllers/components/img.php	/^ $nWidth = round($nWidth);$/;"	v
 name	./app/config/sql/db_acl.php	/^	var $name = 'DbAcl';$/;"	v
 name	./app/config/sql/i18n.php	/^	var $name = 'i18n';$/;"	v
 name	./app/config/sql/sessions.php	/^	var $name = 'Sessions';$/;"	v
@@ -13622,6 +13635,7 @@ newChildren	./cake/libs/model/behaviors/containable.php	/^					$newChildren = nu
 newColumn	./cake/libs/model/schema.php	/^				$newColumn = $value['column'];$/;"	v
 newData	./cake/libs/model/model.php	/^				$newData = $newValues = array();$/;"	v
 newData	./cake/tests/cases/libs/model/behaviors/translate.test.php	/^		$newData = array('id' => $id, 'content' => 'Contenido #4');$/;"	v
+newImg	./app/controllers/components/img.php	/^ $newImg = imagecreatetruecolor($nWidth, $nHeight);$/;"	v
 newItems	./cake/tests/lib/cake_test_case.php	/^				$newItems = $items;$/;"	v
 newKeys	./cake/libs/controller/components/acl.php	/^		$newKeys = array();$/;"	v
 newList	./cake/libs/set.php	/^				$newList = array();$/;"	v
@@ -16121,6 +16135,7 @@ reset	./cake/libs/socket.php	/^	function reset($state = null) {$/;"	f
 resetAssociations	./cake/libs/model/model.php	/^	function resetAssociations() {$/;"	f
 resetBindings	./cake/libs/model/behaviors/containable.php	/^	function resetBindings(&$Model) {$/;"	f
 resetValue	./vendors/simpletest/tag.php	/^    function resetValue() {$/;"	f
+resize	./app/controllers/components/img.php	/^function resize($img, $w, $h, $newfilename) {$/;"	f
 resized_img	./app/controllers/components/img.php	/^           $resized_img = imagecreatetruecolor($newwidth,$newheight);$/;"	v
 resolveKey	./cake/libs/model/datasources/datasource.php	/^	function resolveKey($model, $key) {$/;"	f
 resolveKey	./cake/libs/model/datasources/dbo_source.php	/^	function resolveKey($model, $key, $assoc = null) {$/;"	f
@@ -23074,6 +23089,7 @@ translations	./cake/libs/i18n.php	/^		$translations = array();$/;"	v
 translations	./cake/libs/model/behaviors/translate.php	/^			$translations = $RuntimeModel->find('list', array('conditions' => $conditions, 'fields' => array($RuntimeModel->alias . '.locale', $RuntimeModel->alias . '.id')));$/;"	v
 translations	./cake/tests/cases/libs/model/behaviors/translate.test.php	/^		$translations = array('title' => 'Title', 'content' => 'Content');$/;"	v
 translations	./cake/tests/cases/libs/model/behaviors/tree.test.php	/^		$translations = array('name' => 'Name');$/;"	v
+transparent	./app/controllers/components/img.php	/^  $transparent = imagecolorallocatealpha($newImg, 255, 255, 255, 127);$/;"	v
 trap	./vendors/simpletest/exceptions.php	/^        $trap = SimpleTest::getContext()->get('SimpleExceptionTrap');$/;"	v
 tree	./cake/libs/folder.php	/^	function tree($path, $exceptions = true, $type = null) {$/;"	f
 tree	./cake/tests/cases/libs/set.test.php	/^		$tree = array($/;"	v

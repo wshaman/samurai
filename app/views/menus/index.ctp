@@ -41,10 +41,13 @@
                         echo "<div class=\"dish\" align=\"center\">";
                         echo "<div class=\"img\"><a class=\"nyroModal\" href=\"/Dishes/show/{$dval['id']}\">{$html->image(DISH_IMAGES_URL.$dval['image'].'_THUMB',array( 'height'=>'90px'))}</a></div>";
                         echo "<div class=\"name\" align=\"center\">{$dval['name']}</div>";
-//                        echo "<div class=\"descr\">{$dval['description']}</div>";
+                        echo "<div class=\"descr\">{$dval['cost']}p./{$dval['weight']}гр.</div>";
 //                        echo "<input type=\"text\" id=\"num\" class=\"num\" name=\"num\" />";
                         echo "<input type=\"button\" class=\"put\" value=\"Добавить\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', $dval['id'], 1, 0 ), 'update' => 'cart'))} \"/>";
-                        if( $dval['cost_half']>0 ) echo "<input type=\"button\" class=\"put\" value=\"Полпорции\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', $dval['id'], 1, 1 ), 'update' => 'cart'))} \"/>";
+                        if( $dval['cost_half']>0 ) {
+                            echo "<div class=\"descr\">{$dval['cost_half']}p./{$dval['weight_half']}гр.</div>";
+                            echo "<input type=\"button\" class=\"put\" value=\"Полпорции\" onclick=\"javascript:{$ajax->remoteFunction( array( 'url' => array( 'controller' => 'orders', 'action' => 'ajax_cart', $dval['id'], 1, 1 ), 'update' => 'cart'))} \"/>";
+                        }
 /* echo $ajax->link(
  'Добавить',
  array( 'controller' => 'menus', 'action' => 'ajax_cart', 1 ),

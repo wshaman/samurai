@@ -200,7 +200,7 @@ CREATE TABLE `dishes` (
   `image` varchar(50) NOT NULL COMMENT 'Имя картинки',
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +209,7 @@ CREATE TABLE `dishes` (
 
 LOCK TABLES `dishes` WRITE;
 /*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
-INSERT INTO `dishes` VALUES (10,'Сушка1',1,10,2,NULL,NULL,'d3238b80bd02056708808816c5e7b64c','Это очень симпатишная сушка. А ещё её можно кушать. Ага.'),(11,'Весёлая сушка',1,25,1,NULL,NULL,'71e6f2ba2ed0ef59ad1f104488400cb5','Она улыбается, хоть и сделана из еды.'),(16,'000000000',2,34,2,NULL,NULL,'6a18faecf41ab5a3319556862cdd0d66','ghfghfghfgh'),(19,'444444',2,32,4,NULL,NULL,'7eabd8974609b8e37324154729d94af0','4dfsdfs'),(20,'22222222222222',2,42342,12,NULL,NULL,'d45e779f91ba2a641e1ec6a15818964d','dfsdf');
+INSERT INTO `dishes` VALUES (10,'Сушка1',1,10,2,NULL,NULL,'d3238b80bd02056708808816c5e7b64c','Это очень симпатишная сушка. А ещё её можно кушать. Ага.'),(11,'Весёлая сушка',1,25,1,NULL,NULL,'71e6f2ba2ed0ef59ad1f104488400cb5','Она улыбается, хоть и сделана из еды.'),(16,'000000000',2,34,2,NULL,NULL,'6a18faecf41ab5a3319556862cdd0d66','ghfghfghfgh'),(19,'444444',2,32,4,NULL,NULL,'7eabd8974609b8e37324154729d94af0','4dfsdfs'),(20,'22222222222222',2,42342,12,NULL,NULL,'d45e779f91ba2a641e1ec6a15818964d','dfsdf'),(25,'gfrdf',1,432,4,NULL,NULL,'17de68f4775ffa58aa9e5bef4ffc6a39','dvdfgde'),(26,'4432',1,3423,32,4324,23,'4168f1faaf69936f1a89e422e0233a13','efsdf');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -332,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2009-11-02 23:39:35
+-- Dump completed on 2009-11-09 23:22:07

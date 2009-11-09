@@ -14,8 +14,8 @@
                 echo "<tr><!--td>+/-</td--><td>{$i['num']}</td><td>{$i['name']}{$half}</td><td><em>{$ci}р</em></td></tr>";
             }
         }
-        echo "<tr><td colspan=\"3\">Итого: {$cost}р.</td></tr";
-        echo "<tr><td colspan=\"3\"><a href=\"javascript:clearcart()\">Очистить корзину</a></td></tr";
+        echo "<tr><td colspan=\"3\">Итого: {$cost}р.</td></tr>";
+        echo "<tr><td colspan=\"3\"><a href=\"javascript:clearcart()\">Очистить корзину</a></td></tr>";
         echo "<tr><td colspan=\"3\">{$html->link( "Заказать ", array( 'controller'=>'orders', 'action'=>'index' ) )}</td></tr>";
         echo "</table>";
     }
