@@ -8,5 +8,12 @@ div.popup-caption{
 
 div.popup-description{
 	font-style: italic;
-	color: gray;	
+	font-weight: bolder;
+	font-size: medium;
+	color: white;	
+}
+
+div.wrapper div#nyroModalContent {
+	background-color: black;
+	
 }

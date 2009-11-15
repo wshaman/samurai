@@ -7,11 +7,11 @@
         echo "<table width=\"130px\">";
         foreach( $cart as $c )
             foreach( $c as $k => $i ){
-            $half=( $k == 0 ) ? '': '(1/2)';
+            $half=( $k == 0 ) ? '': ' (полпорции)';
             if( $i['num'] > 0 ){
                 $ci = $i['cost']*$i['num'];
                 $cost += $ci;
-                echo "<tr><!--td>+/-</td--><td>{$i['num']}</td><td>{$i['name']}{$half}</td><td><em>{$ci}р</em></td></tr>";
+                echo "<tr><!--td>+/-</td--><td>{$i['num']}шт. {$i['name']}{$half}</td><td><em>{$ci}р</em></td></tr>";
             }
         }
         echo "<tr><td colspan=\"3\">Итого: {$cost}р.</td></tr>";

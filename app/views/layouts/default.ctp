@@ -6,6 +6,9 @@
 <title><?php echo $title_for_layout?></title>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="/css/main-ie6.css" />
+<![endif]-->
 <?php
 /*
  * Sorry for some indian-code, guys.
@@ -22,7 +25,7 @@
 </head>
 <body>
 <?php $session->flash('auth'); ?>
-<?php echo date( 'r' ); ?>
+<!--?php echo date( 'r' ); ?-->
 <div class="global">
 <div class="header2">
     <div class="head-left">
@@ -52,7 +55,7 @@
             <div class="stop"></div>
             <div class="smiddle">
                 <div class="inner">
-                    <h3>Сёгун to go</h3>
+                    <h3>Сёгун</h3>
                     <div id="cinfo">Суши в каждый дом!<br/>
                         Телефон доставки:<br/>599840
                     </div>

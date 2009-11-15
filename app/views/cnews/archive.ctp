@@ -7,7 +7,7 @@
                 <div class=\"img\">{$html->image(NEWS_IMAGES_URL.$cnew['image'].'_THUMB' ,array( 'height'=>'90px'))}</div>
                 <div class=\"info\">
                     <div class=\"caption\">{$cnew['caption']}</div>
-                    <div class=\"text\">{$cnew['pre']}</div>
+                    <div class=\"text\">{$cnew['text']}</div>
                 </div>
             </div>"; 
     } 

@@ -1,6 +1,6 @@
 .menulist{
 	/*border:1px solid #000000;*/
-	padding:5px 5px 5px 5px;
+	padding:5px 46px 5px 5px;
 	width: 550px;
 	overflow: auto;
 	
@@ -16,6 +16,10 @@
 .menulist > .menu > div.name{
 	font-family: serif;
 	font: caption;
+	font-variant: small-caps;
+	font-size: medium;
+	font-weight: bolder;
+	
 	color: red;
 }
 
@@ -27,11 +31,12 @@
 }
 
 .menulist > .menu > .dishlist >.dish{
-	width: 120px;
+	width: 150px;
 	/*border: 1px solid red;*/
 	display: inline-table;
-	padding-right:  3px;
-	
+	/*padding-right:  3px;
+	padding-bottom: 10px;	*/
+	padding:5px 3px 10px 0px ;	
 }
 
 .menulist > .menu > .dishlist >.dish > .name{

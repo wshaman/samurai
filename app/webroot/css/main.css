@@ -1,5 +1,5 @@
 body {
-	background-image: url("../img/back.png");
+	background-image: url("../img/back-light.png");
 	color: black;
 }
 
@@ -52,7 +52,7 @@ div.head-mid{
 	width: 800px;
 	height:188px;
 	/*display: inline;*/
-	background-image: url("../img/head.jpg");
+	background-image: url("../img/head-back-light.jpg");
 	background-repeat:no-repeat;
 	z-index: auto;
 	margin-left: auto;
@@ -77,7 +77,7 @@ div.header2{
 
 div.main {
 	background-color: #8c0031;
-	background-image:url("../img/middle2.jpg");
+	background-image:url("../img/middle-back-light.jpg");
 	background-repeat:repeat-y;
 	/*color: #cd3f3f;*/
 	margin-left: auto;
@@ -121,7 +121,7 @@ div.left{
 .left > .gong{
 	background-repeat: no-repeat;
 	overflow: auto;
-	background-image: url("../img/gong-text.png");
+	background-image: url("../img/gong-noback2.png");
 	/*width: 230px;*/
 	min-height: 388px;
 	z-index: 100;
@@ -201,12 +201,11 @@ div.content{
 
 div.right{
 	width:230px;
-	clear: both;
-	/*background-image:url("../img/info190w.png");
+	/*clear: both;
+	background-image:url("../img/info190w.png");
 	background-repeat: no-repeat;*/
 	float: right;
-	clear: both;
-	/*margin-top:0;*/
+	margin-top:0;
 }
 
 div.footer{
@@ -214,7 +213,7 @@ div.footer{
 	height:142px;
 	text-align:right;
 /*  border: 1px solid blue;*/
-	background-image: url("../img/footer.jpg");
+	background-image: url("../img/foot-back-light.jpg");
 	background-repeat:no-repeat;
 	margin-left:auto;
 	margin-right:auto;
@@ -275,6 +274,8 @@ div.left > a{
 div.descr{
 	font-style: italic;
 	font-size: small;
+	font-weight: bolder;
+	
 	color: black;
 }
 

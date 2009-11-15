@@ -35,5 +35,5 @@
 .recordlist > .record > .text{
 	font-style: italic;
 	text-align: justify;
-	color: gray;
+	/*color: gray;*/
 }
